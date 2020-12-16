@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="net.simplifiedcoding.firebasecloudmessaging.activity.SHOW_BACKGROUND_FULL"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+
+
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background2">
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/thumbnail_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/edit_backgound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@android:drawable/ic_menu_manage" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

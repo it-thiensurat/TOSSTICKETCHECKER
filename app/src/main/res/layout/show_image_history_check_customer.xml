@@ -1,0 +1,42 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.tsr.tsrproblemreport_tossticket_checker.fragment.HomeFragment"
+    android:background="@color/colorAccent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"/>
+    <RelativeLayout
+
+
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@drawable/background">
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/blue"
+            android:scaleType="fitXY"
+            android:src="@drawable/picture4" />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

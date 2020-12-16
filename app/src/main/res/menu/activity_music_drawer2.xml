@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/one" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/rrr"
+            android:title="ปัญหาที่ยังไม่แก้ไข" />
+    </group>
+
+    <group android:id="@+id/two" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/rrr"
+            android:title="ปัญหาทั้งหมดแยก user" />
+    </group>
+
+    <group android:id="@+id/three" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report1"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/rrr"
+            android:title=" รายการปัญหาทั้งหมด" />
+    </group>
+
+    <group android:id="@+id/frord2" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report_contno_error"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/rrr"
+            android:iconTint="@color/Black"
+            android:title="รายการที่ยังไม่แก้ไข" />
+    </group>
+
+
+    <group android:id="@+id/froe" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report2"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/rrr"
+            android:title=" ปัญหาที่แก้ไขแล้ว" />
+    </group>
+
+    <group android:id="@+id/fror" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report_foller"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/ic_history"
+            android:title=" ปัญหาที่ติดตาม" />
+    </group>
+
+
+
+
+
+
+    <group android:id="@+id/fror1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_check_customer"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/check_customer"
+            android:title="รายการที่ต้องตรวจสอบ" />
+    </group>
+    <group android:id="@+id/frordd" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_edit"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/rrr"
+            android:title="รายการที่แก้ไขแล้ว " />
+    </group>
+
+
+
+
+    <item android:title="ระบบตรวจสอบ">
+        <menu>
+
+    <group android:id="@+id/frord" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report_contno"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/ic_history"
+            android:iconTint="@color/Black"
+            android:title="รายการตรวจสอบ" />
+
+    </group>
+    <group android:id="@+id/frord4" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report_contno_pc"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/ic_history"
+            android:iconTint="@color/Black"
+            android:title="รายการตรวจสอบ PC" />
+
+    </group>
+    <group android:id="@+id/fror24" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report_problem"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/rrr"
+            android:title="รายการที่ตรวจสอบแล้ว" />
+    </group>
+    <group android:id="@+id/fror244" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report_problem_pc"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/rrr"
+            android:title="รายการที่ตรวจสอบแล้ว PC" />
+    </group>
+
+
+    <group android:id="@+id/fror232" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report_edit_tel_number"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/rrr"
+            android:title="แก้ไขเบอร์ การ์ดค่างวด" />
+    </group>
+
+    <group android:id="@+id/nav_hi" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_history_sale"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/ic_history"
+            android:title=" ประวัติทำรายการ" />
+    </group>
+
+    <group android:id="@+id/fror3" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_check_customer_yes"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/check_customer"
+            android:title="รายการที่ตรวจสอบแล้ว" />
+    </group>
+    <group android:id="@+id/fror2" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_history"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/ic_history"
+            android:iconTint="@color/Black"
+            android:title="ประวัติทำรายการ" />
+    </group>
+
+        </menu>
+    </item>
+
+
+
+
+
+
+
+
+
+
+    <group android:id="@+id/check" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_check"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/check_customer"
+            android:title="ระบบเเจ้งปัญหา" />
+    </group>
+    <group android:id="@+id/check3" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_check3"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/baseline_payment_black_24"
+            android:title="รายการชำระเงินจากลูกค้า" />
+    </group>
+
+
+
+
+    <group android:id="@+id/frord3" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report_contno_success"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/ic_history"
+            android:iconTint="@color/Black"
+            android:title="ปัญหาที่แก้ไขแล้วสมบูรณ์" />
+    </group>
+
+    <item android:title="อื่นๆ">
+        <menu>
+            <group android:id="@+id/one5" android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_about_us"
+                android:icon="@drawable/about"
+                android:title="เกี่ยวกับ" /></group>
+            <group android:id="@+id/one6" android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_privacy_policy"
+                android:icon="@drawable/additional"
+                android:title="นโยบายส่วนตัว" /></group>
+
+        </menu>
+    </item>
+
+    <item android:title="บันชีของฉัน">
+        <menu>
+            <group android:id="@+id/one2" android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/user"
+                android:title="โปรไฟท์" /></group>
+            <group android:id="@+id/one4" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_user_user"
+                    android:icon="@drawable/usergroup2"
+                    android:title="ผู้ใช้งาน" /></group>
+            <group android:id="@+id/one3" android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/setting"
+
+
+                android:title="ตั้งค่า" /></group>
+
+
+
+            <group android:id="@+id/one7" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/logout"
+
+
+                    android:title="ออกจากระบบ" /></group>
+
+
+        </menu>
+    </item>
+
+
+
+
+
+
+
+<!--
+
+    <item android:title="อื่น ๆ">
+        <menu>
+            <group android:id="@+id/ere2" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_orther1"
+                    android:icon="@drawable/icon_report_bug"
+                    android:title="การใช้งานเบื้องต้น" /></group>
+
+
+            <group android:id="@+id/ere3" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_orther2"
+                    android:icon="@drawable/icon_report_bug"
+                    android:title="คำถามที่พบบ่อย" /></group>
+
+            <group android:id="@+id/ere4" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_orther3"
+                    android:icon="@drawable/icon_report_bug"
+                    android:title="มีอะไรใหม่" /></group>
+
+
+        </menu>
+    </item>
+-->
+
+
+
+
+    <item android:title="developer">
+        <menu>
+            <group android:id="@+id/ere" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_report_bug"
+                    android:icon="@drawable/icon_report_bug"
+                    android:title="รายงานปัญหาระบบ" /></group>
+
+
+        </menu>
+    </item>
+
+
+</menu>

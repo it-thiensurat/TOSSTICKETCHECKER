@@ -1,0 +1,44 @@
+com/aurelhubert/ahbottomnavigation/AHBottomNavigationFABBehavior.java
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigationFABBehavior
+com/aurelhubert/ahbottomnavigation/AHBottomNavigationAdapter.java
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigationAdapter
+com/aurelhubert/ahbottomnavigation/AHHelper.java
+ com.aurelhubert.ahbottomnavigation.AHHelper
+ com.aurelhubert.ahbottomnavigation.AHHelper$1
+ com.aurelhubert.ahbottomnavigation.AHHelper$2
+ com.aurelhubert.ahbottomnavigation.AHHelper$3
+ com.aurelhubert.ahbottomnavigation.AHHelper$4
+ com.aurelhubert.ahbottomnavigation.AHHelper$5
+ com.aurelhubert.ahbottomnavigation.AHHelper$6
+ com.aurelhubert.ahbottomnavigation.AHHelper$7
+ com.aurelhubert.ahbottomnavigation.AHHelper$8
+ com.aurelhubert.ahbottomnavigation.AHHelper$9
+com/aurelhubert/ahbottomnavigation/BuildConfig.java
+ com.aurelhubert.ahbottomnavigation.BuildConfig
+com/aurelhubert/ahbottomnavigation/notification/AHNotificationHelper.java
+ com.aurelhubert.ahbottomnavigation.notification.AHNotificationHelper
+com/aurelhubert/ahbottomnavigation/AHBottomNavigationItem.java
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem
+com/aurelhubert/ahbottomnavigation/notification/AHNotification.java
+ com.aurelhubert.ahbottomnavigation.notification.AHNotification
+ com.aurelhubert.ahbottomnavigation.notification.AHNotification$1
+ com.aurelhubert.ahbottomnavigation.notification.AHNotification$Builder
+com/aurelhubert/ahbottomnavigation/AHBottomNavigation.java
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigation$1
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigation$2
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigation$3
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigation$4
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigation$5
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigation$OnNavigationPositionListener
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigation$OnTabSelectedListener
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigation$TitleState
+com/aurelhubert/ahbottomnavigation/AHBottomNavigationBehavior.java
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigationBehavior
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigationBehavior$1
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigationBehavior$2
+com/aurelhubert/ahbottomnavigation/VerticalScrollingBehavior.java
+ com.aurelhubert.ahbottomnavigation.VerticalScrollingBehavior
+ com.aurelhubert.ahbottomnavigation.VerticalScrollingBehavior$ScrollDirection
+com/aurelhubert/ahbottomnavigation/AHBottomNavigationViewPager.java
+ com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager

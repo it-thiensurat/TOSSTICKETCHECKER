@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dip"
+    android:layout_height="100dip"
+    android:background="@color/FloralWhite">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView18"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="     กรุณาล็อกอินแอพพลิเคชั่นหลัก"
+        android:textColor="@color/input_login"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView24"
+        android:background="@drawable/unlocked"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/textView18"
+        android:background="@drawable/close"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView24"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_alignEnd="@+id/button6"
+        android:layout_alignLeft="@+id/button6"
+        android:layout_alignRight="@+id/button6"
+        android:layout_alignStart="@+id/button6"
+        android:text="   ออก"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignStart="@+id/button1"
+        android:layout_centerVertical="true"
+        android:text=" ล็อกอิน"
+        android:textSize="8sp" />
+
+
+</RelativeLayout>

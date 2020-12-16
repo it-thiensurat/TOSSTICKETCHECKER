@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/image_map"
+
+
+
+
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+
+
+
+            android:src="@drawable/picture4" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/image_remove"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_close_black_24dp"
+                android:backgroundTint="@color/Yellow"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:id="@+id/rotage2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rotage"
+                android:backgroundTint="@color/Blue"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="false"
+
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+
+
+
+
+
+        <!-- YOUR CUSTOM VIEWS HERE -->
+
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

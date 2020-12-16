@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/repassword"
+        android:layout_width="300dip"
+        android:layout_height="300dip"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/home" />
+
+    <EditText
+        android:id="@+id/txtshopname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ชื่อร้าน" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/txtshoptype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ประเภทธุรกิจ" />
+
+    <EditText
+        android:id="@+id/txtphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="เบอร์โทร" />
+
+    <EditText
+        android:id="@+id/txtemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="อีเมล์" />
+
+    <EditText
+        android:id="@+id/txtaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ที่อยู่" />
+
+    <EditText
+        android:id="@+id/txtintro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="แนะนำเกี่ยวกับร้าน"
+        android:inputType="textMultiLine"
+        android:minLines="2" />
+
+    <EditText
+        android:id="@+id/txthour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hourtoreturn"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="บันทึก" />
+
+</LinearLayout>

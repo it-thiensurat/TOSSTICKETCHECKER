@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:title="Search"
+        />
+
+    <item
+        android:id="@+id/testAction"
+        android:icon="@android:drawable/ic_popup_reminder"
+        android:title="Test Counter Action"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+
+
+
+
+    <item
+    android:id="@+id/testAction2"
+    android:icon="@android:drawable/ic_input_delete"
+    android:title="Test Counter Action"
+    android:orderInCategory="1"
+    app:showAsAction="always" />
+
+    <item
+        android:id="@+id/testAction3"
+        android:icon="@android:drawable/ic_btn_speak_now"
+        android:title="Test Counter Action"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/testAction4"
+        android:icon="@android:drawable/ic_media_ff"
+        android:title="Test Counter Action"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/testAction5"
+        android:icon="@android:drawable/ic_lock_idle_low_battery"
+        android:title="Test Counter Action"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_setting"
+        android:icon="@drawable/ic_control_point_white_24dp"
+        android:title="Test Counter Action"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.ExpandableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/expandable_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:expWithParentScroll="true">
+
+    <!-- The visible layout -->
+    <RelativeLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content"
+                >
+
+
+
+                <ImageView
+                    android:id="@+id/icon_time"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/ic_access_time_black_24dp"
+                    />
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_timeline_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:singleLine="true"
+                    android:text="1 ม.ค 2560"
+                    android:textColor="@color/base_gray"
+                    android:textSize="10sp"
+                    android:textStyle="italic" />
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2.2"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+
+
+                <com.github.vipulasri.timelineview.TimelineView
+                    android:id="@+id/time_marker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:markerSize="20dp"
+                    app:lineSize="3dp"
+
+                    app:line="@color/Yellow"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    app:cardElevation="1dp"
+                    app:contentPadding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.02"
+                                android:background="@color/white"
+                                android:orientation="horizontal">
+
+
+
+
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_below="@+id/relativeLayout2"
+
+                                    android:orientation="horizontal">
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/text_timeline_date"
+                                        android:textSize="12sp"
+                                        tools:text="A11111"/>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_below="@+id/relativeLayout2"
+
+                                    android:orientation="vertical">
+
+
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:id="@+id/text_timeline_title"
+                                        android:textColor="@color/BlueViolet"
+                                        tools:text="Order Successfully Completed"/>
+
+
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </LinearLayout>
+
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.20"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    >
+
+
+                                    <ImageView
+                                        android:id="@+id/image"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/arrow_down"
+                                        android:backgroundTint="@color/Black"
+                                        />
+
+
+                                    <TextView
+                                        android:id="@+id/show_info"
+                                        android:visibility="visible"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_gravity="center"
+
+                                        android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                                        android:drawableTint="@color/Black"/>
+
+
+                                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <!-- The hidden layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="100dp"
+android:background="@color/black2"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ezreal_story"
+        android:paddingLeft="65dp"
+        android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.ExpandableLayout>

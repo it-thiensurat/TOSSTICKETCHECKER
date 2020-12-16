@@ -1,0 +1,17 @@
+<resources>
+    <string name="appupdater_update_available">มีการอัพเดทใหม่แล้ว!</string>
+
+    <string name="appupdater_update_available_description_dialog">Update %1$s is available to download. By downloading the latest update you will get the latest features, improvements and bug fixes for %2$s.</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">Update %1$s is available to download.\n\nYou can get these new features:\n%2$s</string>
+    <string name="appupdater_update_available_description_snackbar">Update %1$s is available!</string>
+
+
+    <string name="appupdater_update_available_description_notification">Update %1$s  TSR PROBLEM REPORT กรุณาอัพเดท ! เมื่อดาวน์โหลดการอัปเดตล่าสุดคุณจะได้รับคุณลักษณะล่าสุดการปรับปรุงและการแก้ไขข้อบกพร่อง...</string>
+
+
+    <string name="appupdater_update_not_available">No updates available</string>
+    <string name="appupdater_update_not_available_description">You\'ve got the latest version available of %s!</string>
+    <string name="appupdater_btn_update">อัฟเดต</string>
+    <string name="appupdater_btn_disable">ไม่ต้องแสดงอีก</string>
+    <string name="appupdater_btn_dismiss">ยกเลิก</string>
+</resources>

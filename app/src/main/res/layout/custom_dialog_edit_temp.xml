@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="340dip"
+    android:layout_height="wrap_content"
+    android:background="@color/FloralWhite">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="ตั้งค่า Temp"
+        android:textColor="@color/input_login"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:gravity="center"
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal">
+
+
+<EditText
+    android:id="@+id/edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inputType="text"
+    />
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          android:gravity="center"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="0dp"
+            android:orientation="horizontal">
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="0dp"
+
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+
+
+                    android:background="@color/Brown"
+                    android:gravity="center"
+                    android:text="ออก"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="0dp"
+                android:paddingLeft="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+
+
+                    android:background="@color/ColorPrimaryDark"
+                    android:gravity="center"
+                    android:text="ตกลง"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.github.jakob-grabner'
+android {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\TOSSTICKETCHECKER\\app\\toss_ticket.keystore')
+            keyPassword 'assanee'
+            keyAlias = 'key0'
+            storePassword 'tsr1234'
+        }
+    }
+    compileSdkVersion 30
+    buildToolsVersion '29.0.3'
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 30
+        versionCode 3
+        versionName "1.2"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+    productFlavors {
+    }
+
+
+}
+
+dependencies {
+    implementation 'com.android.support:support-annotations:25.1.0'
+}
+
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    failOnError false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}

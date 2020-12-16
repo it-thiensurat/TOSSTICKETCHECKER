@@ -1,0 +1,291 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="elevation">0dp</item>
+
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/btn_login</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/btn_login</item>
+        <item name="elevation">0dp</item>
+
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+
+    <style name="custom" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme2.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme2.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/Gray</item>
+        <item name="android:textSize">20sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/dot_light_screen3</item>
+        <item name="colorControlNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">@color/dot_light_screen3</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/White</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:listPreferredItemHeightSmall">50dp</item>
+    </style>
+
+
+
+
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@android:color/holo_orange_light</item>
+    </style>
+
+
+
+
+
+    <style name="setting">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+
+
+
+
+
+
+
+    <style name="AppTheme.TransparentText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+
+
+
+
+
+
+
+
+    <style name="MenuFragmentStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:colorForeground">@android:color/transparent</item>
+        <item name="android:colorForegroundInverse">@android:color/transparent</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="TextView" />
+
+    <style name="TextView.DefaultStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/menu_text_size</item>
+    </style>
+
+
+
+
+    <!--Difference 21-->
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+
+
+
+
+
+
+    <style name="MyButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/app_green</item>
+        <item name="colorButtonNormal">@color/app_green</item>
+    </style>
+
+
+
+
+
+    <style name="tab_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style name="Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="SplashTheme" parent="Fullscreen">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+
+
+
+
+
+
+
+    <style name="TextView.Label">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:background">#44FFFFFF</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+
+
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="Toolbar.TitleText2" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">5sp</item>
+    </style>
+
+
+
+
+    <style name="Font_family_light" parent="AppTheme">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="Font_family_regular" parent="AppTheme">
+        <item name="android:fontFamily">sans-serif-regular</item>
+    </style>
+
+
+
+
+    <style name="Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text_black">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="bnve">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="bnve_primary_bg" parent="bnve">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+    <style name="bnve_white_bg" parent="bnve">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- Set this to true if you want Full Screen without status bar -->
+        <item name="android:windowFullscreen">false</item>
+
+        <item name="android:windowIsFloating">false</item>
+
+        <!-- This is important! Don't forget to set window background -->
+        <item name="android:windowBackground">@color/colorWhite</item>
+
+        <!-- Additionally if you want animations when dialog opening -->
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+
+
+
+
+
+
+</resources>

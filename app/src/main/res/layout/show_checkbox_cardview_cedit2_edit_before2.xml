@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="1dp"
+    card_view:cardMaxElevation="1dp"
+    card_view:contentPadding="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/background4"
+            android:padding="4dp">
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.74"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:background="@drawable/roun_rect_orange3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="เลขที่การแจ้ง:"
+                    android:textSize="@dimen/text_12"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:orientation="vertical">
+                <TextView
+
+                    android:id="@+id/InformID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_12"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.70"
+
+                android:orientation="vertical">
+                <TextView
+                    android:background="@drawable/roun_rect_orange16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="เลขที่สัญญา:"
+                    android:textSize="@dimen/text_12"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/contno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_12"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/White">
+
+                    <ImageView
+                        android:id="@+id/image_problem_incorrect"
+                        android:layout_width="130sp"
+                        android:layout_height="100sp"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/no_image"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_count_image_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_alignBottom="@+id/image_problem_incorrect"
+                        android:layout_alignRight="@+id/image_problem_incorrect"
+                        android:text="+10 "
+                        android:textSize="45sp"
+                        android:textColor="@color/White"
+                        android:visibility="visible"
+
+                        android:background="@drawable/background_alpa"
+                        />
+                    <TextView
+                        android:id="@+id/txt_status_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_alignBottom="@+id/image_problem_incorrect"
+                        android:layout_alignRight="@+id/image_problem_incorrect"
+                        android:text="รูปแก้ไขแล้ว "
+                        android:textSize="8sp"
+                        android:textColor="@color/Green"
+                        android:visibility="visible"
+
+                        android:background="@drawable/background_alpa2"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:orientation="vertical"
+                android:layout_marginLeft="10sp"
+                >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="หมวดหมู่ :"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/text_12"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5sp"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:layout_alignLeft="@+id/txt_conno"
+                    android:layout_below="@+id/ddf"
+                    android:maxLines="2"
+                    android:text="ปัญหาหลัก : "
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/text_12" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:layout_alignLeft="@+id/txt_conno"
+                    android:layout_below="@+id/ddf"
+                    android:maxLines="2"
+                    android:text="ปัญหาย่อย : "
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/text_12" />
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:layout_alignLeft="@+id/txt_conno"
+                    android:layout_below="@+id/ddf"
+                    android:maxLines="2"
+                    android:text="เรื่อง : "
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/text_12" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="ปัญหา AAAA"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_12"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5sp"/>
+
+                <TextView
+                    android:id="@+id/txt_main_problem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:layout_alignLeft="@+id/txt_conno"
+                    android:layout_below="@+id/ddf"
+                    android:maxLines="2"
+                    android:text="กรองตัน"
+                    android:textColor="@color/bg_screen4"
+                    android:textSize="@dimen/text_12" />
+
+                <TextView
+                    android:id="@+id/txt_sub_problem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:layout_alignLeft="@+id/txt_conno"
+                    android:layout_below="@+id/ddf"
+                    android:maxLines="2"
+                    android:text="ทดสอบ5555 : "
+                    android:textColor="@color/bg_screen4"
+                    android:textSize="@dimen/text_12" />
+                <TextView
+                    android:id="@+id/txt_topic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:layout_alignLeft="@+id/txt_conno"
+                    android:layout_below="@+id/ddf"
+                    android:maxLines="2"
+                    android:text="ทดสอบ5555 : "
+                    android:textColor="@color/bg_screen4"
+                    android:textSize="@dimen/text_12" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:background="@drawable/roun_rect_orange8"
+                    android:singleLine="true"
+                    android:text="1 ม.ค 2560 12:00:00"
+                    android:textColor="@color/white"
+                    android:textSize="8sp"
+                    android:textStyle="italic"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/View_image_show_cradview"/>
+
+                <RelativeLayout
+                    android:id="@+id/deleteAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/image_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/icon_modify"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:id="@+id/linear_coler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_gravity="right"
+
+            android:background="@color/DarkBlue"
+            android:padding="4dp">
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/roun_rect_orange15"
+                >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="สถานะ :"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/text_status" />
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="14sp"
+                    android:text="ส่งเรื่องให้หน่วยงานที่เกี่ยวข้อง"
+                    android:textColor="@color/white"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/txt_status_workcode" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_status_closing"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:background="@drawable/roun_rect_orange17"
+                >
+                <TextView
+                    android:id="@+id/txt_status_closing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="ปิดงานแล้ว"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_closing" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_sale2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:padding="4dp">
+
+
+
+            <ImageView
+                android:id="@+id/add_attachment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+
+                android:background="@drawable/ic_chat_black_24dp"
+
+                />
+
+
+            <TextView
+                android:id="@+id/new_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="dddddddddddddddddddddddddddddddddddddd"
+                android:textSize="@dimen/text_12" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</android.support.v7.widget.CardView>
+

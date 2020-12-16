@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="?android:selectableItemBackground"
+    android:orientation="vertical"
+    android:id="@+id/view"
+    android:padding="5dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
+
+            <TextView
+                android:id="@+id/itemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/btnMore"
+                android:text="Sample title"
+
+                android:background="@drawable/roun_rect_orange6"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+
+
+
+
+
+            <Button
+                android:id="@+id/btnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:theme="@style/MyButton"
+                android:text="เพิ่มเติม"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="#FFF" />
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+
+            android:padding="2dp">
+
+
+
+            <TextView
+                android:id="@+id/deleteAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roun_rect_orange6"
+                android:text="ลบทั้งหมด"
+
+                android:layout_marginLeft="114sp"
+                />
+
+
+
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+
+
+
+
+            <TextView
+                android:id="@+id/moreAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/roun_rect_orange6"
+                android:text="ลบรูป"
+                android:visibility="visible"
+
+                />
+
+
+
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal" />
+
+
+</LinearLayout>
+

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roun_rect_orange"
+            android:text="ผู้จัดการฝ่าย"
+            android:textColor="#fff"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+
+            android:layout_below="@+id/relativeLayout2">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+
+            android:orientation="horizontal">
+
+
+
+
+            <EditText
+                android:id="@+id/messageToSend"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:clickable="false"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:onClick="sendMessage"
+                android:layout_gravity="bottom"
+                android:id="@+id/sendButton"
+                android:background="@android:drawable/ic_menu_send" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

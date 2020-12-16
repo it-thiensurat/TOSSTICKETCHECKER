@@ -1,0 +1,3334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/CoordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:visibility="gone"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:titleTextAppearance="@style/Toolbar.TitleText">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_music" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20sp"/>
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="20sp"/>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10sp"/>
+
+
+            <LinearLayout
+                android:id="@+id/liner2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+
+                android:layout_centerInParent="true"
+                >
+
+                <ScrollView
+                    android:id="@+id/relayouttop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true">
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/layoutcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:background="@drawable/background2"
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:id="@+id/bn_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/fab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:backgroundTint="#3F51B5"
+                                android:layout_margin="@dimen/fab_margin"
+                                android:src="@drawable/ic_save_white_24dp"
+                                android:tint="@color/White"/>
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout_data1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+
+                                android:id="@+id/lili_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0sp"
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange7"
+                                    android:text="ข้อมูลสำคัญต้องตรวจสอบ :"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="รูปหน้าบ้าน :"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input">
+
+                                    <Spinner
+                                        android:id="@+id/spDemo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginRight="20dp" />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+                                android:id="@+id/lili_2"
+
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="รายละเอียดเพิ่มเติม :"
+                                    android:textSize="10sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <EditText
+                                        android:id="@+id/new_message_home_in"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:hint="เขียนโน๊ต เพิ่มเติม/ ชื่อ-นามสกุล ลูกค้าที่ตรวจสอบ หรือ อื่นๆ"
+                                        android:textSize="12sp"
+
+                                        />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="horizontal"
+
+                                >
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_camera4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/ic_came" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_image4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/icon_picture" />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:gravity="center"
+
+                                    >
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/my_recycler_view4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone">
+
+                                    </android.support.v7.widget.RecyclerView>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lili_line1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <View
+
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_gravity="center"
+                                android:background="@color/Navy" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+                        </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0sp"
+                                android:id="@+id/lili_3"
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="แผนที่ :"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input"
+                                    android:visibility="visible">
+
+                                    <Spinner
+                                        android:id="@+id/spDemo1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginRight="20dp" />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="horizontal"
+
+                                >
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <RelativeLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/ic_came" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/li_gps"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+
+                                    >
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/location"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/icon_image_map" />
+
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="กดปักหมุด"
+                                                android:textColor="@color/White" />
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:gravity="center"
+
+                                    >
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/my_recycler_view_map"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone">
+
+                                    </android.support.v7.widget.RecyclerView>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lili_line2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li_line1SDSSSD"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange7"
+                                    android:text="เลือกสถานะการตรวจสอบ :"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="0sp"
+                                android:background="@color/description">
+
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/recyclerview1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent" />
+
+
+                                <RelativeLayout
+                                    android:id="@+id/relativeLayout_new"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:background="@drawable/background_alpa">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/double_down_new"
+                                            android:layout_width="30dip"
+                                            android:layout_height="30dip"
+
+                                            android:background="@drawable/ic_error_outline_white_24dp" />
+
+                                        <View
+                                            android:layout_width="20dp"
+                                            android:layout_height="0sp" />
+
+                                        <TextView
+                                            android:id="@+id/internet_new"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="ไม่ได้เชื่อมต่อเครือข่าย"
+                                            android:textColor="@color/White" />
+
+                                        <View
+                                            android:layout_width="20dp"
+                                            android:layout_height="0sp" />
+
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+                                android:id="@+id/lili_text_select4"
+                                android:visibility="gone"
+
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="รายละเอียดเพิ่มเติม :"
+                                    android:textSize="10sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <EditText
+                                        android:id="@+id/new_message_select4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:hint="เขียนโน๊ต เพิ่มเติม/ ชื่อ-นามสกุล ลูกค้าที่ตรวจสอบ หรือ อื่นๆ"
+                                        android:textSize="12sp"
+
+                                        />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line1234"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/double_down"
+                                    android:backgroundTint="@color/base_gray" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/txt_scan_assa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="0dp"
+                                android:background="@drawable/roun_rect_orange22"
+                                android:text="สแกน :"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp" />
+
+                            <LinearLayout
+                                android:id="@+id/li7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10sp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/relativeLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/background_alpa"
+                                    android:visibility="gone">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/double_down"
+                                            android:layout_width="30dip"
+                                            android:layout_height="30dip"
+
+                                            android:background="@drawable/ic_error_outline_white_24dp" />
+
+                                        <View
+                                            android:layout_width="20dp"
+                                            android:layout_height="0sp" />
+
+                                        <TextView
+                                            android:id="@+id/internet"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="ไม่ได้เชื่อมต่อเครือข่าย"
+                                            android:textColor="@color/White" />
+
+                                        <View
+                                            android:layout_width="20dp"
+                                            android:layout_height="0sp" />
+
+
+                                    </LinearLayout>
+
+
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:id="@+id/relat_scan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input"
+                                    android:gravity="center">
+
+
+                                    <ImageButton
+                                        android:id="@+id/switcher2"
+                                        android:layout_width="50dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentStart="true"
+                                        android:background="@android:color/transparent"
+                                        android:padding="5dp"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/check_box_report_problem"
+                                        android:visibility="gone" />
+
+
+                                    <TextView
+                                        android:id="@+id/txt_scan"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:background="@android:color/transparent"
+                                        android:gravity="center"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="textPhonetic"
+                                        android:lines="1"
+                                        android:maxLines="3"
+                                        android:paddingLeft="50dp"
+
+                                        android:paddingRight="50dp"
+                                        android:text="สแกน QR/BAR CODE"
+                                        android:textColor="@color/Navy"
+                                        android:textSize="@dimen/menu_text_size"
+                                        android:textStyle="bold"
+
+                                        />
+
+                                    <ImageButton
+                                        android:id="@+id/bt_scan"
+                                        android:layout_width="50dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentEnd="true"
+
+                                        android:background="@android:color/transparent"
+                                        android:padding="5dp"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ic_barcode_button" />
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li_qr1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="รายละเอียดเพิ่มเติม :"
+                                    android:textSize="10sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <EditText
+                                        android:id="@+id/new_message_scan"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:hint="เขียนโน๊ต เพิ่มเติม/ ชื่อ-นามสกุล ลูกค้าที่ตรวจสอบ หรือ อื่นๆ"
+                                        android:textSize="8sp"
+
+                                        />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+
+                                >
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_camera"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/ic_came" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/icon_picture" />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:gravity="center"
+
+                                    >
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/my_recycler_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone">
+
+                                    </android.support.v7.widget.RecyclerView>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_install1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0sp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txt_install2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="รูปเครื่องที่ติดตั้ง :"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input"
+                                    android:visibility="gone">
+
+                                    <Spinner
+                                        android:id="@+id/spDemo2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginRight="20dp" />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_install2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="ติดตั้งเรียบร้อยหรือไม่ :"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+
+                                    <RadioGroup
+                                        android:id="@+id/radioSex1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:id="@+id/RadioButton2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:checked="false"
+                                            android:text="ติดตั้งเรียบร้อย" />
+
+                                        <RadioButton
+                                            android:id="@+id/RadioButton3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:ellipsize="end"
+                                            android:lines="1"
+                                            android:text="ติดดั้งไม่เรียบร้อย" />
+
+                                    </RadioGroup>
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_install3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="รายละเอียดเพิ่มเติม :"
+                                    android:textSize="10sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <EditText
+                                        android:id="@+id/new_message_install"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:hint="เขียนโน๊ต เพิ่มเติม/ ชื่อ-นามสกุล ลูกค้าที่ตรวจสอบ หรือ อื่นๆ"
+                                        android:textSize="12sp"
+
+                                        />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="horizontal"
+
+                                >
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_camera5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/ic_came" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_image5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/icon_picture" />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:gravity="center"
+
+                                    >
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/my_recycler_view5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone">
+
+                                    </android.support.v7.widget.RecyclerView>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/linearlayout_show_problem_main"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="สภาพบ้าน :"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input">
+
+                                    <Spinner
+                                        android:id="@+id/spDemo4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginRight="20dp" />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/linearlayout_show_problem_sub"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange7"
+                                    android:text="ข้อมูลการสอบถาม :"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="ตรวจสอบกับใคร :"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input">
+
+                                    <Spinner
+                                        android:id="@+id/spDemo3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginRight="20dp" />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_who"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="รายละเอียดเพิ่มเติม :"
+                                    android:textSize="10sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <EditText
+                                        android:id="@+id/new_message"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:hint="เขียนโน๊ต เพิ่มเติม/ ชื่อ-นามสกุล ลูกค้าที่ตรวจสอบ หรือ อื่นๆ"
+                                        android:textSize="12sp"
+
+                                        />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li_line3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_remarket"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="ลุกค้าเคยซื้อสินค้าบริษัทหรือไม่? :"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+
+                                    <RadioGroup
+                                        android:id="@+id/radioSex_re"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:id="@+id/RadioButton_re"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:checked="false"
+                                            android:text="เคย" />
+
+                                        <RadioButton
+                                            android:id="@+id/RadioButton1_re"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="ไม่เคย" />
+
+                                    </RadioGroup>
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/linearlayout_show_problem_tain"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="มีเครื่องเทิร์นหรือไม่ ? :"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/li_retain"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10sp"
+                                    android:orientation="vertical">
+
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="5dp" />
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:background="@drawable/custom_input2">
+
+
+                                        <RadioGroup
+                                            android:id="@+id/radioSex_retain"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <RadioButton
+                                                android:id="@+id/RadioButton_retain"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:checked="false"
+                                                android:text="ไม่มี" />
+
+                                            <RadioButton
+                                                android:id="@+id/RadioButton1_retain"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:text="มี" />
+
+                                        </RadioGroup>
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_install_re_tain"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input">
+
+                                    <Spinner
+                                        android:id="@+id/spDemo5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginRight="20dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_install_tain"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="รายละเอียดเพิ่มเติม :"
+                                    android:textSize="10sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <EditText
+                                        android:id="@+id/new_message_tain"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:hint="เขียนโน๊ต เพิ่มเติม/ ชื่อ-นามสกุล ลูกค้าที่ตรวจสอบ หรือ อื่นๆ"
+                                        android:textSize="12sp"
+
+                                        />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_pay_one"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="ลูกค้าชำระงวดแรกแล้ว ? :"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+
+                                    <RadioGroup
+                                        android:id="@+id/radioSex"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:id="@+id/RadioButton"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:checked="false"
+                                            android:text="ชำระแล้ว" />
+
+                                        <RadioButton
+                                            android:id="@+id/RadioButton1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="ยังไม่ชำระ" />
+
+                                    </RadioGroup>
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li_pay1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="20dp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/roun_rect_orange22"
+
+                                    android:text="นัดอีกเมื่อไร"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/date1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="20dp"
+                                    android:text=""
+                                    android:textColor="@color/Yellow"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/image_tal2"
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/calendar_icon"
+                                    android:backgroundTint="@color/Green"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/image_clear"
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/ic_delete_forever_black_24dp"
+                                    android:backgroundTint="@color/Yellow"
+
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_pay1_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="รายละเอียดเพิ่มเติม :"
+                                    android:textSize="10sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <EditText
+                                        android:id="@+id/new_message2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:hint="เขียนโน๊ต เพิ่มเติม/ เกี่ยวกับสภาพบ้าน..."
+                                        android:textSize="8sp"
+
+                                        />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+
+                                >
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_camera2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/ic_came" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_image2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/icon_picture" />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:gravity="center"
+
+                                    >
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/my_recycler_view2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone">
+
+                                    </android.support.v7.widget.RecyclerView>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li_line4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_pay_two"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0sp"
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="นัดเก็บเงินงวด 2 หรือไม่ ?:"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input"
+                                    android:visibility="visible">
+
+                                    <CheckBox
+                                        android:id="@+id/CheckBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_alignParentTop="true"
+                                        android:layout_marginRight="20dp"
+                                        android:checked="true"
+                                        android:text="นัดเก็บเงินงวด 2"
+                                        android:visibility="gone" />
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li_pay_two2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/roun_rect_orange23"
+
+                                    android:text="วันที่ทำสัญญา"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/date222"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:text="11/12/2018"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="10sp" />
+
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+
+                                    android:background="@drawable/roun_rect_orange23"
+                                    android:text="วันเก็บเงินงวดแรก"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/date33"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:text="11/12/2018"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="10sp"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li_pay2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="20dp"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/roun_rect_orange23"
+
+                                    android:text="วันที่นัดเก็บเงินงวด 2"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/date2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="-"
+                                    android:textColor="@color/Yellow"
+                                    android:textSize="10sp" />
+
+
+
+                              <CheckBox
+                                  android:id="@+id/cb_pay_two"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginLeft="50sp"
+                                  android:visibility="visible"
+                                  android:text="ไม่ทราบ"
+
+                                  />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_pay2_2_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="20dp"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+
+                                >
+
+
+                                <ImageView
+                                    android:id="@+id/image_tal3"
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/calendar_icon"
+                                    android:backgroundTint="@color/Green"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/txt_day_nad2"
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:ellipsize="end"
+                                    android:lines="3"
+                                    android:text="เกิน 45 วัน"
+                                    android:textColor="@color/Red"
+
+
+                                    android:textSize="10sp"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_pay2_2_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="20dp"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+
+                                >
+
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:ellipsize="end"
+                                    android:lines="4"
+                                    android:text="(หมายเหตุ กดรูป ปฏิทิน เพื่อ ทำการนัดเก็บเงินงวด 2    กรณี นัดเกิน 60 วัน จะเป็นสีแดง จะตีเป็นปัญหา เพื่อนำไปแจ้งปัญหา เมื่อบันทึกรายการเสร็จ)"
+                                    android:textColor="@color/Red"
+
+
+                                    android:textSize="10sp"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/linearlayout_date_to_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="ช่วงเวลาที่สะดวกในการเก็บเงิน  :"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input">
+
+                                    <Spinner
+                                        android:id="@+id/spDemo6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginRight="20dp" />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_pay2_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="รายละเอียดเพิ่มเติม :"
+                                    android:textSize="10sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <EditText
+                                        android:id="@+id/new_message_pay2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:hint="เขียนโน๊ต เพิ่มเติม/ สาเหตุที่ไม่เรียบร้อยเพราะ..."
+                                        android:textSize="8sp"
+
+                                        />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li_line5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_confirm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="ยืนยันการผ่อนชำระ :"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="10sp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@color/AntiqueWhite"
+                                    android:orientation="horizontal">
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+
+                                            android:layout_width="wrap_content"
+
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/roun_rect_orange23"
+
+                                            android:text="ราคาเงินผ่อน 12 งวด"
+                                            android:textColor="@color/white"
+                                            android:textSize="10sp"
+                                            android:visibility="visible"
+                                            android:id="@+id/txt_concon"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_Outstanding"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:maxLines="2"
+                                            android:text="11/12/2018"
+                                            android:textColor="@color/Black"
+                                            android:textSize="10sp"
+                                            android:visibility="visible" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:visibility="gone">
+
+                                        <TextView
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:background="@drawable/roun_rect_orange23"
+
+                                            android:maxLines="3"
+                                            android:text="งวดล่าสุด"
+                                            android:textColor="@color/white"
+                                            android:textSize="10sp"
+                                            android:visibility="visible" />
+
+                                        <TextView
+                                            android:id="@+id/PayLastPeriod"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:maxLines="3"
+                                            android:text="11"
+                                            android:textColor="@color/Black"
+                                            android:textSize="10sp"
+                                            android:visibility="visible" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="0sp"
+                                    android:layout_marginRight="20dp"
+                                    android:orientation="horizontal"
+
+                                    >
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="0sp"
+                                        android:orientation="vertical"
+
+                                        >
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_marginRight="0dp"
+                                            android:gravity="center"
+
+                                            >
+
+                                            <android.support.v7.widget.RecyclerView
+                                                android:id="@+id/my_recycler_view2_2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:visibility="visible">
+
+                                            </android.support.v7.widget.RecyclerView>
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="0sp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@color/Green"
+                                    android:orientation="horizontal"
+
+                                    >
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/roun_rect_orange23"
+
+                                        android:text="ยอดคงเหลือ"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/txt_balance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:text="11/12/2018"
+                                        android:textColor="@color/Black"
+                                        android:textSize="12sp"
+                                        android:visibility="visible" />
+
+
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+
+                                    <RadioGroup
+                                        android:id="@+id/radioSex2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:id="@+id/RadioButton5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:checked="false"
+                                            android:text="ถูกต้อง" />
+
+                                        <RadioButton
+                                            android:id="@+id/RadioButton6"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="ไม่ถูกต้อง" />
+
+                                    </RadioGroup>
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li_confirm2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="รายละเอียดเพิ่มเติม :"
+                                    android:textSize="10sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <EditText
+                                        android:id="@+id/new_message1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:hint="เขียนโน๊ต เพิ่มเติม/ สาเหตุที่ไม่เรียบร้อยเพราะ..."
+                                        android:textSize="12sp"
+
+                                        />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+
+                                >
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_camera3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/ic_came" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="1.02"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_image3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/background_round_coler"
+
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/icon_picture" />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+
+                                >
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:gravity="center"
+
+                                    >
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/my_recycler_view3"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone">
+
+                                    </android.support.v7.widget.RecyclerView>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+
+                                android:layout_marginRight="20dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/image_pen_sing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_pen"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+
+                                <LinearLayout
+                                    android:id="@+id/linear_pen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/roun_rect_orange2"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="30sp"
+                                        android:layout_height="30sp"
+
+                                        android:background="@drawable/pen_sing" />
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="0dp"
+
+                                        android:gravity="center"
+                                        android:text="  เซ็นชื่อ  "
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+                            <LinearLayout
+                                android:id="@+id/li_conveniently"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="สะดวกรับใบเสร็จและเอกสารต่างๆทางอิเล็กทรอนิกส์หรือไม่?:"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+
+                                    <RadioGroup
+                                        android:id="@+id/radioSex_con"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:id="@+id/RadioButton_re11"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:checked="false"
+                                            android:text="ใช่สะดวก" />
+
+                                        <RadioButton
+                                            android:id="@+id/RadioButton1_re22"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="ไม่สะดวก" />
+
+                                    </RadioGroup>
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="สรุประดับการตรวจสอบ:"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/li_line8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/relativeLayout2"
+
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relativeLayout2"
+
+                                    android:orientation="vertical"
+                                    android:paddingLeft="10dp">
+
+                                    <TextView
+                                        android:id="@+id/count1"
+                                        android:layout_width="50dip"
+                                        android:layout_height="50dip"
+
+
+                                        android:background="@drawable/bg_circle01"
+                                        android:gravity="center"
+
+                                        android:textColor="@android:color/white"
+                                        android:textSize="26dp" />
+
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="ไม่ผ่าน" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="50dp"
+                                    android:layout_height="match_parent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relativeLayout2"
+
+                                    android:orientation="vertical"
+                                    android:paddingLeft="10dp">
+
+                                    <TextView
+                                        android:id="@+id/count2"
+                                        android:layout_width="50dip"
+                                        android:layout_height="50dip"
+
+
+                                        android:background="@drawable/bg_circle8"
+                                        android:gravity="center"
+
+                                        android:textColor="@android:color/white"
+                                        android:textSize="26dp" />
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="เฝ้าระวัง" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="50dp"
+                                    android:layout_height="match_parent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relativeLayout2"
+
+                                    android:orientation="vertical"
+                                    android:paddingLeft="10dp">
+
+                                    <TextView
+                                        android:id="@+id/count3"
+                                        android:layout_width="50dip"
+                                        android:layout_height="50dip"
+
+
+                                        android:background="@drawable/bg_circle"
+                                        android:gravity="center"
+
+                                        android:textColor="@android:color/white"
+                                        android:textSize="26dp" />
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="ผ่าน" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_line9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/Navy" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="ข้อตกลงอื่น ๆ:"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <EditText
+                                        android:id="@+id/new_message3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:hint="เขียนโน๊ต เพิ่มเติม/ อื่น ๆ..."
+                                        android:textSize="8sp"
+
+                                        />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+
+                                >
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:background="@drawable/roun_rect_orange22"
+                                    android:text="ข้อมูล้พิ่มเติม :"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/custom_input2">
+
+                                    <Spinner
+                                        android:id="@+id/spDemo12"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginRight="20dp" />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/li_save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10sp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+
+                                >
+
+                                <RelativeLayout
+                                    android:id="@+id/r_save"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/background_round_coler2"
+                                    android:gravity="left"
+
+                                    >
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+
+                                        >
+
+                                        <ImageView
+                                            android:layout_width="30sp"
+                                            android:layout_height="30sp"
+
+                                            android:background="@drawable/ic_save_black_24dp" />
+
+                                        <TextView
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_marginTop="5sp"
+                                            android:text="  บันทึกรายการ  "
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:id="@+id/r_save2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/background_round_coler4"
+                                    android:gravity="left"
+                                    android:visibility="gone"
+
+                                    >
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+
+                                        >
+
+                                        <ImageView
+                                            android:layout_width="30sp"
+                                            android:layout_height="30sp"
+
+                                            android:background="@drawable/ic_send_white_24dp" />
+
+                                        <TextView
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_marginTop="5sp"
+                                            android:maxLines="1"
+                                            android:text="แจ้งปัญหา"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

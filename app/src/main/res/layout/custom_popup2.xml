@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/custom"
+
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true"
+    android:windowSoftInputMode="adjustPan|adjustResize"
+
+
+
+android:background="@drawable/roun_rect_orange19"
+    android:orientation="vertical">
+
+
+
+
+    <ScrollView
+        android:id="@+id/scrl"
+        android:layout_above="@+id/savee"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        >
+
+
+
+                        <RelativeLayout
+                            android:id="@+id/inputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/linear_sale1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="5sp"
+                                    android:visibility="visible"
+                                    android:layout_gravity="center"
+
+
+
+                                    >
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10sp">
+
+                                        <ImageView
+                                            android:id="@+id/handle0"
+                                            android:layout_width="50sp"
+                                            android:layout_height="50sp"
+                                            android:background="@drawable/bg_circle"
+                                            />
+
+                                    </RelativeLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginLeft="10sp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/txt_namesale0"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:singleLine="true"
+                                            android:text="พนักงาน : นาย อัสนี แหวนหล่อ"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/text_size"
+                                            android:textStyle="bold"
+                                            android:layout_marginTop="5sp"/>
+
+                                        <TextView
+                                            android:id="@+id/txt_position0"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5sp"
+                                            android:layout_alignLeft="@+id/txt_conno"
+                                            android:layout_below="@+id/ddf"
+                                            android:maxLines="2"
+                                            android:text="ตำแหน่ง : พนักงานขาย"
+                                            android:textColor="@color/bg_screen4"
+                                            android:textSize="@dimen/text_size" />
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+
+                                            android:layout_marginLeft="0sp"
+                                            android:orientation="horizontal">
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="ชื่อทีม   : "
+                                                android:textColor="@color/bg_main"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold"
+                                                android:layout_marginTop="5sp"/>
+                                            <TextView
+                                                android:id="@+id/txt_teamcode"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:maxLines="2"
+                                                android:text="A748SD"
+                                                android:textColor="@color/gold"
+                                                android:textSize="@dimen/text_size" />
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginLeft="0sp"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="หัวหน้า : "
+                                                android:textColor="@color/bg_main"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold"
+
+                                                android:layout_marginTop="5sp"/>
+
+
+
+
+
+                                            <TextView
+                                                android:id="@+id/txt_boss"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="นาย ใจสั่งมา โอเย "
+                                                android:textColor="@color/bg_main"
+                                                android:textSize="@dimen/text_size"
+                                                android:textStyle="bold"
+                                                android:layout_marginTop="5sp"/>
+
+
+
+
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginLeft="0sp"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="ตำแหน่ง : หัวหน้า "
+                                                android:textColor="@color/bg_main"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold"
+
+                                                android:layout_marginTop="5sp"/>
+
+
+
+
+                                            <TextView
+                                                android:id="@+id/txt_bossposition"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="Saleteamleader"
+                                                android:textColor="@color/MediumSeaGreen"
+                                                android:textSize="@dimen/text_size"
+                                                android:textStyle="bold"
+                                                android:layout_marginTop="5sp"/>
+
+
+
+
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginLeft="20sp"
+                                        android:layout_marginRight="20sp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginLeft="0sp"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="ลูกค้า : "
+                                                android:textColor="@color/bg_main"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold"
+
+                                                android:layout_marginTop="5sp"/>
+
+
+
+
+
+                                            <TextView
+                                                android:id="@+id/txt_CustomerName"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="นาย นิษา ภู่เกษม "
+                                                android:textColor="@color/bg_main"
+                                                android:textSize="@dimen/text_size"
+                                                android:textStyle="bold"
+                                                android:layout_marginTop="5sp"/>
+
+
+
+
+
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginLeft="0sp"
+                                            android:orientation="horizontal">
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="สินค้า : "
+                                                android:textColor="@color/bg_main"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold"
+                                                android:layout_marginTop="5sp"/>
+                                            <TextView
+                                                android:id="@+id/txt_ProductName"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:maxLines="2"
+                                                android:text="เครื่องกรองน้ำ Power Health"
+                                                android:textColor="@color/gold"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginLeft="0sp"
+                                            android:orientation="horizontal">
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="ราคา : "
+                                                android:textColor="@color/bg_main"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold"
+                                                android:layout_marginTop="5sp"/>
+                                            <TextView
+                                                android:id="@+id/txt_ProductPrice"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:maxLines="2"
+                                                android:text="8800"
+                                                android:textColor="@color/gold"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+
+                                            android:layout_marginLeft="0sp"
+                                            android:orientation="horizontal">
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="ที่อยู่ : "
+                                                android:textColor="@color/bg_main"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold"
+                                                android:layout_marginTop="5sp"/>
+                                            <TextView
+                                                android:id="@+id/txt_Addressall"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+
+                                                android:layout_marginTop="5sp"
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:maxLines="3"
+                                                android:text="99/61 หมู่ หมู่บ้านบัวทองธานี ซอย ไพริน  ถนน บางบัวทอง สุพรรณบุรี ต. บางบัวทอง อ. บางบัวทอง จ. นนทบุรี 11110"
+                                                android:textColor="@color/gold"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <View
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="5dp"
+
+                                    android:background="@android:color/darker_gray" />
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10sp"
+                                >
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_alignLeft="@+id/txt_conno"
+                                    android:layout_below="@+id/ddf"
+                                    android:layout_marginTop="5sp"
+                                    android:background="@drawable/roun_rect_orange8"
+                                    android:gravity="center"
+                                    android:maxLines="3"
+                                    android:text="พนักงานขายที่เกี่ยวข้อง"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/text_size" />
+
+                            </LinearLayout>
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relativeLayout2"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        >
+
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10sp">
+
+                                        <ImageView
+                                            android:id="@+id/handle"
+                                            android:layout_width="38sp"
+                                            android:layout_height="38sp"
+                                            android:background="@drawable/bg_circle"
+                                            />
+
+                                    </RelativeLayout>
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:layout_gravity="center"
+                                        >
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginLeft="10sp"
+
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/txt_namesale"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="พนัก "
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/text_size"
+                                                android:textStyle="bold"
+                                                android:ellipsize="end"
+                                                android:lines="1"
+                                                android:layout_marginTop="5sp"/>
+
+
+
+                                            <TextView
+                                                android:id="@+id/txt_position"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:maxLines="2"
+                                                android:text="ตำแหน่"
+                                                android:ellipsize="end"
+                                                android:lines="1"
+                                                android:textColor="@color/bg_screen4"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:layout_gravity="center"
+                                        >
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="right"
+                                            android:layout_marginLeft="0sp"
+                                            android:gravity="right"
+
+                                            android:orientation="horizontal">
+
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:singleLine="true"
+                                                android:text="สถาณะ : "
+                                                android:textColor="@color/Yellow"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/txt_status_name"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:layout_marginTop="5sp"
+                                                android:background="@drawable/roun_rect_orange17"
+                                                android:gravity="center"
+                                                android:maxLines="3"
+                                                android:text="ยังทำงานอยู่"
+                                                android:textColor="@color/gold"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relativeLayout2"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        >
+
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10sp">
+
+                                            <ImageView
+                                                android:id="@+id/handle2"
+                                                android:layout_width="38sp"
+                                                android:layout_height="38sp"
+                                                android:background="@drawable/bg_circle"
+                                                />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:layout_gravity="center"
+                                        >
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginLeft="10sp"
+
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/txt_namesale2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="พนัก "
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/text_size"
+                                                android:textStyle="bold"
+                                                android:ellipsize="end"
+                                                android:lines="1"
+                                                android:layout_marginTop="5sp"/>
+
+
+
+                                            <TextView
+                                                android:id="@+id/txt_position2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:maxLines="2"
+                                                android:text="ตำแหน่"
+                                                android:ellipsize="end"
+                                                android:lines="1"
+                                                android:textColor="@color/bg_screen4"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:layout_gravity="center"
+                                        >
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="right"
+                                            android:layout_marginLeft="0sp"
+                                            android:gravity="right"
+
+                                            android:orientation="horizontal">
+
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:singleLine="true"
+                                                android:text="สถาณะ : "
+                                                android:textColor="@color/Yellow"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/txt_status_name2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:layout_marginTop="5sp"
+                                                android:background="@drawable/roun_rect_orange17"
+                                                android:gravity="center"
+                                                android:maxLines="3"
+                                                android:text="ยังทำงานอยู่"
+                                                android:textColor="@color/gold"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relativeLayout2"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        >
+
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10sp">
+
+                                            <ImageView
+                                                android:id="@+id/handle3"
+                                                android:layout_width="38sp"
+                                                android:layout_height="38sp"
+                                                android:background="@drawable/bg_circle"
+                                                />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:layout_gravity="center"
+                                        >
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginLeft="10sp"
+
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/txt_namesale3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="พนัก "
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/text_size"
+                                                android:textStyle="bold"
+                                                android:ellipsize="end"
+                                                android:lines="1"
+                                                android:layout_marginTop="5sp"/>
+
+
+
+                                            <TextView
+                                                android:id="@+id/txt_position3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:maxLines="2"
+                                                android:text="ตำแหน่"
+                                                android:ellipsize="end"
+                                                android:lines="1"
+                                                android:textColor="@color/bg_screen4"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:layout_gravity="center"
+                                        >
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="right"
+                                            android:layout_marginLeft="0sp"
+                                            android:gravity="right"
+
+                                            android:orientation="horizontal">
+
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:singleLine="true"
+                                                android:text="สถาณะ : "
+                                                android:textColor="@color/Yellow"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/txt_status_name3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:layout_marginTop="5sp"
+                                                android:background="@drawable/roun_rect_orange17"
+                                                android:gravity="center"
+                                                android:maxLines="3"
+                                                android:text="ยังทำงานอยู่"
+                                                android:textColor="@color/gold"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relativeLayout2"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        >
+
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10sp">
+
+                                            <ImageView
+                                                android:id="@+id/handle4"
+                                                android:layout_width="38sp"
+                                                android:layout_height="38sp"
+                                                android:background="@drawable/bg_circle"
+                                                />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:layout_gravity="center"
+                                        >
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginLeft="10sp"
+
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/txt_namesale4"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="พนัก "
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/text_size"
+                                                android:textStyle="bold"
+                                                android:ellipsize="end"
+                                                android:lines="1"
+                                                android:layout_marginTop="5sp"/>
+
+
+
+                                            <TextView
+                                                android:id="@+id/txt_position4"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:maxLines="2"
+                                                android:text="ตำแหน่"
+                                                android:ellipsize="end"
+                                                android:lines="1"
+                                                android:textColor="@color/bg_screen4"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:layout_gravity="center"
+                                        >
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="right"
+                                            android:layout_marginLeft="0sp"
+                                            android:gravity="right"
+
+                                            android:orientation="horizontal">
+
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:singleLine="true"
+                                                android:text="สถาณะ : "
+                                                android:textColor="@color/Yellow"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/txt_status_name4"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:layout_marginTop="5sp"
+                                                android:background="@drawable/roun_rect_orange17"
+                                                android:gravity="center"
+                                                android:maxLines="3"
+                                                android:text="ยังทำงานอยู่"
+                                                android:textColor="@color/gold"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relativeLayout2"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        >
+
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10sp">
+
+                                            <ImageView
+                                                android:id="@+id/handle5"
+                                                android:layout_width="38sp"
+                                                android:layout_height="38sp"
+                                                android:background="@drawable/bg_circle"
+                                                />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:layout_gravity="center"
+                                        >
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginLeft="10sp"
+
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/txt_namesale5"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:singleLine="true"
+                                                android:text="พนัก "
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/text_size"
+                                                android:textStyle="bold"
+                                                android:ellipsize="end"
+                                                android:lines="1"
+                                                android:layout_marginTop="5sp"/>
+
+
+
+                                            <TextView
+                                                android:id="@+id/txt_position5"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:maxLines="2"
+                                                android:text="ตำแหน่"
+                                                android:ellipsize="end"
+                                                android:lines="1"
+                                                android:textColor="@color/bg_screen4"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="0sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:layout_gravity="center"
+                                        >
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="right"
+                                            android:layout_marginLeft="0sp"
+                                            android:gravity="right"
+
+                                            android:orientation="horizontal">
+
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5sp"
+                                                android:singleLine="true"
+                                                android:text="สถาณะ : "
+                                                android:textColor="@color/Yellow"
+                                                android:textSize="6sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/txt_status_name5"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:layout_alignLeft="@+id/txt_conno"
+                                                android:layout_below="@+id/ddf"
+                                                android:layout_marginTop="5sp"
+                                                android:background="@drawable/roun_rect_orange17"
+                                                android:gravity="center"
+                                                android:maxLines="3"
+                                                android:text="ยังทำงานอยู่"
+                                                android:textColor="@color/gold"
+                                                android:textSize="@dimen/text_size" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+                                <View
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="10dp"
+
+                                    android:background="@android:color/darker_gray" />
+
+
+
+
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/linear_status"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+
+                                    android:paddingLeft="15sp"
+                                    android:paddingRight="15sp"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    >
+
+                                    <LinearLayout
+
+                                        android:id="@+id/linear_coler"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:visibility="visible"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:background="@color/base_gray_green"
+                                        android:padding="4dp">
+
+
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.60"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:background="@drawable/roun_rect_orange15"
+                                            >
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:text="สถานะการแจ้งปัญหา :"
+                                                android:textSize="12sp" />
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.2"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:id="@+id/image_status"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/ic_check_circle_white_24dp"
+                                                />
+                                        </LinearLayout>
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.6"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+                                            <TextView
+                                                android:id="@+id/txt_status"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="left"
+
+                                                android:text="แจ้งปัญหาแล้ว"
+                                                android:textColor="@color/white"
+                                                android:textSize="14sp" />
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

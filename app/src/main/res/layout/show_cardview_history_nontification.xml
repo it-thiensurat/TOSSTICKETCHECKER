@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/AntiqueWhite"
+    android:backgroundTint="@color/white"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+android:background="@drawable/background3"
+        android:orientation="horizontal">
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+
+            >
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top">
+
+            <ImageView
+                android:id="@+id/VollyNetworkImageView1"
+                android:layout_width="70dp"
+                android:layout_height="70dip"
+                android:background="@drawable/bg_circle"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/lbl_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="ฮัสนี แหวนหล่อ"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/sa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="     |     "
+                        android:textColor="@color/Black"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/position"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="Sale"
+                    android:textColor="@color/Black"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/head_topic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="left"
+
+                    android:text="แจ้งการแก้ไขปัญหาทั้งหมดแล้ว"
+                    android:textColor="@color/input_register_hint"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/Bisque"
+                    android:gravity="center|left"
+
+                    android:text="ญหาcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+                    android:textColor="@color/input_register_hint"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+
+                    android:layout_below="@+id/relativeLayout2"
+                    android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/device_by"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:ellipsize="end"
+                    android:lines="1"
+
+                    android:text="จาก Mobile"
+                    android:textColor="@color/MediumVioletRed"
+                    android:textSize="8sp" />
+
+
+            </LinearLayout>
+
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="      :     "
+                        android:textColor="@color/Black"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="8dp"
+                android:layout_below="@+id/relativeLayout2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lbl_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:gravity="left"
+                    android:text="6 ต.ค 2560"
+                    android:textColor="@color/bg_register"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.27"
+
+
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/advertising"
+                    android:backgroundTint="@android:color/darker_gray"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+

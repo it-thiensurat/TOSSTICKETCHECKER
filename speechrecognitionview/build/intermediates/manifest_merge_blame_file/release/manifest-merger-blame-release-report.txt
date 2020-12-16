@@ -1,0 +1,11 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.github.zagum.speechrecognitionview" >
+4
+5    <uses-sdk android:minSdkVersion="17" />
+5-->D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml
+6
+7    <application />
+7-->D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml:3:5-19
+8
+9</manifest>

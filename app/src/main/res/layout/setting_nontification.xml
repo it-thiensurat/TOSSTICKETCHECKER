@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btn_logut_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingLeft="0dp">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/btn_logut_bg"
+            android:textStyle="bold"
+            android:text="   เลือกเสียงแจ้งเตือน" />
+
+
+        <RadioGroup
+            android:id="@+id/myRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:background="@color/btn_logut_bg"
+            android:checkedButton="@+id/sound">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="nontification" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton"
+                android:layout_alignStart="@+id/radioButton"
+                android:layout_below="@+id/radioButton"
+                android:text="capisci" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton2"
+                android:layout_alignStart="@+id/radioButton2"
+                android:layout_below="@+id/radioButton2"
+                android:text="chafing" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton3"
+                android:layout_alignStart="@+id/radioButton3"
+                android:layout_below="@+id/radioButton3"
+                android:text="coins" />
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton4"
+                android:layout_alignStart="@+id/radioButton4"
+                android:layout_below="@+id/radioButton4"
+                android:text="come to daddy" />
+
+            <RadioButton
+                android:id="@+id/radioButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton5"
+                android:layout_alignStart="@+id/radioButton5"
+                android:layout_below="@+id/radioButton5"
+                android:text="communication channel" />
+
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton6"
+                android:layout_alignStart="@+id/radioButton6"
+                android:layout_below="@+id/radioButton6"
+                android:text="credulous" />
+
+            <RadioButton
+                android:id="@+id/radioButton8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton7"
+                android:layout_alignStart="@+id/radioButton7"
+                android:layout_below="@+id/radioButton7"
+                android:text="demonstrative" />
+
+            <RadioButton
+                android:id="@+id/radioButton9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton8"
+                android:layout_alignStart="@+id/radioButton8"
+                android:layout_below="@+id/radioButton8"
+                android:text="et voila" />
+
+            <RadioButton
+                android:id="@+id/radioButton10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioButton9"
+                android:layout_centerHorizontal="true"
+                android:text="get outta here" />
+
+            <RadioButton
+                android:id="@+id/radioButton11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton10"
+                android:layout_alignStart="@+id/radioButton10"
+                android:layout_below="@+id/radioButton10"
+                android:text="gets in the way" />
+
+            <RadioButton
+                android:id="@+id/radioButton12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton11"
+                android:layout_alignStart="@+id/radioButton11"
+                android:layout_below="@+id/radioButton11"
+                android:text="good morning" />
+
+            <RadioButton
+                android:id="@+id/radioButton13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioButton12"
+                android:layout_centerHorizontal="true"
+                android:text="happy new year sms" />
+
+            <RadioButton
+                android:id="@+id/radioButton14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/radioButton13"
+                android:layout_alignRight="@+id/radioButton13"
+                android:layout_below="@+id/radioButton13"
+                android:text="isn't it" />
+
+            <RadioButton
+                android:id="@+id/radioButton15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton14"
+                android:layout_alignStart="@+id/radioButton14"
+                android:layout_below="@+id/radioButton14"
+                android:text="jingle bells sms" />
+
+            <RadioButton
+                android:id="@+id/radioButton16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton15"
+                android:layout_alignStart="@+id/radioButton15"
+                android:layout_below="@+id/radioButton15"
+                android:text="job done" />
+
+            <RadioButton
+                android:id="@+id/radioButton17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton16"
+                android:layout_alignStart="@+id/radioButton16"
+                android:layout_below="@+id/radioButton16"
+                android:text="just like magic" />
+
+            <RadioButton
+                android:id="@+id/radioButton18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="nice cut" />
+
+
+            <RadioButton
+                android:id="@+id/radioButton19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/radioButton17"
+                android:layout_alignRight="@+id/radioButton17"
+                android:layout_below="@+id/radioButton17"
+                android:text="oh boy" />
+
+            <RadioButton
+                android:id="@+id/radioButton20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton19"
+                android:layout_alignStart="@+id/radioButton19"
+                android:layout_below="@+id/radioButton19"
+                android:text="served" />
+
+            <RadioButton
+                android:id="@+id/radioButton21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton20"
+                android:layout_alignStart="@+id/radioButton20"
+                android:layout_below="@+id/radioButton20"
+                android:text="solemn" />
+
+            <RadioButton
+                android:id="@+id/radioButton22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/radioButton21"
+                android:layout_alignStart="@+id/radioButton21"
+                android:layout_below="@+id/radioButton21"
+                android:text="surprise on a spring" />
+
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignLeft="@+id/button8"
+                android:layout_alignStart="@+id/button8"
+                android:layout_below="@+id/button8"
+
+                android:text="คืนค่า" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:text="บันทึก" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

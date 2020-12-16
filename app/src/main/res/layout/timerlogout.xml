@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutmain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="244dp"
+        android:layout_height="314dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="1px"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="vertical"
+        android:padding="5dip"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        android:soundEffectsEnabled="true"></ListView>
+
+    <Button
+        android:id="@+id/btnaddtocart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Set_Time_Save" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Set_Time_cancel" />
+
+</LinearLayout>

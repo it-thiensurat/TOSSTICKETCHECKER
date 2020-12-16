@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="0dp"
+
+        tools:ignore="MissingConstraints">
+        <TableRow android:background="#0079D6" android:padding="5dp"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="งวดที่"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ยอดชำระ"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="สถานะ"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tata"
+            android:background="#DAE8FC" android:padding="5dp">
+            <TextView
+                android:id="@+id/txt_PaymentPeriodNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/text_12"
+                />
+            <TextView
+                android:id="@+id/txt_PaymentAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Suresh Dasari"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="@dimen/text_12"/>
+            <TextView
+                android:id="@+id/txt_Discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hyderabad"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+
+                android:textSize="@dimen/text_12"/>
+            <TextView
+                android:id="@+id/txt_NetAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Hyderabad"
+
+                android:textSize="@dimen/text_12"/>
+            <TextView
+                android:id="@+id/txt_PaymentComplete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Hyderabad"
+
+                android:textSize="@dimen/text_12"/>
+        </TableRow>
+        <TableRow
+            android:visibility="gone"
+            android:background="#8ecee5"
+
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rohini Alavala" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Guntur" />
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

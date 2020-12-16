@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/AntiqueWhite"
+    android:backgroundTint="@color/AntiqueWhite"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="3dp"
+    card_view:cardMaxElevation="3dp"
+    card_view:contentPadding="3dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/LemonChiffon">
+
+
+        <LinearLayout
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lbl_problem"
+            android:layout_width="150dip"
+            android:layout_height="18dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            android:textSize="10sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/lbl_problem"
+            android:layout_alignBottom="@+id/lbl_problem"
+            android:layout_toEndOf="@+id/lbl_problem"
+            android:layout_toRightOf="@+id/lbl_problem" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+

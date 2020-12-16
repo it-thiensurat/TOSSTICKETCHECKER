@@ -1,0 +1,385 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<!--    <string name="app_name">TOSS TICKET CHECKER</string>-->
+
+    <string name="title_activity_music" tools:ignore="ExtraTranslation">PROBLEM REPORT</string>
+    <string name="home_tab">Home tab</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="read_file">This app needs access to your file storage so that it can read photos.</string>
+    <string name="action_settings">Settings</string>
+    <string name="adele_hello">Playing now Hello by Adele</string>
+    <string name="music_library">Library</string>
+    <string name="music_songs">Songs</string>
+    <string name="music_playlists">Playlists</string>
+    <string name="music_albums">Albums</string>
+    <string name="music_artists">Artists</string>
+    <string name="remote_services">Remote Services</string>
+    <string name="sound_cloud">Sound Cloud</string>
+    <string name="local_services">Local Services</string>
+    <string name="app_raw_folder">App raw folder</string>
+    <string name="tips_badge_removed" translatable="false">Badge is removed</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recently_played_songs">Recently Played Songs</string>
+    <string name="hello">Someone Like You</string>
+    <string name="adele">Adele</string>
+    <string name="your_playlists">Your Playlists</string>
+    <string name="let_me_go">Let Me Go</string>
+
+    <string name="action_back">Back</string>
+    <string name="action_forward">Forward</string>
+    <string name="action_bookmark">Bookmark</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">หน้าหลัก</string>
+    <string name="nav_photos">รายงานการแก้ไขปัญหา</string>
+    <string name="nav_movies">หนัง</string>
+    <string name="nav_notifications">การแจ้งเตือน</string>
+    <string name="nav_settings">ตั้งค่า</string>
+    <string name="nav_about_us">เกี่ยวกับเรา</string>
+    <string name="nav_profile">ตั้งค่า</string>
+    <string name="nav_setting">เกี่ยวกับเรา</string>
+    <string name="nav_logout">ออกจากระบบ</string>
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>หน้าหลัก</item>
+        <item>รายงานการแก้ไขปัญหา</item>
+        <item>หนัง</item>
+        <item>การแจ้งเตือน</item>
+        <item>ตั้งค่า</item>
+    </string-array>
+
+    <string name="activity_title_about_us">เกี่ยวกับเรา</string>
+    <string name="activity_title_privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+
+
+    <string name="pleaseconnectinternet">Please connect internet.</string>
+    <string name="yourmistalk">คุณกรอกรหัสเติมเงินผิดเกิน 3 ครั้ง ทำให้ไม่สามารถเติมเงินได้อีกในครั้งต่อไป กรุณาติดต่อเจ้าหน้าที่</string>
+    <string name="Savesuccess">บันทึกไปที่แกลเลอรี่เรียบร้อยแล้ว</string>
+    <string name="No">ไม่</string>
+    <string name="filesavedat">บันทึกภาพไว้ที่  </string>
+    <string name="thisimagecannotbedisplay">ไม่สามารถแสดงภาพนี้ได้</string>
+    <string name="share">แบ่งปัน</string>
+    <string name="openwith">เปิดด้วย</string>
+    <string name="open">เปิดดู</string>
+    <string name="close">ปิด</string>
+    <string name="login">Login</string>
+    <string name="Change_New_password">Change New password</string>
+    <string name="Set_logout_Time">Set logout Time</string>
+    <string name="Change_language">Change language</string>
+    <string name="Select_Start_Page">Select Start Page</string>
+    <string name="Increase_the_security_level">Increase the security level</string>
+    <string name="Change_background">Change background</string>
+    <string name="Logout">Logout</string>
+    <string name="Pay">Pay</string>
+    <string name="transfer">transfer</string>
+    <string name="Top_up_by_card">Top up by card</string>
+    <string name="top_up_by_online">Get</string>
+
+    <string name="Check_balances">Check balances</string>
+    <string name="Transaction_History">Transaction History</string>
+    <string name="Set_Time_Save">Set Time Save</string>
+    <string name="Set_Time_cancel">Set Time cancel</string>
+
+
+    <string name="Select_image_gallery">Select image gallery</string>
+    <string name="Select_image_App">Select image App</string>
+    <string name="Restore_original_image">Restore original image</string>
+    <string name="Save_in_image">Save</string>
+    <string name="registershop">Register shop</string>
+    <string name="shopinfo">Shop info</string>
+    <string name="View">View</string>
+    <string name="Edit">Edit</string>
+    <string name="Delete">Delete</string>
+    <string name="bath"> Bath</string>
+    <string name="Sum">Sum </string>
+    <string name="hourtoreturn">Hour to return money </string>
+
+
+    <string name="one">ONE</string>
+    <string name="eight">EIGHT</string>
+    <string name="five">FIVE</string>
+    <string name="four">FOUR</string>
+    <string name="nine">NINE</string>
+    <string name="seven">SEVEN</string>
+    <string name="six">SIX</string>
+    <string name="ten">TEN</string>
+    <string name="three">THREE</string>
+    <string name="two">TWO</string>
+    <string name="title_activity_scrollable_tabs">Scrollable Tabs</string>
+    <string name="title_activity_simple_tabs">Simple Tabs</string>
+    <string name="btn_simple_tabs">Simple Tabs</string>
+    <string name="btn_scrollable_tabs">Scrollable Tabs</string>
+    <string name="btn_icon_text_tabs">Icon &amp; Text Tabs</string>
+    <string name="btn_icon_tabs">Only Icon Tabs</string>
+    <string name="btn_pinned_top_tabs">Pinned To Top Tabs</string>
+    <string name="title_activity_icon_text_tabs">Icon and Text Tabs</string>
+    <string name="title_activity_icon_tabs">Icon Tabs</string>
+    <string name="btn_custom_icon_tabs">Custom View Icon &amp; Text</string>
+    <string name="title_activity_custom_view_icon_text_tabs">Custom View Icon &amp; Text</string>
+    <string name="title_activity_pinned_top_tabs">Pin Top Tabs</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="hello_world">Hello world!</string>
+
+
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="authen_button">Log in</string>
+
+    <string name="menu_item_1">Home</string>
+    <string name="menu_item_2">Other</string>
+    <string name="menu_item_3">Log out</string>
+
+    <string name="music">Music</string>
+    <string name="backup">Backup</string>
+    <string name="friends">Friends</string>
+    <string name="favor">Favor</string>
+    <string name="intro">Capture a picture to crop!</string>
+    <string name="visibility">Visibility</string>
+    <string name="picture">Picture</string>
+    <string name="capture">Launch Camera</string>
+
+
+    <string name="tab_1">Label 1</string>
+    <string name="tab_2">Label 2</string>
+    <string name="tab_3">Label 3</string>
+    <string name="tab_4">Label 4</string>
+    <string name="tab_5">Label 5</string>
+
+    <string name="menu_1">Menu 1</string>
+    <string name="menu_2">Menu 2</string>
+    <string name="menu_3">Menu 3</string>
+    <string name="menu_4">Menu 4</string>
+    <string name="menu_5">Menu 5</string>
+
+
+    <string name="welcomanim_title_login">登录</string>
+    <string name="welcomanim_title_regin">注册</string>
+    <string name="welcomanim_title_phone">+86</string>
+    <string name="welcomanim_title_psw">密码</string>
+    <string name="welcomanim_title_forgetpsw">忘记密码?</string>
+    <string name="welcomanim_title_psw_hint">请输入用户密码</string>
+    <string name="welcomanim_title_social">使用社交账号快速登录</string>
+    <string name="welcomanim_title_social_weibo">微博登录</string>
+    <string name="welcomanim_title_social_wechat">微信登录</string>
+    <string name="welcomanim_title_social_qq">QQ登录</string>
+    <string name="welcomanim_title_share">分享到社区</string>
+    <string name="welcomanim_title_policy">隐私政策</string>
+    <string name="welcomanim_down">下载原版小红书</string>
+
+
+    <string name="input_phone">请输入你的手机号码</string>
+    <string name="reg_select_country">请选择国家地区</string>
+    <string name="reg_write_identify_code">请输入短信验证码</string>
+    <string name="smssdk_write_mobile_phone">请填写手机号码</string>
+    <string name="reg_send_ver">发送</string>
+    <string name="reg_next">验证并登录</string>
+
+
+    <string name="action_about">About</string>
+
+
+    <string name="app_description">A library that checks for your apps\' updates on Google Play, GitHub, Amazon or F-Droid.</string>
+    <string name="app_icon"><a href="https://plus.google.com/+AdrienZier">Sample icon designed by Adrien Zier.</a></string>
+    <string name="btn_dialog_update_changelog">Show dialog (JSON with changelog)</string>
+    <string name="btn_dialog_update">Show dialog (JSON)</string>
+    <string name="btn_snackbar_update">Show snackbar (XML)</string>
+    <string name="btn_notification_update">Show notification (XML)</string>
+    <string name="btn_dialog_google_play">Show dialog (Google Play)</string>
+    <string name="btn_snackbar_google_play">Show snackbar (Google Play)</string>
+    <string name="btn_notification_google_play">Show notification (Google Play)</string>
+
+    <string name="settings_check_for_updates">Check for updates</string>
+    <string name="settings_check_for_updates_summary">Check for new versions using AppUpdater library.</string>
+
+
+    <string name="appupdater_update_available">New update available!</string>
+    <string name="appupdater_update_available_description_dialog">Update %1$s is available to download. By downloading the latest update you will get the latest features, improvements and bug fixes for %2$s.</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">Update %1$s is available to download.\n\nYou can get these new features:\n%2$s</string>
+    <string name="appupdater_update_available_description_snackbar">Update %1$s is available!</string>
+
+
+    <string name="appupdater_update_available_description_notification">Update %1$s of %2$s is available to download</string>
+
+
+    <string name="appupdater_update_not_available">No updates available</string>
+    <string name="appupdater_update_not_available_description">You\'ve got the latest version available of %s!</string>
+    <string name="appupdater_btn_update">Update</string>
+    <string name="appupdater_btn_disable">Don\'t show again</string>
+    <string name="appupdater_btn_dismiss">Dismiss</string>
+
+
+    <string name="text">Squid blog crucifix Marfa, consectetur vero placeat mixtape. Non seitan sriracha eu, do Banksy fashion axe cred qui vegan delectus consequat Helvetica mollit. XOXO gluten-free disrupt, gastropub officia cliche chillwave hella pop-up. Fixie swag raw denim, YOLO craft beer assumenda occupy veniam photo booth pug consectetur next level Portland tote bag +1. Mlkshk PBR aliquip placeat Wes Anderson.</string>
+    <string name="title">My Description</string>
+    <string name="context_menu">Context menu</string>
+
+
+    <string name="action_search">Search</string>
+    <string name="action_delete">Delete</string>
+
+
+    <string name="pick_a_color">Pick a color …</string>
+    <string name="youve_picked">You\'ve picked:</string>
+
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+
+    <string name="dialog_add">New playlist</string>
+    <string name="dialog_edit">Edit playlist</string>
+    <string name="dialog_delete">Delete playlist</string>
+    <string name="btn_show">Show</string>
+
+
+    <!-- TODO Change those Ad ID by your own Ad ID -->
+    <!-- app ad section -->
+    <string name="app_ad_id">ca-app-pub-6382099871444261~2045692236</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <!-- end of the ad section -->
+
+    <!-- TODO Change app name and splash text from here -->
+
+    <string name="splash_text">QR | Barcode\nScanner and Generator</string>
+    <string name="action_flash">Flash</string>
+    <string name="action_focus">Auto Focus</string>
+    <string name="action_cam">Switch Camera</string>
+
+    <string name="menu_scan">Scan</string>
+    <string name="menu_generate">Generate</string>
+    <string name="menu_history">History</string>
+
+
+    <string name="tapAgain">Tap again to exit!</string>
+
+    <string name="permission_not_granted">Permission not granted!</string>
+
+    <string name="autofocus_on">Autofocus activated</string>
+    <string name="autofocus_off">Autofocus deactivated</string>
+
+    <string name="type_here_bar">Generate barcode</string>
+    <string name="type_here_qr">Generate QR code</string>
+
+    <string name="copied">Copied to clipboard.</string>
+    <string name="result">Result</string>
+    <string name="scanned_result">Scanned result:</string>
+
+    <string name="saving">Saving...</string>
+    <string name="preparing">Preparing...</string>
+    <string name="saved_to">Saved to:\n</string>
+    <string name="directory_in">directory in SD card.</string>
+    <string name="no_history">History empty</string>
+
+    <string name="copy">Copy</string>
+    <string name="search">Search in Web</string>
+    <string name="share_text">Share</string>
+    <string name="action">Action</string>
+
+    <string name="action_visit">Browse URL</string>
+    <string name="action_youtube">Open Video in YouTube</string>
+    <string name="action_call">Call</string>
+    <string name="action_email">Email</string>
+
+    <string name="delete_message_item">Are you sure you want to delete this item?</string>
+    <string name="delete_message_all">Are you sure you want to clear the list?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <string name="more_info">More Information</string>
+    <string name="less_info">Less Information</string>
+
+    <string name="ezreal">An example Application name</string>
+    <string name="ezreal_label">Short description: Lorem ipsum dolor sit amet...</string>
+    <string name="ezreal_story">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula sem. Nulla nisi elit, cursus faucibus nisl sed,
+        congue eleifend dolor. Aliquam nec porta arcu. Praesent consequat luctus justo ut gravida. Quisque turpis diam, rutrum nec nisl sit amet, congue vestibulum lorem. Nam faucibus aliquam enim eleifend porttitor. In eget rhoncus mi, vitae bibendum ex. Proin facilisis egestas urna. Nunc accumsan interdum sapien. Aenean gravida tortor at massa fermentum, et sollicitudin sapien rutrum. Praesent at mattis est. Donec at quam eros. In eleifend sapien nec ex placerat scelerisque. Suspendisse semper sapien eget libero sagittis rutrum.</string>
+    <string name="jinx_label">Primary role : Marksman (ADCarry)  \nSecondary role : N/A</string>
+    <string name="jinx_story">Morbi aliquet id augue non pretium. Maecenas at augue lectus. Suspendisse eget malesuada ligula, vitae tincidunt purus. Nunc tortor augue, sollicitudin eget enim quis, gravida tempus tellus. Sed interdum magna vehicula rutrum interdum. Nunc in imperdiet nisl. Suspendisse tempus lorem eget elementum placerat. Cras felis odio, ornare eu
+        purus id, accumsan pharetra odio. Etiam vel semper dolor. Suspendisse facilisis purus at enim euismod tempor.</string>
+
+
+    <string name="tab1">CALLS</string>
+    <string name="tab2">CHATS</string>
+    <string name="tab3">CONTACTS</string>
+
+    <string name="action_chat">Chat</string>
+    <string name="action_new_group">New Group</string>
+    <string name="action_new_broadcast">New broadcast</string>
+    <string name="action_whatsapp_web">WhatsApp Web</string>
+    <string name="action_starred_messages">Starred messages</string>
+    <string name="action_status">Status</string>
+
+    <string name="action_clear_call_log">Clear call log</string>
+    <string name="action_calls">Calls</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_contacts">Contacts</string>
+    <string name="action_without_icon">Without Icon</string>
+    <string name="action_with_icon">With Icon</string>
+    <string name="action_custom">Custom Tab</string>
+
+
+    <string name="permission_accessibility_setting_description">"Turn on and it locks all soft key including HOME, RECENTS, BACK, MENU buttons.
+
+You may be warned about potential privacy risk, that's just a regular informative warning for any accessibility service. We promise NEVER EVER collecting your personal information in this accessibility service."</string>
+
+
+    <!--All hard-coded strings are defined here-->
+    <string name="mobile_no">Mobile No.</string>
+    <string name="call">Call</string>
+    <string name="phone_empty_message">Please enter phone no.!</string>
+    <string name="invalid_no_message">Invalid phone no.!</string>
+    <string name="call_permission_denied_message">Call permission denied</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Permissions-->
+    <string name="permission_message_title">แจ้งเตือน</string>
+    <string name="permission_message_button">ตกลง</string>
+    <string name="permission_message_msg">กรุณาให้สิทธิ์ก่อนเข้าใช้งาน TOSS TICKET CHECKER</string>
+    <string name="permission_message_camera">อนุญาตให้ TOSS TICKET CHECKER ถ่ายภาพและบันทึกวิดีโอก่อนเข้าใช้งาน</string>
+    <string name="permission_message_storage">อนุญาตให้ TOSS TICKET CHECKER เข้าถึงรูปภาพ สื่อ และไฟล์บนอุปกรณ์ก่อนเข้าใช้งาน</string>
+    <string name="permission_message_location">อนุญาตให้ TOSS TICKET CHECKER เข้าถึงตำแหน่งของอุปกรณ์ก่อนเข้าใช้งาน</string>
+    <string name="permission_message_camera_and_storage">อนุญาตให้ TOSS TICKET CHECKER ถ่ายภาพ บันทึกวิดีโอ เข้าถึงรูปภาพ สื่อ และไฟล์บนอุปกรณ์ก่อนเข้าใช้งาน</string>
+    <!--Permissions-->
+
+</resources>

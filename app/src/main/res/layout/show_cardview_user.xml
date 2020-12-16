@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/AntiqueWhite"
+    android:backgroundTint="@color/AntiqueWhite"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="3dp"
+    card_view:cardMaxElevation="3dp"
+    card_view:contentPadding="3dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="90dip"
+            android:background="@color/White">
+
+
+            <ImageView
+                android:id="@+id/VollyNetworkImageView1"
+                android:layout_width="75dp"
+                android:layout_height="75dip"
+                android:background="@drawable/bg_circle"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/count2"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/VollyNetworkImageView1"
+                android:background="@drawable/bg_circle2"
+                android:gravity="center"
+                android:text="NEW"
+                android:textColor="@android:color/white"
+                android:textSize="8dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lbl_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="ฮัสนี แหวนหล่อ"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/empid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+
+                    android:text="A1111"
+                    android:textColor="@color/Brown"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblposition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Sale"
+                    android:textColor="@color/gold"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/relativeLayout2"
+
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/relativeLayout2"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lbl_problem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+
+                    android:text="xxxxxxxxxxxxxxxxxxxxxxxx"
+                    android:textColor="@color/Black"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.27"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true">
+                    <TextView
+                        android:id="@+id/lbl_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21 ส.ค.2560"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/bg_register"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:paddingLeft="90dp">
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_below="@+id/lbl_sale"
+
+                    android:background="@drawable/bg_circle"
+                    android:gravity="center"
+                    android:paddingLeft="0dp"
+                    android:text="5"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+

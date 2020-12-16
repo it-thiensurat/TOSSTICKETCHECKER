@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:windowSoftInputMode="adjustPan|adjustResize"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_above="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roun_rect_orange6"
+            android:text="comment..."
+            android:textColor="#fff"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/messageToSend"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:clickable="false"
+            android:layout_gravity="center_vertical"
+            android:background="@color/LemonChiffon"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/roun_rect_orange6"
+            android:text="ส่ง"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

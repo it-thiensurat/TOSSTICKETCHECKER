@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tsr.tsrproblemreport_tossticket_checker">
+
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- vibration permission -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- phone call permission -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+
+
+    <application
+        android:name="com.tsr.tsrproblemreport_tossticket_checker.other_all.MyApplication"
+        android:allowBackup="true"
+        android:icon="${appIcon}"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:theme"
+
+
+        >
+
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <!-- android:name="com.tsr.tsrproblemreport.check_after_sale.qrcode.fragment.GenerateActivity" -->
+        <!-- .jsonlogin.LOGIN_MAIN -->
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.jsonlogin.INTRO_APP">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+
+
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.pagination.MainActivity_page_data"
+            android:screenOrientation="portrait">
+
+
+
+
+
+        </activity>
+
+
+
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.test_image"
+            android:label="ทดสอบเก้บรูปภาพ"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.activity.Detali_check1"
+            android:label="รายละเอียดการตรวจสอบ"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.activity.Detali_check2"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.activity.Detali_check3"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+        <!--      <activity
+            android:name="com.tsr.tsrproblemreport_tossticket.Monitoring_system.activity.Detali_check1"
+            android:label="ตรวจสอบได้ เข้าบ้านลูกค้าได้"
+            android:screenOrientation="portrait"
+
+
+            />-->
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.TestImageZoomActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.qrcode.MainActivity_barcode"
+            android:label="สแกน QR / BAR CODE"
+            android:screenOrientation="portrait"/>
+
+
+
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.pen_sing.SignatureActivity"
+            android:label="เซ็นชื่อ"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.jsonlogin.INTRO_APP_HOME"
+
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.Activity_Call"
+            android:label="โทรหาลูกค้า"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.uploads_image.Upload_image"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Detali_data_cedit2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Detali_data_cedit3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Detali_data_cedit3_2"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Detali_data_cedit3_2_edit_tel"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Detali_data_cedit3_3"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Detali_data_cedit3_4"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.jsonlogin.LOGIN_MAIN"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.UI_CARDVIEW_DATA_CREDIT_BEFORE_EDIT_PROBLEM_INTRO_FRAGMENT2_Acti"
+            android:label="รายการ การแจ้งปัญหา"
+            android:screenOrientation="portrait" />
+
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.UI_CARDVIEW_DATA_CREDIT_BEFORE_EDIT_PROBLEM_INTRO_FRAGMENT2_Acti_sale"
+            android:label="รายการ ปัญหา"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.manager.UI_CARDVIEW_DATA_MANAGER_BEFORE_EDIT_PROBLEM_INTRO_FRAGMENT_NO_3_activity"
+            android:label="รายการ ปัญหา การ์ดสัญญา"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.manager.UI_CARDVIEW_DATA_MANAGER_BEFORE_EDIT_PROBLEM_INTRO_FRAGMENT_Sale_all_activity_for_search"
+
+            android:screenOrientation="portrait" />
+
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.UI_CARDVIEW_DATA_SALE_BEFORE_EDIT_PROBLEM_INTRO_FRAGMENT_ACTIVITY"
+            android:label="ประวัติการแก้ไขปัญหา"
+            android:screenOrientation="portrait" />
+
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.Mechanic_system.activity.Activity_tel_custo"
+            android:label="เบอร์ลูกค้า"
+            android:screenOrientation="portrait" />
+
+
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.UI_CARDVIEW_DATA_SALE_BEFORE_EDIT_PROBLEM_INTRO_FRAGMENT_ACTIVITY_UAT"
+            android:label="ประวัติการแก้ไขปัญหา"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="${provider_select}" />
+
+            <!--         <meta-data
+                         android:name="android.support.FILE_PROVIDER_PATHS"
+                         android:resource="@xml/file_list"></meta-data>-->
+
+        </provider>
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.MusicActivity_Credit"
+            android:label="รายการปัญหา"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.MusicActivity_Checker"
+            android:label="รายการตรวจสอบ"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.payment_system.MusicActivity_Payment"
+            android:label="ระบบรายการชำระเงิน"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.Mechanic_system.MusicActivity_Mechanic"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.MusicActivity_Progammer"
+            android:label="ดูข้อมูลทั้งหมด"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.v1.CameraV1Activity" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.test_my_location"
+            android:label="แจ้งปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.UI_CARDVIEW_DATA_SALE_EDIT_PROBLEM"
+            android:label="แก้ไขปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.IMAGE_SALE_RECIVE_EDIT_PROBLEM"
+            android:label="รูปปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.UI_CARDVIEW_DATA_CEDIT_BEFORE_EDIT_PROBLEM"
+            android:label="รายการ การแจ้งปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.UI_CARDVIEW_DATA_SALE_BEFORE_EDIT_PROBLEM"
+            android:label="รายการ ปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.UI_CARDVIEW_DATA_CEDIT_BEFORE_EDIT_PROBLEM_INTRO_FRAGMENT_Activity"
+            android:label="รายการ การแจ้งปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.UI_CARDVIEW_DATA_CEDIT_BEFORE_EDIT_PROBLEM_INTRO_FRAGMENT_Activity_map"
+            android:label="รายการ การแจ้งปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Activity_edit_problem_from_sale"
+            android:label="แก้ไขปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Activity_edit_problem_from_sale_edit_new"
+            android:label="แก้ไขปัญหาไหม่"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Activity_edit_problem_from_sale_uat"
+            android:label="แก้ไขปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Activity_edit_problem_from_sale_edit_new_uat"
+            android:label="แก้ไขปัญหาไหม่"
+            android:screenOrientation="portrait" />
+
+
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.uploadfile.MainActivity_upload_file"
+            android:label="แก้ไขปัญหาไหม่"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Show_dails_all"
+            android:label="รายละเอียดปัญหาเพิ่มเติม"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Activity_check_problem_by_cedit"
+            android:label="ตรวจสอบปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Activity_check_problem_by_cedit_nonti"
+            android:label="ตรวจสอบปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Activity_details_problem_by_all"
+            android:label="รายละเอียดปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.jsonlogin.INTRO_SELECT_LOGIN"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.IconTextTabsActivity_cedit"
+            android:label="รายการปัญหา"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Show_image_history"
+            android:label="รูปประวัติทำรายการ"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.MainActivity_map_contno"
+            android:label="ตำแหน่งตรวจสอบ"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Detali_data_cedit"
+            android:label="ตรวจสอบข้อมูลลูกค้า"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.DemoActivity"
+            android:label="ตรวจสอบข้อมูลลูกค้า"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.UI_CARDVIEW_CHECK_PROBLEM_NEW_Activity"
+            android:label="แจ้งปัญหา"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.qrcode.activity.MainActivity_qr"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.qrcode.activity.MainActivity_qr_report_problem"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.qrcode.activity.ResultActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.qrcode.activity.ResultActivity_report_problem"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.map.MapsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.IMAGE_report_problem_all_id"
+            android:label="ตรวจสอบข้อมูลลูกค้า"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.WEBVIEW_NON_TO_WEB"
+            android:label="vvvv"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.Activity_comment"
+            android:label="แสดงความคิดเห็น"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.mvp.Activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.MainActivity_web_help"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.BrowserActivity_web_help"
+            android:theme="@style/AppTheme.NoActionBar"
+
+
+
+            />
+
+
+
+
+
+
+
+
+
+
+
+        <!--
+    <meta-data
+    android:name="com.google.android.maps.v2.API_KEY"
+    android:value="AIzaSyD7npBz1WiWeSMSUN1NPtYpn0FQJ0iWS9E" />
+-->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAaAipXLku1soFbRMZkVKnu018zc9bAR5w" />
+        <!--        android:value="AIzaSyD7npBz1WiWeSMSUN1NPtYpn0FQJ0iWS9E" />-->
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--        <service
+                    android:name="com.tsr.tsrproblemreport_tossticket_checker.other_all.nontification.FloatWidgetService"
+                    android:enabled="true"
+                    android:exported="false" />-->
+
+        <!-- ./Firebase Notifications -->
+        <!--
+        <service android:name="com.tsr.tsrproblemreport.other_all.service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.tsr.tsrproblemreport.other_all.service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        -->
+
+        <service android:name="com.tsr.tsrproblemreport_tossticket_checker.other_all.service.FloatingWindow" />
+        <service android:name="com.tsr.tsrproblemreport_tossticket_checker.other_all.service.MyFirebaseMessagingService2">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.tsr.tsrproblemreport_tossticket_checker.other_all.service.MyFirebaseInstanceIDService2">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon_number" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+
+
+
+
+
+
+    </application>
+
+</manifest>

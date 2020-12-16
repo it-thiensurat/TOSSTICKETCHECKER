@@ -1,0 +1,1966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/custom"
+
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true"
+    android:windowSoftInputMode="adjustPan|adjustResize"
+
+
+
+
+    android:orientation="vertical">
+
+
+
+
+    <ScrollView
+        android:id="@+id/scrl"
+        android:layout_above="@+id/savee"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_gravity="center"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        >
+
+
+
+                        <RelativeLayout
+                            android:id="@+id/inputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+android:layout_gravity="center"
+                                    android:gravity="center"
+                                    >
+
+
+
+                                    <RelativeLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:background="@drawable/custom_input">
+
+
+                                        <ImageButton
+                                            android:id="@+id/switcher2"
+                                            android:layout_width="50dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentStart="true"
+                                            android:background="@android:color/transparent"
+                                            android:padding="5dp"
+                                            android:scaleType="centerInside"
+                                            android:visibility="gone"
+                                            android:src="@drawable/check_box_report_problem" />
+
+
+                                        <EditText
+                                            android:id="@+id/inputText"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:background="@android:color/transparent"
+                                            android:hint="ค้นหาเลขที่สัญญา"
+                                            android:imeOptions="actionDone"
+                                            android:inputType="textPhonetic"
+                                            android:lines="1"
+                                            android:maxLines="1"
+                                            android:gravity="center"
+
+                                            android:textSize="@dimen/menu_text_size"
+                                            android:paddingLeft="50dp"
+                                            android:paddingRight="50dp"
+
+                                            />
+
+                                        <ImageButton
+                                            android:id="@+id/switcher"
+                                            android:layout_width="50dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentEnd="true"
+                                            android:background="@android:color/transparent"
+                                            android:padding="5dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/ic_barcode_button" />
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/linear_sale2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_marginTop="10sp"
+                                    android:visibility="gone"
+                                    >
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10sp"
+                                        android:background="@color/White">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="! เลขที่สัญญาไม่ถูกต้อง / ไม่มีเลขที่สัญญานี้ "
+                                            android:textColor="@color/Red"
+                                            />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+
+                                <View
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="5dp"
+
+                                    android:background="@android:color/darker_gray" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/linear_sale1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <LinearLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginTop="0dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0sp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.23"
+                                        android:layout_marginTop="5sp"
+                                            android:visibility="visible"
+                                            android:layout_gravity="right"
+                                            android:gravity="right"
+                                            >
+
+
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10sp"
+                                                android:background="@color/White">
+
+                                                <ImageView
+                                                    android:id="@+id/handle"
+                                                    android:layout_width="50sp"
+                                                    android:layout_height="50sp"
+                                                    android:layout_marginTop="5sp"
+                                                    android:background="@drawable/bg_circle"
+                                                    />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="0sp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.4"
+                                            android:layout_gravity="left"
+                                            >
+
+
+
+
+
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:layout_marginLeft="5sp"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/txt_namesale"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:singleLine="true"
+                                                    android:text="พนักงาน : นาย อัสนี แหวนหล่อ"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="@dimen/text_size"
+                                                    android:textStyle="bold"
+                                                    android:layout_marginTop="5sp"/>
+
+                                                <TextView
+                                                    android:id="@+id/txt_position"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5sp"
+                                                    android:layout_alignLeft="@+id/txt_conno"
+                                                    android:layout_below="@+id/ddf"
+                                                    android:maxLines="2"
+                                                    android:text="ตำแหน่ง : พนักงานขาย"
+                                                    android:textColor="@color/bg_screen4"
+                                                    android:textSize="@dimen/text_size" />
+
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+
+                                                    android:layout_marginLeft="0sp"
+                                                    android:orientation="horizontal">
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="รหัสทีม : "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="6sp"
+                                                        android:textStyle="bold"
+                                                        android:layout_marginTop="5sp"/>
+                                                    <TextView
+                                                        android:id="@+id/txt_teamcode"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="5sp"
+                                                        android:layout_alignLeft="@+id/txt_conno"
+                                                        android:layout_below="@+id/ddf"
+                                                        android:maxLines="2"
+                                                        android:text="A748SD"
+                                                        android:textColor="@color/gold"
+                                                        android:textSize="@dimen/text_size" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+
+                                                    android:layout_marginLeft="0sp"
+                                                    android:orientation="horizontal">
+
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="หัวหน้า : "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="6sp"
+                                                        android:textStyle="bold"
+
+                                                        android:layout_marginTop="5sp"/>
+
+
+
+
+
+                                                    <TextView
+                                                        android:id="@+id/txt_boss"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="นาย ใจสั่งมา โอเย "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="@dimen/text_size"
+                                                        android:textStyle="bold"
+                                                        android:layout_marginTop="5sp"/>
+
+
+
+
+
+                                                </LinearLayout>
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+
+                                                    android:layout_marginLeft="0sp"
+                                                    android:orientation="horizontal">
+
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="ตำแหน่ง : หัวหน้า "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="6sp"
+                                                        android:textStyle="bold"
+
+                                                        android:layout_marginTop="5sp"/>
+
+
+
+
+                                                    <TextView
+                                                        android:id="@+id/txt_bossposition"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="Saleteamleader"
+                                                        android:textColor="@color/MediumSeaGreen"
+                                                        android:textSize="@dimen/text_size"
+                                                        android:textStyle="bold"
+                                                        android:layout_marginTop="5sp"/>
+
+
+
+
+
+                                                </LinearLayout>
+
+
+                                            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        </LinearLayout>
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="0sp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.6"
+                                            android:layout_gravity="left"
+                                            >
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:layout_marginLeft="10sp"
+                                                android:layout_marginRight="10sp"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+
+                                                    android:layout_marginLeft="0sp"
+                                                    android:orientation="horizontal">
+
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="ลูกค้า : "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="6sp"
+                                                        android:textStyle="bold"
+
+                                                        android:layout_marginTop="5sp"/>
+
+
+
+
+
+                                                    <TextView
+                                                        android:id="@+id/txt_CustomerName"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="นาย นิษา ภู่เกษม "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="@dimen/text_size"
+                                                        android:textStyle="bold"
+                                                        android:layout_marginTop="5sp"/>
+
+
+
+
+
+
+                                                </LinearLayout>
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+
+                                                    android:layout_marginLeft="0sp"
+                                                    android:orientation="horizontal">
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="สินค้า : "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="6sp"
+                                                        android:textStyle="bold"
+                                                        android:layout_marginTop="5sp"/>
+                                                    <TextView
+                                                        android:id="@+id/txt_ProductName"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="5sp"
+                                                        android:layout_alignLeft="@+id/txt_conno"
+                                                        android:layout_below="@+id/ddf"
+                                                        android:maxLines="2"
+                                                        android:text="เครื่องกรองน้ำ Power Health"
+                                                        android:textColor="@color/gold"
+                                                        android:textSize="@dimen/text_size" />
+
+
+                                                </LinearLayout>
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+
+                                                    android:layout_marginLeft="0sp"
+                                                    android:orientation="horizontal">
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="ราคา : "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="6sp"
+                                                        android:textStyle="bold"
+                                                        android:layout_marginTop="5sp"/>
+                                                    <TextView
+                                                        android:id="@+id/txt_ProductPrice"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="5sp"
+                                                        android:layout_alignLeft="@+id/txt_conno"
+                                                        android:layout_below="@+id/ddf"
+                                                        android:maxLines="2"
+                                                        android:text="8800"
+                                                        android:textColor="@color/gold"
+                                                        android:textSize="@dimen/text_size" />
+
+
+                                                </LinearLayout>
+
+
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+
+                                                    android:layout_marginLeft="0sp"
+                                                    android:orientation="horizontal">
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="ค้างจ่าย : "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="6sp"
+                                                        android:textStyle="bold"
+                                                        android:layout_marginTop="5sp"/>
+                                                    <TextView
+                                                        android:id="@+id/txt_Outstanding"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+
+
+                                                        android:layout_marginTop="5sp"
+                                                        android:layout_alignLeft="@+id/txt_conno"
+                                                        android:layout_below="@+id/ddf"
+                                                        android:maxLines="3"
+                                                        android:text="Outstanding"
+                                                        android:textColor="@color/gold"
+                                                        android:textSize="@dimen/text_size" />
+
+
+                                                </LinearLayout>
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+
+                                                    android:layout_marginLeft="0sp"
+                                                    android:orientation="horizontal">
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="งวดล่าสุดที่ชำระ : "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="6sp"
+                                                        android:textStyle="bold"
+                                                        android:layout_marginTop="5sp"/>
+                                                    <TextView
+                                                        android:id="@+id/txt_PayLastPeriod"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+
+
+                                                        android:layout_marginTop="5sp"
+                                                        android:layout_alignLeft="@+id/txt_conno"
+                                                        android:layout_below="@+id/ddf"
+                                                        android:maxLines="3"
+                                                        android:text="PayLastPeriod"
+                                                        android:textColor="@color/gold"
+                                                        android:textSize="@dimen/text_size" />
+
+
+                                                </LinearLayout>
+
+
+                                            </LinearLayout>
+
+
+
+
+
+
+                                        </LinearLayout>
+
+
+
+
+
+
+
+
+                                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <LinearLayout
+                                        android:id="@+id/lenear_custommer_other"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginTop="0dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0sp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.23"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:visibility="visible"
+                                            >
+
+
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:visibility="gone"
+                                                android:layout_marginLeft="10sp">
+
+                                                <ImageView
+
+                                                    android:layout_width="38sp"
+                                                    android:layout_height="38sp"
+                                                    android:background="@drawable/bg_circle"
+                                                    />
+
+                                            </RelativeLayout>
+                                        </LinearLayout>
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="0sp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.4"
+                                            android:layout_gravity="center"
+                                            >
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:layout_marginLeft="5sp"
+
+                                                android:orientation="vertical">
+
+
+
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+
+                                                    android:layout_marginLeft="0sp"
+                                                    android:orientation="horizontal">
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="สถานะลูกค้า : "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="6sp"
+                                                        android:textStyle="bold"
+                                                        android:layout_marginTop="5sp"/>
+                                                    <TextView
+                                                        android:id="@+id/txt_CustomerStatus"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+
+
+                                                        android:layout_marginTop="5sp"
+                                                        android:layout_alignLeft="@+id/txt_conno"
+                                                        android:layout_below="@+id/ddf"
+                                                        android:maxLines="3"
+                                                        android:text="n"
+                                                        android:textColor="@color/gold"
+                                                        android:textSize="@dimen/text_size" />
+
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="0sp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.6"
+                                            android:layout_gravity="center"
+                                            >
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:layout_marginLeft="10sp"
+
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+
+                                                    android:layout_marginLeft="0sp"
+                                                    android:orientation="horizontal">
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:singleLine="true"
+                                                        android:text="สถานะบัญชี : "
+                                                        android:textColor="@color/bg_main"
+                                                        android:textSize="6sp"
+                                                        android:textStyle="bold"
+                                                        android:layout_marginTop="5sp"/>
+                                                    <TextView
+                                                        android:id="@+id/txt_AccountStatus"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+
+
+                                                        android:layout_marginTop="5sp"
+                                                        android:layout_alignLeft="@+id/txt_conno"
+                                                        android:layout_below="@+id/ddf"
+                                                        android:maxLines="3"
+                                                        android:text="AccountStatus"
+                                                        android:textColor="@color/gold"
+                                                        android:textSize="@dimen/text_size" />
+
+
+                                                </LinearLayout>
+
+
+
+
+
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <LinearLayout
+                                        android:id="@+id/lenear_custommer_other"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginTop="0dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0sp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.23"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:visibility="visible"
+                                            >
+
+
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:visibility="gone"
+                                                android:layout_marginLeft="10sp">
+
+                                                <ImageView
+
+                                                    android:layout_width="38sp"
+                                                    android:layout_height="38sp"
+                                                    android:background="@drawable/bg_circle"
+                                                    />
+
+                                            </RelativeLayout>
+                                        </LinearLayout>
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="0sp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.0"
+                                            android:layout_gravity="center"
+                                            >
+
+
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:layout_marginLeft="5sp"
+                                                android:orientation="horizontal">
+                                                <TextView
+
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:singleLine="true"
+                                                    android:text="ที่อยู่ : "
+                                                    android:textColor="@color/bg_main"
+                                                    android:textSize="6sp"
+                                                    android:textStyle="bold"
+                                                    android:layout_marginTop="5sp"/>
+                                                <TextView
+                                                    android:id="@+id/txt_Addressall"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+
+
+                                                    android:layout_marginTop="5sp"
+
+
+                                                    android:text="v"
+                                                    android:textColor="@color/gold"
+                                                    android:textSize="@dimen/text_size" />
+
+
+                                            </LinearLayout>
+
+
+
+
+                                        </LinearLayout>
+
+
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+                                <View
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="10dp"
+
+                                    android:background="@android:color/darker_gray" />
+
+
+
+
+
+
+
+                            <LinearLayout
+                                android:id="@+id/linear_status"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+
+                                android:paddingLeft="15sp"
+                                android:paddingRight="15sp"
+                                android:visibility="gone"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                >
+
+                                <LinearLayout
+
+                                    android:id="@+id/linear_coler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:layout_gravity="center"
+android:gravity="center"
+                                    android:background="@color/base_gray_green"
+                                    android:padding="4dp">
+
+
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.60"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:background="@drawable/roun_rect_orange15"
+                                        >
+                                        <TextView
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="สถานะการแจ้งปัญหา :"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.2"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/image_status"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/ic_check_circle_white_24dp"
+                                            />
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.6"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+                                        <TextView
+                                            android:id="@+id/txt_status"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="left"
+
+                                            android:text="แจ้งปัญหาแล้ว"
+                                            android:textColor="@color/white"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="10sp"
+
+                                    >
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+
+                                        >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="แจ้งปัญหา"
+                                            />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                android:orientation="vertical"
+
+                                    android:layout_marginTop="10sp"
+                                    >
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="เมนูลัดค้นหาเลขปัญหา :"
+                                        android:textSize="10sp"
+                                        android:textColor="@color/Red"
+                                        android:layout_marginLeft="20dp"
+                                        />
+
+                                    <RelativeLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+
+
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:background="@drawable/custom_input">
+
+
+                                        <ImageButton
+
+                                            android:layout_width="50dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentStart="true"
+                                            android:background="@android:color/transparent"
+                                            android:padding="5dp"
+                                            android:scaleType="centerInside"
+                                            android:visibility="gone"
+                                            android:src="@drawable/check_box_report_problem" />
+
+                                        <CheckBox
+                                            android:id="@+id/checkBox"
+                                            android:layout_width="50dp"
+                                            android:layout_height="match_parent"
+                                            android:button="@drawable/check_selector3"
+                                            android:checked="false"
+                                            android:gravity="center"
+                                            android:layout_marginRight="20dp"
+                                            android:layout_marginLeft="20dp"
+
+
+                                            />
+                                        <EditText
+                                            android:id="@+id/edittext_se"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:background="@android:color/transparent"
+                                            android:hint="ค้นหาเลขปัญหา/ชื่อปัญหา"
+
+                                            android:visibility="visible"
+
+                                            android:textSize="@dimen/menu_text_size"
+                                            android:imeOptions="actionDone"
+                                            android:inputType="numberDecimal"
+
+                                            />
+
+
+
+                                        <Spinner
+                                            android:id="@+id/spDemo4"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                          android:layout_marginLeft="60sp"
+
+                                            android:visibility="gone"
+                                            android:layout_marginRight="20dp"/>
+
+                                        <ImageButton
+                                            android:id="@+id/ib_se"
+                                            android:layout_width="50dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentEnd="true"
+                                            android:background="@android:color/transparent"
+                                            android:padding="5dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/ic_search_black_36dp"
+
+                                            />
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+
+
+                                <LinearLayout
+
+                                    android:id="@+id/linear_problem"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="0sp"
+                                    android:visibility="gone"
+
+                                    >
+
+
+
+
+
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="ปัญหา :"
+                                                android:textSize="10sp"
+                                                android:layout_marginLeft="20dp"
+                                                />
+
+
+
+
+                                    <RelativeLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+
+
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:background="@drawable/custom_input2">
+
+
+                                    <TextView
+                                         android:id="@+id/problem_name"
+                                         android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content"
+                                         android:text="ยังไม่เรียบร้อย"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                         />
+
+                                        <ImageButton
+                                            android:id="@+id/delete_problem_name"
+                                            android:layout_width="50dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentEnd="true"
+                                            android:background="@android:color/transparent"
+                                            android:padding="5dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/ic_delete_forever_black_24dp"
+                                            android:tint="@color/Purple"
+                                            />
+                                    </RelativeLayout>
+
+
+
+                                </LinearLayout>
+
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/linear_gory"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="10sp"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/textView2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="หมวดหมู่ :"
+                                        android:textSize="10sp"
+                                        android:layout_marginLeft="20dp"
+                                        />
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/custom_input"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        >
+
+                                        <Spinner
+                                            android:id="@+id/spDemo"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginRight="20dp"/>
+                                    </RelativeLayout>
+
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/linearlayout_show_problem_main"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="10sp"
+                                    >
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="ปัญหาหลัก :"
+                                        android:textSize="10sp"
+                                        android:layout_marginLeft="20dp"
+                                        />
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/custom_input"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        >
+
+                                        <Spinner
+                                            android:id="@+id/spDemo2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginRight="20dp"/>
+                                    </RelativeLayout>
+
+
+
+                                </LinearLayout>
+
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/linearlayout_show_problem_sub"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="10sp"
+                                    >
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="ปัญหาย่อย :"
+                                        android:textSize="10sp"
+                                        android:layout_marginLeft="20dp"
+                                        />
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/custom_input"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        >
+
+                                        <Spinner
+                                            android:id="@+id/spDemo3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginRight="20dp"/>
+                                    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+                                </LinearLayout>
+
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/linear_topic_other"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="10sp"
+                                    android:visibility="gone"
+
+                                    >
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="เรื่อง :"
+                                        android:textSize="10sp"
+                                        android:layout_marginLeft="20dp"
+                                        />
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/custom_input2"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        >
+
+                                        <EditText
+                                            android:id="@+id/new_message_topic_other"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+
+
+                                            android:hint="หัวข้ออื่น"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:textSize="12sp"
+                                            android:inputType="textPhonetic"
+
+                                            />
+                                    </RelativeLayout>
+
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="10sp"
+
+                                    >
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="รายละเอียด :"
+                                        android:textSize="10sp"
+                                        android:layout_marginLeft="20dp"
+                                        />
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/custom_input2"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        >
+
+                                        <TextView
+                                            android:id="@+id/new_message_db"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+
+
+                                            android:hint="vvvvvvvvvvvvvvvvvvDFDFDFDSFDSFDDFDSFDFDSFDSFSDSDFDFSFDFSDFDFvvvv"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:textSize="12sp"
+
+
+                                            />
+                                    </RelativeLayout>
+
+
+
+                                </LinearLayout>
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="10sp"
+
+                                    >
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="รายละเอียดเพิ่มเติม :"
+                                        android:textSize="10sp"
+                                        android:layout_marginLeft="20dp"
+                                        />
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/custom_input2"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        >
+
+                                        <EditText
+                                            android:id="@+id/new_message"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+
+
+                                            android:hint="เขียนโน๊ต ทั้งกลุ่ม/ ชื่อ-นามสกุล ลูกค้าที่ตรวจสอบ หรือ อื่นๆ"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:textSize="12sp"
+                                            android:inputType="textPhonetic"
+
+                                            />
+                                    </RelativeLayout>
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="10sp"
+
+                                    >
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1.02"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginLeft="20dp"
+                                        >
+                                    <RelativeLayout
+                                        android:id="@+id/open_camera"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+
+                                        android:background="@drawable/background_round_coler"
+                                        >
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/ic_came"
+                                            />
+
+                                    </RelativeLayout>
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1.02"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="5dp"
+                                        >
+
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/open_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+
+                                        android:background="@drawable/background_round_coler"
+                                        >
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/icon_picture"
+                                            />
+
+                                    </RelativeLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_marginTop="10sp"
+
+                                >
+
+                                <ImageView
+                                    android:id="@+id/test_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/bg_circle"/>
+
+                            </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="10sp"
+
+                                    >
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+
+                                        >
+
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/my_recycler_view"
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                        </android.support.v7.widget.RecyclerView>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="10sp"
+
+                                    >
+
+                                    <RelativeLayout
+                                        android:id="@+id/r_save"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:background="@drawable/background_round_coler2"
+
+                                        >
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+
+                                            >
+                                            <ImageView
+                                                android:layout_width="30sp"
+                                                android:layout_height="30sp"
+
+                                                android:background="@drawable/ic_save_black_24dp"
+                                                />
+
+                                            <TextView
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="  บันทึกรายการ  "
+                                                android:textSize="14sp"
+                                                android:layout_marginTop="5sp"
+                                                android:layout_marginLeft="0dp"
+                                                />
+                                        </LinearLayout>
+
+
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                                <View
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="10dp"
+
+                                    android:background="@android:color/darker_gray" />
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="10sp"
+
+                                    >
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="left"
+                                        >
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:layout_marginRight="20dp"
+                                            android:layout_marginLeft="20dp"
+
+                                            >
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="รายการปัญหา"
+                                                />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="right"
+                                        >
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginRight="20dp"
+                                            android:layout_marginLeft="20dp"
+
+                                            >
+
+                                            <TextView
+                                                android:id="@+id/count_problem"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="0 รายการ"
+                                                />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+
+
+
+
+
+
+
+                                </LinearLayout>
+
+
+                                <View
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="10dp"
+
+                                    android:background="@android:color/darker_gray" />
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp"
+
+                                        >
+
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/recyclerview1"
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                        </android.support.v7.widget.RecyclerView>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/savee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+
+
+        <Button
+            android:id="@+id/btn_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  แจ้งปัญหาทั้งหมด  "
+            android:textColor="@color/white"
+            android:backgroundTint="#FF4081"
+
+            android:drawableRight="@drawable/ic_send_white_24dp"
+            />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

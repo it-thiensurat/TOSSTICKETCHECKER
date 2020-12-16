@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relayouttop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="80dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutcontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="30dp"
+            android:background="@drawable/background2"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+
+                <ImageView
+                    android:id="@+id/imgproduct"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_below="@+id/btnbuy"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_circle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10sp"/>
+
+                <TextView
+                    android:id="@+id/txtname_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgproduct"
+                    android:layout_gravity="center"
+                    android:text="นาย อัสนี แหวนหล่อ" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10sp"/>
+
+                <TextView
+                    android:id="@+id/txt_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtname_sale"
+                    android:layout_gravity="center"
+                    android:text="Sale"
+                    android:textColor="@color/Blue" />
+
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="right"
+                        android:text="รหัสทีม:"
+                        android:textColor="#000000"
+                        android:textSize="14dp"
+                        android:typeface="serif" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"/>
+
+                    <TextView
+                        android:id="@+id/codeteam"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="A0001"
+                        android:textColor="@color/MediumAquamarine"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/relativeLayout2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:layout_weight="0.8"
+                        android:gravity="right"
+                        android:text="เลขที่สัญญา:"
+                        android:textColor="#000000"
+                        android:textSize="14dp"
+                        android:typeface="serif" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"/>
+
+                    <TextView
+                        android:id="@+id/txt_cnumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="A0001"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/relativeLayout2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="right"
+                        android:text="ลูกค้า:"
+                        android:textColor="#000000"
+                        android:textSize="14dp"
+                        android:typeface="serif" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"/>
+
+                    <TextView
+                        android:id="@+id/txt_customer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="A0001"
+                        android:textColor="@color/BlueViolet"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/relativeLayout2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="right"
+                        android:text="สินค้า:"
+                        android:textColor="#000000"
+                        android:textSize="14dp"
+                        android:typeface="serif" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"/>
+
+                    <TextView
+                        android:id="@+id/txtname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="A0001"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/relativeLayout2">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"/>
+
+                    <TextView
+                        android:id="@+id/txtname2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="A0001"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"/>
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/couter_problem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+
+                        android:background="@drawable/roun_rect_orange"
+                        android:text="ปัญหา"
+                        android:textColor="#fff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview1"
+                        android:layout_width="300dip"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/selector_xml_btn_yellow"
+                        android:text="บันทึก"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

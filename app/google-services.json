@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "959293836506",
+    "firebase_url": "https://tsr-problem-report-e7d59.firebaseio.com",
+    "project_id": "tsr-problem-report-e7d59",
+    "storage_bucket": "tsr-problem-report-e7d59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959293836506:android:5bce9f3a5da08a35",
+        "android_client_info": {
+          "package_name": "com.tsr.tsrproblemreport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959293836506-ef46esru67hf6jtmo39peddm0bfgoe2h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tsr.tsrproblemreport",
+            "certificate_hash": "38ddd9b49c2da5835ba756ca992945c44e61e3fe"
+          }
+        },
+        {
+          "client_id": "959293836506-82ffn3fadt352qlb2b32ekcdbgabugch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiVnVYaVZZUWxH-9PzmX-4FBBmJbaALQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959293836506-82ffn3fadt352qlb2b32ekcdbgabugch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959293836506:android:01797ffb7b369efc",
+        "android_client_info": {
+          "package_name": "com.tsr.tsrproblemreport_tossticket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959293836506-n4nt909tuspip8vd3h9heirk26e8d8uc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tsr.tsrproblemreport_tossticket",
+            "certificate_hash": "fee9daadb64eff59552ed2a73fded2b6ac036823"
+          }
+        },
+        {
+          "client_id": "959293836506-82ffn3fadt352qlb2b32ekcdbgabugch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiVnVYaVZZUWxH-9PzmX-4FBBmJbaALQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959293836506-82ffn3fadt352qlb2b32ekcdbgabugch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959293836506:android:dc2025d910d6da9f",
+        "android_client_info": {
+          "package_name": "com.tsr.tsrproblemreport_tossticket_checker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959293836506-2dt6cff32c6tt73lcup04e5vqncj4oo3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tsr.tsrproblemreport_tossticket_checker",
+            "certificate_hash": "fee9daadb64eff59552ed2a73fded2b6ac036823"
+          }
+        },
+        {
+          "client_id": "959293836506-82ffn3fadt352qlb2b32ekcdbgabugch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiVnVYaVZZUWxH-9PzmX-4FBBmJbaALQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959293836506-82ffn3fadt352qlb2b32ekcdbgabugch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959293836506:android:585f87389825fe120fa9e3",
+        "android_client_info": {
+          "package_name": "com.tsr.tsrproblemreport_tossticket_checker.uat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959293836506-8csmve7ja0m8ir20v8aravgl17o0ava9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tsr.tsrproblemreport_tossticket_checker.uat",
+            "certificate_hash": "fee9daadb64eff59552ed2a73fded2b6ac036823"
+          }
+        },
+        {
+          "client_id": "959293836506-82ffn3fadt352qlb2b32ekcdbgabugch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiVnVYaVZZUWxH-9PzmX-4FBBmJbaALQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959293836506-82ffn3fadt352qlb2b32ekcdbgabugch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="250dp"
+            android:layout_below="@+id/relativeLayout2">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:text="ตั้งค่าการแจ้งเตือน" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:layout_below="@+id/relativeLayout2">
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/Red"
+                android:layout_marginTop="120dp"
+                android:text="ตั้งค่า nontification" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:paddingLeft="190dp"
+        android:layout_below="@+id/relativeLayout2">
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+android:textSize="16dp"
+        android:checked="true"
+        android:text="ปัญหาที่ยังไม่เเก้ไข By website "
+        android:textColorLink="@color/MediumAquamarine"
+        android:layout_below="@+id/textView19"
+        android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:paddingLeft="190dp"
+        android:layout_below="@+id/relativeLayout2">
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_marginTop="16dp"
+
+        android:checked="true"
+        android:text="ปัญหาเข้ามาใหม่ By website "
+        android:textColorLink="@color/MediumAquamarine" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:paddingLeft="190dp">
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginTop="56dp"
+
+                android:checked="true"
+
+                android:text="แจ้งการแก้ไขปัญหาทั้งหมด By mobile" />
+        </LinearLayout>
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:paddingLeft="190dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/relativeLayout2">
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:checked="true"
+
+        android:text="แจ้งการแก้ไขปัญหาบางส่วน By mobile"
+
+        android:layout_marginTop="17dp" />
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="190dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/relativeLayout2">
+
+            <Switch
+                android:id="@+id/switch7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:checked="true"
+
+                android:text="แจ้งการแก้ไขปัญหา(ปัญหาที่ติดตาม) By mobile"
+
+                android:layout_marginTop="17dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:layout_below="@+id/relativeLayout2">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/Red"
+                android:layout_marginTop="80dp"
+                android:text="เสียง nontification" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:paddingLeft="190dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/relativeLayout2">
+
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+    <TextView
+        android:id="@+id/btnbuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        android:paddingLeft="40dp"
+        android:text="nontification"/>
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ic_edit_white_24dp" />
+
+
+        <Switch
+            android:id="@+id/switch5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:checked="true"
+
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:paddingLeft="190dp">
+
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/vibrate" />
+
+            <TextView
+                android:id="@+id/btnbuy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="40dp"
+                android:text="เสียงสั่น"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_edit_white_24dp" />
+
+            <Switch
+                android:id="@+id/switch6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:checked="true"
+
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

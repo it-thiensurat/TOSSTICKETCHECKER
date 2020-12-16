@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dip"
+    android:layout_height="wrap_content"
+    android:background="@color/FloralWhite">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView18"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="     กรุณาเลือกขนาดที่ต้องการ"
+        android:textColor="@color/input_login"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="25dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/edit_desing1" />
+
+
+                    <ImageView
+                        android:id="@+id/ceck1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="90dp"
+                        android:background="@drawable/sign_check_icon" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/edit_desing2" />
+
+
+                    <ImageView
+                        android:id="@+id/ceck2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="90dp"
+                        android:background="@drawable/sign_check_icon" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="25dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/edit_desing3" />
+
+
+                    <ImageView
+                        android:id="@+id/ceck3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="90dp"
+                        android:background="@drawable/sign_check_icon" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true">
+
+
+
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="100dp"
+                    android:background="@drawable/edit_desing4" />
+
+
+                    <ImageView
+                        android:id="@+id/ceck4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="90dp"
+                        android:background="@drawable/sign_check_icon" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="25dp"
+            android:orientation="horizontal">
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+
+
+                    android:background="@color/Brown"
+                    android:gravity="center"
+                    android:text="ออก"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="60dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+
+
+                    android:background="@color/ColorPrimaryDark"
+                    android:gravity="center"
+                    android:text="ตกลง"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

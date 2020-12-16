@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:background="@color/Moccasin">
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roun_rect_orange"
+            android:text="ซุปเปอร์ไวเซอร์"
+            android:textColor="#fff"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/counter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="250dp"
+
+        android:text=""
+        android:textColor="@color/text_color"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/AntiqueWhite"
+    android:backgroundTint="@color/AntiqueWhite"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="3dp"
+    card_view:cardMaxElevation="3dp"
+    card_view:contentPadding="3dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="120dip"
+            android:background="@color/White">
+
+
+            <ImageView
+                android:id="@+id/VollyNetworkImageView1"
+                android:layout_width="80dp"
+                android:layout_height="80dip"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/number"
+                android:layout_toRightOf="@+id/number"
+                android:background="@drawable/bg_circle" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/VollyNetworkImageView1"
+                android:background="@drawable/bg_circle2"
+                android:gravity="center"
+                android:text="NEW"
+                android:textColor="@android:color/white"
+                android:textSize="8dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lbl_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="A0001"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+
+                    android:text="พนักงาน:"
+                    android:textColor="@color/input_login"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/lbl_sale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+
+                    android:text="อัสนี แหวนหล่อ"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblposition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Sale"
+                    android:textColor="@color/gold"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/relativeLayout2"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="หัวข้อ"
+                    android:textColor="#040404"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/relativeLayout2"
+
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+
+                    android:text="ลูกค้า:"
+                    android:textColor="@color/input_login"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/lbl_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+
+                    android:text="xxxxxxxxxxxxxxxxxxxxxxxx"
+                    android:textColor="@color/BlueViolet"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/relativeLayout2"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lbl_problem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="xxxxxxxxxxxxxxxx"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="14dp"
+                android:layout_below="@+id/relativeLayout2"
+
+                android:orientation="horizontal">
+
+
+
+
+                <TextView
+                    android:id="@+id/couter_problem2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="20"
+
+                    android:textSize="8sp"
+                    android:textColor="@color/YellowGreen"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text=""
+                    android:textColor='@color/Black'
+                    android:textSize="8sp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/icon_star"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="0dp"
+                    android:src="@drawable/star"
+                    android:tint="@color/Yellow" />
+
+
+                <ImageView
+                    android:id="@+id/sub2"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="0dp"
+                    android:src="@drawable/ic_mode_comment_black_24dp"
+                    android:tint="@color/Bisque" />
+                <TextView
+                    android:id="@+id/countcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="20"
+                    android:textColor='@color/Black'
+                    android:textSize="8dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/relativeLayout2"
+
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+
+                    android:text="รหัสทีม:"
+                    android:textColor="@color/input_login"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/subteam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+
+                    android:text="ASSS3333"
+                    android:textColor="@color/LightSeaGreen"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="26dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/couter_problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/roun_rect_orange2"
+                    android:text="0"
+                    android:textColor="#fff"
+                    android:textSize="8sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="  ปัญหา"
+                    android:textColor='@color/Black'
+                    android:textSize="8sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.27"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lbl_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00 AM"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/bg_register"
+                    android:textSize="@dimen/timestamp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/approveall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="ยังไม่ตรวจสอบ"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lbl_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:paddingLeft="11dp"
+                    android:text="ยังไม่แก้ไข"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+    <!--
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dip"
+            android:background="@color/White">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/lbl_problem"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_toLeftOf="@+id/couter_problem"
+                android:layout_toStartOf="@+id/couter_problem"
+                android:text=". . ."
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/lbl_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView4"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/lblposition"
+                android:text="status"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="6sp" />
+
+
+
+
+            <TextView
+                android:id="@+id/lbl_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="12:00:30"
+                android:textColor="@color/bg_register"
+                android:textSize="6sp" />
+
+            <TextView
+                android:id="@+id/lbl_name"
+                android:layout_width="45dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/count"
+                android:layout_alignBottom="@+id/count"
+                android:layout_toEndOf="@+id/VollyNetworkImageView1"
+                android:layout_toRightOf="@+id/VollyNetworkImageView1"
+                android:text="A0001"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/lblposition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/VollyNetworkImageView1"
+                android:layout_alignLeft="@+id/lbl_name"
+                android:layout_alignStart="@+id/lbl_name"
+                android:text="100"
+                android:textColor="@color/gold"
+                android:textSize="8sp" />
+
+            <LinearLayout
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:text="หัวข้อ"
+                android:textColor="#040404"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:layout_above="@+id/VollyNetworkImageView1"
+                android:layout_toLeftOf="@+id/subteam"
+                android:layout_toStartOf="@+id/subteam" />
+
+            <ImageView
+                android:id="@+id/VollyNetworkImageView1"
+                android:layout_width="55dp"
+                android:layout_height="55dip"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/number"
+                android:layout_toRightOf="@+id/number"
+                android:background="@drawable/bg_circle" />
+
+            <TextView
+                android:id="@+id/lbl_customer"
+                android:layout_width="130dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/lbl_sale"
+                android:layout_alignBottom="@+id/lbl_sale"
+                android:layout_toEndOf="@+id/lbl_sale"
+                android:layout_toRightOf="@+id/lbl_sale"
+                android:text="xxxxxxxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/BlueViolet"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/lbl_problem"
+                android:layout_width="100dip"
+                android:layout_height="10dip"
+                android:layout_alignBaseline="@+id/lblposition"
+                android:layout_alignBottom="@+id/lblposition"
+                android:layout_alignLeft="@+id/lbl_customer"
+                android:layout_alignStart="@+id/lbl_customer"
+                android:text="xxxxxxxxxxxxxxxx"
+                android:textSize="8sp" />
+
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/VollyNetworkImageView1"
+                android:background="@drawable/bg_circle2"
+                android:gravity="center"
+                android:text="NEW"
+                android:textColor="@android:color/white"
+                android:textSize="6dp" />
+
+            <TextView
+                android:id="@+id/subteam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="AAAA-02"
+                android:textColor="@color/LightSeaGreen"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/couter_problem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView4"
+                android:layout_toLeftOf="@+id/subteam"
+                android:layout_toStartOf="@+id/subteam"
+                android:background="@drawable/roun_rect_orange2"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    -->

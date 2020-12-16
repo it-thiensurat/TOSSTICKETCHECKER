@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imgproduct"
+        android:layout_width="501dp"
+        android:layout_height="100dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.14"
+        android:src="@drawable/side_nav_bar" />
+
+    <EditText
+        android:id="@+id/txtname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ชื่อสินค้า" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/txt_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ราคา"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="บันทึก" />
+
+</LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:background="?android:selectableItemBackground"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/image_cancal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_close_black_24dp"
+                    android:backgroundTint="@color/Red"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/image_remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/baseline_zoom_out_map_black_24dp"
+                    android:backgroundTint="@color/Yellow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+
+
+
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.chrisbanes.photoview.PhotoView
+                        android:id="@+id/image_map"
+
+
+
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+
+
+
+                        android:src="@drawable/picture4" />
+
+
+
+                    <ImageView
+                        android:id="@+id/rotage2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:src="@drawable/rotage" />
+                </LinearLayout>
+
+
+
+
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/DarkGray"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

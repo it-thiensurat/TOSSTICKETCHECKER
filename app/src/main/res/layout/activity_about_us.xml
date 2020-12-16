@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:paddingLeft="0dp">
+
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="แอฟฟิเคชั่น tsr problem report " />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="60dp"
+                android:text="เวอร์ชั่นที่ใช้งาน 1.1.1" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView9"
+                android:layout_alignStart="@+id/textView9"
+                android:layout_below="@+id/textView9"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:text="เวอร์ชั่นล่าสุด 1.1.1" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="ความช่วยเหลือเกี่ยวกับรหัสผ่าน"
+                android:paddingLeft="30dp"
+                android:layout_below="@+id/textView22"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</ScrollView>

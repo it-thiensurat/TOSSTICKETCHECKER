@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/base_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/handle"
+                android:layout_width="?listPreferredItemHeight"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_reorder_grey_500_24dp" />
+
+
+            <TextView
+                android:id="@+id/txt_conno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="5sp"
+
+
+                android:singleLine="true"
+                android:text="A11111111"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:id="@+id/ddf"
+                android:layout_width="match_parent"
+
+                android:layout_below="@+id/txt_conno"
+
+                android:layout_height="5sp"/>
+            <TextView
+                android:id="@+id/txt_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_conno"
+                android:layout_below="@+id/ddf"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="3sp"
+                android:maxLines="2"
+                android:text="อัสนี แหวนหล่อ"
+                android:textColor="@color/bg_screen4"
+                android:textSize="15sp" />
+
+
+            <View
+                android:id="@+id/ddf2"
+                android:layout_width="match_parent"
+                android:layout_alignLeft="@+id/txt_conno"
+                android:layout_below="@+id/txt_customer"
+
+                android:layout_height="5sp"/>
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_customer"
+                android:layout_below="@+id/ddf2"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="3sp"
+                android:maxLines="2"
+                android:text="21 หมู่ 9     ต.บุ่งไหม อ.วารินชำราบ จ.อุบลราชธานี 34190"
+                android:textColor="@color/base_gray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="2sp"
+                android:background="@drawable/roun_rect_orange6"
+                android:singleLine="true"
+                android:text="~ 1.2 Km"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+
+
+
+            <View
+                android:id="@+id/ddf3"
+                android:layout_width="match_parent"
+                android:layout_alignLeft="@+id/txt_conno"
+                android:layout_below="@+id/txt_address"
+
+                android:layout_height="5sp"/>
+
+
+
+            <View
+
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="0dp"
+                android:layout_alignBottom="@+id/ddf3"
+                android:background="@android:color/darker_gray" />
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

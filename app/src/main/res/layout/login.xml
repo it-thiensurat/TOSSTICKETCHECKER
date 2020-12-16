@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutmain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#404040"
+    android:orientation="vertical" >
+
+<View   android:layout_width="match_parent"
+         android:layout_height="100dp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/icon" />
+
+    <TextView
+                android:id="@+id/lbltitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                android:textColor="#ffffffff"
+                android:paddingTop="5dp"
+                android:paddingBottom="20dp"
+                android:textSize="22sp"
+                android:text="Coin corporation" />
+
+     <EditText
+         android:id="@+id/txtusername"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:ems="13"
+         android:hint="Username"
+         android:inputType="text"
+         android:background="#ffffffff"
+        >
+
+         <requestFocus />
+     </EditText>
+<View   android:layout_width="match_parent"
+         android:layout_height="5dp" />
+
+     <EditText
+         android:id="@+id/txtpassword"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:hint="Password"
+         android:inputType="text"
+         android:password="true"
+         android:background="#ffffffff"
+         />
+
+  
+<View   android:layout_width="match_parent"
+         android:layout_height="5dp" />
+     
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="login"
+            android:text="@string/login"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" >
+
+            <TextView
+                android:id="@+id/lbltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:textColor="#ffffffff"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
+                android:text="15:30" />
+         <TextView
+                android:id="@+id/lbldate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/lbltime"
+                android:textColor="#ffffffff"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="9 December 2015" />
+        </RelativeLayout>
+   
+</LinearLayout>
+  

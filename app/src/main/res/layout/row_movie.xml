@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rere"
+    android:background="@drawable/bg_list_row"
+
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/message_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingLeft="102dp"
+        android:paddingRight="@dimen/padding_list_row">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/Black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/msg_text_secondary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/actors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/msg_text_secondary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingLeft="102dp"
+        android:paddingRight="@dimen/padding_list_row">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/Black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/codeteam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/msg_text_secondary"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/msg_text_secondary" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/icon_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/icon_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillAfter="false"
+            android:fillEnabled="false">
+
+            <ImageView
+                android:layout_width="@dimen/icon_width_height"
+                android:layout_height="@dimen/icon_width_height"
+                android:src="@drawable/bg_circle" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_done_white_24dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/icon_front"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillAfter="false"
+            android:fillEnabled="false">
+
+            <ImageView
+                android:id="@+id/cover"
+                android:background="@drawable/bg_circle"
+                android:layout_width="@dimen/icon_width_height"
+                android:layout_height="@dimen/icon_width_height" />
+
+            <TextView
+                android:id="@+id/icon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/icon_text" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00 AM"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/opaque_back"
+        android:textSize="@dimen/timestamp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/icon_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="80dp"
+        android:paddingLeft="570dp"
+        android:src="@drawable/star"
+        android:tint="@color/Yellow" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon_star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="90dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/status_online"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="120dp"
+
+            android:background="@android:color/darker_gray"/>
+    </LinearLayout>
+
+</RelativeLayout>

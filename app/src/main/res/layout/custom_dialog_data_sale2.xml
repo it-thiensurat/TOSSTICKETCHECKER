@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_main"
+
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            android:layout_marginTop="32dp"
+            android:id="@+id/congratulation_card"
+            app:cardBackgroundColor="#f98da5"
+            app:cardElevation="0dp"
+            android:layout_gravity="bottom">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/title"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginTop="48dp"
+                    android:text="หมายเหตุการแจ้งปัญหาจากการตรวจสอบ"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="12sp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background6"
+                    android:id="@+id/message"
+                    android:gravity="center"
+                    android:text="(หมายเหตุ : จากรายการตรวจสอบแล้ว กดดูรายกาตรวจสอบ จะป๊อปอัพ ขึ้นให้ดูผลการตรวจสอบ ถ้าหัวข้อไหนมีปัญหา ให้ทำการแจ้งปัญหาเอง ตามการแจ้งปัญหาแบบเดิม ถ้ารายการตรวจสอบนั้นนั้นไม่มีปัญหา ก็ไม่ต้องแจ้งปัญหา ระบบจะแสดงรายการตรวจสอบ ของแต่ละเลขที่สัญญา นับจากวันที่ตรวจสอบ
+ สามารถกดแท็ปข้างล้างสีชมพู ขอบ น้ำเงินเพื่อ ค้นหาเลขเลขที่สัญญาเพื่อทำการแจ้งไปปัญหาได้)
+
+" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/background6"
+
+                    android:textSize="10sp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text="- การตรวจสอบ ที่เข้าบ้านได้ ตรวจสอบได้ และ ตรวจสอบได้ เข้าบ้านลูกค้าไม่ได้ เผื่อมีปัญหาที่จะต้องแจ้ง(ระบบจะแสดงรายการที่ตรวจสอบแล้วภายใน 7 วัน เพื่อง่ายต่อการใช้งาน)"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background6"
+
+                    android:gravity="center"
+                    android:text="- การตรวจสอบ ไม่ได้ และ นอกเขตการขาย/ในหน้าตรวจที่เลือกหัวข้อที่ 3 และ 4  จะต้องทำการแจ้งปัญหา (ระบบจะแสดงรายการที่ตรวจสอบแล้วภายใน 7 วัน เพื่อง่ายต่อการใช้งาน)"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background6"
+
+                    android:gravity="center"
+                    android:text="- การตรวจสอบ แล้วขึ้นพบปัญหา/แท็ปสีแดง จะต้องทำการแจ้งปัญหา  (ระบบจะแสดงรายการที่ตรวจสอบแล้ว จนกว่าจะแจ้งปัญหาครบตามเลขที่สัญญา)"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="8sp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/background6"
+
+                    android:gravity="center"
+                    android:text="** ระบบจะแสดงรายการตรวจให้เพื่องานต่อกานใช้งาน ***"
+                    />
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OK"
+                    android:id="@+id/read_btn"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/primary"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="1dp"
+            android:src="@drawable/check_box_report_problem"
+            android:background="@drawable/check_box_report_problem"
+            android:layout_gravity="center_horizontal|top"
+            />
+
+    </FrameLayout>
+</LinearLayout>

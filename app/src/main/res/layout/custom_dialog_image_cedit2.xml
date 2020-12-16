@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+
+
+
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/image_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:scaleType="fitXY"
+                android:src="@drawable/picture4" />
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingLeft="0dp"
+
+
+                    android:background="@drawable/roun_rect_orange7"
+                    android:text="  ออก  " />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:id="@+id/rotage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:src="@drawable/rotage" />
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingLeft="0dp"
+
+
+                    android:background="@drawable/roun_rect_orange6"
+                    android:text="  เปลี่ยน  " />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+
+            />
+
+
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>
