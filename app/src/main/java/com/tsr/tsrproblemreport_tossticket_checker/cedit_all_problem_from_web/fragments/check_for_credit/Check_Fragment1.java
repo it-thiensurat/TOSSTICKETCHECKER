@@ -19,7 +19,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -478,7 +477,7 @@ ImageView edit1,edit2,edit3,edit4,edit5,edit6,edit7,edit8,image_tal1,image_tal2,
         counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent = new Intent(getActivity(), Detali_check1.class);
+                Intent = new Intent(getActivity(), Detali_check1.class);     //  แก้หน้าทดสอบ  ...
                 Bundle bun = new Bundle();
                 bun.putString("NoID", NoID);
                 bun.putString("conno", conno);
@@ -493,7 +492,7 @@ ImageView edit1,edit2,edit3,edit4,edit5,edit6,edit7,edit8,image_tal1,image_tal2,
 
                 bun.putString("ProcessTypeID", "01");
                 bun.putString("date", date);
-
+                bun.putString("idcard", idcard);
 
                 Intent.putExtras(bun);
                 startActivityForResult(Intent, 23);

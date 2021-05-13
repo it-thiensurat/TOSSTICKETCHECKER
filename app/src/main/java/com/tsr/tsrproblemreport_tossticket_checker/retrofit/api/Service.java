@@ -37,25 +37,12 @@ public interface Service {
     Call<Object> getSale4(@Query("SaleEmp") String EmpID);
 
 
+    @GET("assanee/checker_system/add_new/CheckerCard_Answer.php/")                                   // REAL
+    Call<Object> getCheckerCard_Answer(@Query("TopicID") String TopicID);
 
+    @GET("assanee/checker_system/add_new/ContractGrade.php/")                                   // REAL
+    Call<Object> getContractGrade(@Query("IDCard") String idcard,@Query("CONTNO") String CONTNO);
 
-
-
-
-/*
-    @GET("/assanee/api_sale_all_problem_from_cedit_by_db_kiw/manager/problem_all/manager_problem1_json2_real_from_cedit_edit_problem2_copy_real_PAGE.php")
-    Call<Object> getTopRatedMovies(
-           *//* @Query("api_key") String apiKey,
-            @Query("language") String language,*//*
-            @Query("page") int pageIndex
-    );*/
-/*
-    @GET("/assanee/login5_3_UAT.php/")                                  // UAT
-    Call<Object> getSale(@Query("EmpID") String EmpID);
-
-    @GET("/assanee/login_device.php/")
-    Call<Object> getSale2(@Query("AndroidDeviceID") String AndroidDeviceID);
-    */
 
 }
 

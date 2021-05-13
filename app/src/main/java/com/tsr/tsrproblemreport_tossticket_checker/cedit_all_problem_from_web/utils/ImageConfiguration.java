@@ -488,83 +488,105 @@ public class ImageConfiguration {
         int height = bm.getHeight();
 
         int bitmapByteCount= BitmapCompat.getAllocationByteCount(bm);
-        bitmapByteCount=(bitmapByteCount/10000)/5;
+        bitmapByteCount=(bitmapByteCount/10000)/10;
 
 
         Log.e("resizedBitmap1", String.valueOf(bitmapByteCount));
         float scaleWidth = 0,scaleHeight=0;
 
+        float x=bitmapByteCount/100;
+        //float x2=bitmapByteCount/10;
 
 
         if(IN_SELECT.equals("camera")){
 
-            if(bitmapByteCount>=20000){
-                scaleWidth = ((float) width/35) / width;
-                scaleHeight = ((float) height/35) / height;
+
+            //int x=0;
+            //x=bitmapByteCount/400;
+
+            scaleWidth = ((float) width/x) / width;
+            scaleHeight = ((float) height/x) / height;
+
+
+
+         //   tt=scaleWidth/500;
+          //  tt2=scaleHeight/500;
+            Log.e("scaleWidth_x", String.valueOf(scaleWidth));
+            Log.e("scaleWidth_y", String.valueOf(scaleHeight));
+
+
+
+
+            scaleWidth=scaleWidth/2;
+            scaleHeight=scaleHeight/2;
+
+/*            if(bitmapByteCount>=20000){
+                scaleWidth = ((float) width/50) / width;
+                scaleHeight = ((float) height/50) / height;
             }
             else if(bitmapByteCount>=16000){
-                scaleWidth = ((float) width/32) / width;
-                scaleHeight = ((float) height/32) / height;
+                scaleWidth = ((float) width/48) / width;
+                scaleHeight = ((float) height/48) / height;
             }
             else if(bitmapByteCount>=15000){
-                scaleWidth = ((float) width/30) / width;
-                scaleHeight = ((float) height/30) / height;
+                scaleWidth = ((float) width/45) / width;
+                scaleHeight = ((float) height/45) / height;
             }
             else  if(bitmapByteCount>=14000){
-                scaleWidth = ((float) width/28) / width;
-                scaleHeight = ((float) height/28) / height;
+                scaleWidth = ((float) width/42) / width;
+                scaleHeight = ((float) height/42) / height;
             }
             else   if(bitmapByteCount>=13000){
-                scaleWidth = ((float) width/26) / width;
-                scaleHeight = ((float) height/26) / height;
+                scaleWidth = ((float) width/39) / width;
+                scaleHeight = ((float) height/39) / height;
             }
 
             else if(bitmapByteCount>=12000){
-                scaleWidth = ((float) width/24) / width;
-                scaleHeight = ((float) height/24) / height;
+                scaleWidth = ((float) width/36) / width;
+                scaleHeight = ((float) height/36) / height;
             }
             else if(bitmapByteCount>=11000){
-                scaleWidth = ((float) width/22) / width;
-                scaleHeight = ((float) height/22) / height;
+                scaleWidth = ((float) width/33) / width;
+                scaleHeight = ((float) height/33) / height;
             }
 
             else if(bitmapByteCount>=10000){
-                scaleWidth = ((float) width/20) / width;
-                scaleHeight = ((float) height/20) / height;
+                scaleWidth = ((float) width/30) / width;
+                scaleHeight = ((float) height/30) / height;
             }
 
             else if(bitmapByteCount>=9000){
+                scaleWidth = ((float) width/27) / width;
+                scaleHeight = ((float) height/27) / height;
+            }
+
+            else if(bitmapByteCount>=8000){
+                scaleWidth = ((float) width/24) / width;
+                scaleHeight = ((float) height/24) / height;
+            }
+
+            else if(bitmapByteCount>=7000){
+                scaleWidth = ((float) width/21) / width;
+                scaleHeight = ((float) height/21) / height;
+            }
+
+            else if(bitmapByteCount>=6000){
                 scaleWidth = ((float) width/18) / width;
                 scaleHeight = ((float) height/18) / height;
             }
 
-            else if(bitmapByteCount>=8000){
-                scaleWidth = ((float) width/16) / width;
-                scaleHeight = ((float) height/16) / height;
+            else if(bitmapByteCount>=5000){
+                scaleWidth = ((float) width/15) / width;
+                scaleHeight = ((float) height/15) / height;
             }
-
-            else if(bitmapByteCount>=7000){
-                scaleWidth = ((float) width/14) / width;
-                scaleHeight = ((float) height/14) / height;
-            }
-
-            else if(bitmapByteCount>=6000){
+            else if(bitmapByteCount>=4000){
                 scaleWidth = ((float) width/12) / width;
                 scaleHeight = ((float) height/12) / height;
             }
 
-            else if(bitmapByteCount>=5000){
-                scaleWidth = ((float) width/10) / width;
-                scaleHeight = ((float) height/10) / height;
-            }
-            else if(bitmapByteCount>=4000){
-                scaleWidth = ((float) width/8) / width;
-                scaleHeight = ((float) height/8) / height;
-            }
-
             else if(bitmapByteCount>=3000){
-                scaleWidth = ((float) width/7) / width;
-                scaleHeight = ((float) height/7) / height;
+                scaleWidth = ((float) width/9) / width;
+                scaleHeight = ((float) height/9) / height;
                 Log.e("resizedBitmapaaaa","6");
             }
 
@@ -584,11 +606,16 @@ public class ImageConfiguration {
                 Log.e("resizedBitmapaaaa","3");
                 scaleWidth = ((float) width/4) / width;
                 scaleHeight = ((float) height/4) / height;
-            }
+            }*/
         }
         else {
 
 
+            scaleWidth = ((float) width/x) / width;
+            scaleHeight = ((float) height/x) / height;
+            scaleWidth=scaleWidth/2;
+            scaleHeight=scaleHeight/2;
+/*
             if(bitmapByteCount>=20000){
                 scaleWidth = ((float) width/33) / width;
                 scaleHeight = ((float) height/33) / height;
@@ -676,6 +703,7 @@ public class ImageConfiguration {
                 scaleWidth = ((float) width/2) / width;
                 scaleHeight = ((float) height/2) / height;
             }
+*/
 
 
         }

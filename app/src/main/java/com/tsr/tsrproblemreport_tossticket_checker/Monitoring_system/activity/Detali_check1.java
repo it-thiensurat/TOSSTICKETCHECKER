@@ -121,6 +121,16 @@ import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.GetDa
 import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.GetData_select_product_name;
 import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.GetData_select_tain;
 import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.GetData_select_tain2;
+import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_Answer1;
+import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_Answer10;
+import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_Answer2;
+import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_Answer3;
+import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_Answer4;
+import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_Answer5;
+import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_Answer6;
+import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_Answer7;
+import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_Answer8;
+import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_Answer9;
 import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_confirm;
 import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_type_check;
 import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.SectionDataModel_checker1;
@@ -138,7 +148,6 @@ import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Singl
 import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.pen_sing.ViewSignatureActivity;
 import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.qrcode.MainActivity_barcode;
 import com.tsr.tsrproblemreport_tossticket_checker.R;
-import com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.MusicActivity_Credit;
 import com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.activities.BagdeDrawable;
 import com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.fragments.Service;
 import com.tsr.tsrproblemreport_tossticket_checker.cedit_all_problem_from_web.map.MapsActivity;
@@ -179,7 +188,6 @@ import java.util.Timer;
 import java.util.concurrent.TimeUnit;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
-
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
@@ -208,23 +216,36 @@ public class Detali_check1 extends AppCompatActivity implements View.OnClickList
             li_pay_two,li_pay_two2,li_confirm,li_confirm2,li_line1,li_line2,
             li_line3,li_line4,li_line5,li_line6,li_line0,li_line7,li_line8,
             li_line9,li_remarket,li_pay2_2_2,li_line10,li_line11,li_line12,li_pay2_2_3;
+    LinearLayout li_new1, li_new2, li_new3, li_new4, li_new5, li_new6, li_new7, li_new8, li_new9, li_line_new1,
+            li_line_new2, li_line_new3, li_line_new4, li_line_new5, li_line_new6, li_line_new7, li_line_new8, li_line_new9;
+
     private SignaturePad objSignaturePad;
     private String signaturePath;
-    String NoID="",conno="",FnYear="",FnMonth="",customer="",PayLastPeriod="",Outstanding="",ProcessTypeID="",ProductSerial="",date_install="";
+    String NoID="",conno="",FnYear="",FnMonth="",customer="",PayLastPeriod="",Outstanding="",ProcessTypeID="",ProductSerial="",date_install="",idcard="";
     TextView txt_scan,txt_scan_assa;
     ImageView image_tal2,image_tal3,image_clear,image_pen_sing;
     ImageButton bt_scan,switcher2;
     RecyclerView my_recycler_view1,my_recycler_view2,my_recycler_view3,my_recycler_view4,my_recycler_view5,my_recycler_view_map,my_recycler_view2_2,recyclerview1;
-    Spinner spDemo,spDemo1,spDemo2,spDemo3,spDemo4,spDemo5,spDemo6;
+    Spinner spDemo,spDemo1,spDemo2,spDemo3,spDemo4,spDemo5,spDemo6,sp1,sp2,sp4,sp5,sp6,sp7,sp8,sp9,sp10;
+    Spinner sp3;
     EditText new_message_tain,new_message,new_message1,new_message2,new_message3,new_message4,new_message_home_in,new_message_scan,new_message_install,new_message_pay2,new_message_select4;
-    RadioButton RadioButton_0,RadioButton_1,RadioButton_2,RadioButton_4,RadioButton_5,RadioButton_6;
+    RadioButton RadioButton_0,RadioButton_1,RadioButton_2,RadioButton_4,RadioButton_5,RadioButton_6,RadioButton_history,RadioButton1_history;
     CheckBox CheckBox0,cb_pay_two;
     int CheckBox_status=0;
-    RadioGroup radioSexGroup,radioSexGroup1,radioSexGroup2,radioSex_re,radioSex_retain,radioSex_con;
+    RadioGroup radioSexGroup,radioSexGroup1,radioSexGroup2,radioSex_re,radioSex_retain,radioSex_con,radio_history;
     private RadioButton radioButton1,radioButton2,radioButton3;
     Intent Intent;
     String VersionOSM="",AnswerID_home_in="",AnswerID_gps="",AnswerID_install="",AnswerID_who="",AnswerID_tain="",AnswerID_tain2="",TopicID_home_in="",TopicID_gps="",
             TopicID_install="",TopicID_who="",TopicID_tain="",TopicID_tain2="";
+
+    String AnswerID1="",AnswerID2="",AnswerID3="",AnswerID4="",AnswerID5="",
+            AnswerID6="",AnswerID7="",AnswerID8="",AnswerID9="",AnswerID10="";
+    String TopicID1="",TopicID2="",TopicID3="",TopicID4="",TopicID5="",
+            TopicID6="",TopicID7="",TopicID8="",TopicID9="",TopicID10="",AnswerName3="",
+            AnswerName1="",AnswerName2="",AnswerName4="",AnswerName5="",AnswerName6="",
+            AnswerName7="",AnswerName8="",AnswerName9="",AnswerName10="";
+
+
 
     String checkedText_confirm="",checkedText_install="",checkedText_pay_one="",radioSex_re_S="",radioSex_retain_S="",checkedText_radioSex_con="";
     long noOfDaysBetween = 0;
@@ -293,6 +314,18 @@ public class Detali_check1 extends AppCompatActivity implements View.OnClickList
     List<GetData_select_product_name> getData_select_product_names;
 
     List<GetData_uploade_Image> getData_uploade_images;
+
+    List<Get_data_Answer1> get_data_answer1s;
+    List<Get_data_Answer2> get_data_answer2s;
+    List<Get_data_Answer3> get_data_answer3s;
+    List<Get_data_Answer4> get_data_answer4s;
+    List<Get_data_Answer5> get_data_answer5s;
+    List<Get_data_Answer6> get_data_answer6s;
+    List<Get_data_Answer7> get_data_answer7s;
+    List<Get_data_Answer8> get_data_answer8s;
+    List<Get_data_Answer9> get_data_answer9s;
+    List<Get_data_Answer10> get_data_answer10s;
+
 
     JsonArrayRequest jsonArrayRequest;
     JsonObjectRequest jsonObjectRequest;
@@ -392,7 +425,7 @@ int status_report_problem_qr=0,status_report_problem_pay2=0,status_qr=0,status_p
 
 
 
-        setContentView(R.layout.activity_check_for_1);
+        setContentView(R.layout.activity_check_for_1_test);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
@@ -403,7 +436,7 @@ int status_report_problem_qr=0,status_report_problem_pay2=0,status_qr=0,status_p
 
         //VersionOSM = MyApplication.getInstance().getPrefManager().getPreferrence("VersionOS");
 
-        VersionOSM = android.os.Build.VERSION.RELEASE;
+        VersionOSM = Build.VERSION.RELEASE;
 
         relat_scan= (RelativeLayout) findViewById(R.id.relat_scan);
         txt_scan= (TextView) findViewById(R.id.txt_scan);
@@ -449,6 +482,16 @@ int status_report_problem_qr=0,status_report_problem_pay2=0,status_qr=0,status_p
 
         spDemo5= (Spinner) findViewById(R.id.spDemo5);
         spDemo6= (Spinner) findViewById(R.id.spDemo6);
+        sp1= (Spinner) findViewById(R.id.sp1);
+        sp2= (Spinner) findViewById(R.id.sp2);
+        sp3= (Spinner) findViewById(R.id.sp3);
+        sp4= (Spinner) findViewById(R.id.sp4);
+        sp5= (Spinner) findViewById(R.id.sp5);
+        sp6= (Spinner) findViewById(R.id.sp6);
+        sp7= (Spinner) findViewById(R.id.sp7);
+        sp8= (Spinner) findViewById(R.id.sp8);
+        sp9= (Spinner) findViewById(R.id.sp9);
+        sp10= (Spinner) findViewById(R.id.sp10);
 
         RadioButton_0= (RadioButton) findViewById(R.id.RadioButton);
         RadioButton_1= (RadioButton) findViewById(R.id.RadioButton1);
@@ -466,6 +509,10 @@ int status_report_problem_qr=0,status_report_problem_pay2=0,status_qr=0,status_p
         radioSex_retain= (RadioGroup) findViewById(R.id.radioSex_retain);
 
         radioSex_con= (RadioGroup) findViewById(R.id.radioSex_con);
+
+
+
+
 
         new_message= (EditText) findViewById(R.id.new_message);
         new_message1= (EditText) findViewById(R.id.new_message1);
@@ -561,6 +608,27 @@ int status_report_problem_qr=0,status_report_problem_pay2=0,status_qr=0,status_p
         relativeLayout_new= (RelativeLayout) findViewById(R.id.relativeLayout_new);
         linearlayout_date_to_date= (LinearLayout) findViewById(R.id.linearlayout_date_to_date);
         li_gps= (LinearLayout) findViewById(R.id.li_gps);
+
+
+        li_new1= (LinearLayout) findViewById(R.id.li_new1);
+        li_new2= (LinearLayout) findViewById(R.id.li_new2);
+        li_new3= (LinearLayout) findViewById(R.id.li_new3);
+        li_new4= (LinearLayout) findViewById(R.id.li_new4);
+        li_new5= (LinearLayout) findViewById(R.id.li_new5);
+        li_new6= (LinearLayout) findViewById(R.id.li_new6);
+        li_new7= (LinearLayout) findViewById(R.id.li_new7);
+        li_new8= (LinearLayout) findViewById(R.id.li_new8);
+        li_new9= (LinearLayout) findViewById(R.id.li_new9);
+        li_line_new1= (LinearLayout) findViewById(R.id.li_line_new1);
+        li_line_new2= (LinearLayout) findViewById(R.id.li_line_new2);
+        li_line_new3= (LinearLayout) findViewById(R.id.li_line_new3);
+        li_line_new4= (LinearLayout) findViewById(R.id.li_line_new4);
+        li_line_new5= (LinearLayout) findViewById(R.id.li_line_new5);
+        li_line_new6= (LinearLayout) findViewById(R.id.li_line_new6);
+        li_line_new7= (LinearLayout) findViewById(R.id.li_line_new7);
+        li_line_new8= (LinearLayout) findViewById(R.id.li_line_new8);
+        li_line_new9= (LinearLayout) findViewById(R.id.li_line_new9);
+
 
           count1=(TextView)findViewById(R.id.count1);
           count2=(TextView)findViewById(R.id.count2);
@@ -786,6 +854,18 @@ catch (Exception ex){
         get_data_confirms=new ArrayList<>();
         get_data_type_checks=new ArrayList<>();
         getData_select_product_names=new ArrayList<>();
+
+        get_data_answer1s=new ArrayList<>();
+        get_data_answer2s=new ArrayList<>();
+        get_data_answer3s=new ArrayList<>();
+        get_data_answer4s=new ArrayList<>();
+        get_data_answer5s=new ArrayList<>();
+        get_data_answer6s=new ArrayList<>();
+        get_data_answer7s=new ArrayList<>();
+        get_data_answer8s=new ArrayList<>();
+        get_data_answer9s=new ArrayList<>();
+        get_data_answer10s=new ArrayList<>();
+
 
         bt_scan.setOnClickListener(this);
         txt_scan.setOnClickListener(this);
@@ -1032,6 +1112,7 @@ catch (Exception ex){
            // ProcessTypeID=data.getString("ProcessTypeID");
             ProductSerial=data.getString("ProductSerial");
             date_install=data.getString("date");
+            idcard=data.getString("idcard");
             //txt_Outstanding.setText(MyApplication.getInstance().getPrefManager().getPreferrence("Outstanding_cf"));
             txt_PayLastPeriod.setText(MyApplication.getInstance().getPrefManager().getPreferrence("PayLastPeriod_cf"));
 
@@ -1296,7 +1377,7 @@ catch (Exception ex){
 
         //Parsing the date
         LocalDate dateBefore = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             try {
                 dateBefore = LocalDate.parse(dateBeforeString);
             }
@@ -1306,7 +1387,7 @@ catch (Exception ex){
 
         }
         LocalDate dateAfter = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             try {
                 dateAfter = LocalDate.parse(dateAfterString);
             }
@@ -1319,7 +1400,7 @@ catch (Exception ex){
 
         //calculating number of days in between
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             try {
                 noOfDaysBetween = ChronoUnit.DAYS.between(dateBefore, dateAfter);
                 Log.e("noOfDaysBetween", String.valueOf(noOfDaysBetween));
@@ -1705,6 +1786,19 @@ catch (Exception ex){
             }});
 
 
+
+
+
+
+        CheckerCard_Answer1("42");
+        CheckerCard_Answer2("44");
+        CheckerCard_Answer4("60");
+        CheckerCard_Answer5("40");
+        CheckerCard_Answer6("46");
+        CheckerCard_Answer7("48");
+        CheckerCard_Answer8("50");
+        CheckerCard_Answer9("52");
+        CheckerCard_Answer10("54");
     }
 
 
@@ -3078,7 +3172,15 @@ catch (Exception ex){
                                                                      }
 
 
+                                                                     if(radioSex_re_S.equals("เคย")){
+                                                                         CheckerCard_Answer3(idcard,conno);
 
+                                                                         sp3.setVisibility(View.VISIBLE);
+
+                                                                     }
+                                                                     else {
+                                                                         sp3.setVisibility(View.GONE);
+                                                                     }
 
                                                                  }
                                                              }
@@ -3094,9 +3196,12 @@ catch (Exception ex){
 
 
 
+                  //  sp3.setVisibility(View.GONE);
 
                 }
                 else if(checkedText_install_ONBACK.equals("เคย")){
+
+                    Log.e("gggggg","aqwer");
                     ((RadioButton)radioSex_re.getChildAt(0)).setChecked(true);
                     ((RadioButton)radioSex_re.getChildAt(1)).setChecked(false);
 
@@ -3157,7 +3262,14 @@ catch (Exception ex){
                                                                      }
 
 
+                                                                     if(radioSex_re_S.equals("เคย")){
+                                                                         CheckerCard_Answer3(idcard,conno);
 
+                                                                         sp3.setVisibility(View.VISIBLE);
+                                                                     }
+                                                                     else {
+                                                                         sp3.setVisibility(View.GONE);
+                                                                     }
 
                                                                  }
                                                              }
@@ -3175,9 +3287,14 @@ catch (Exception ex){
 
 
 
+                    sp3.setVisibility(View.VISIBLE);
+                    CheckerCard_Answer3(idcard,conno);
 
                 }
                 else {
+
+                    Log.e("dddd","1");
+
                     ((RadioButton)radioSex_re.getChildAt(1)).setChecked(false);
                     ((RadioButton)radioSex_re.getChildAt(0)).setChecked(false);
 
@@ -3223,7 +3340,14 @@ catch (Exception ex){
                                                                      }
 
 
+                                                                     if(radioSex_re_S.equals("เคย")){
+                                                                         CheckerCard_Answer3(idcard,conno);
 
+                                                                         sp3.setVisibility(View.VISIBLE);
+                                                                     }
+                                                                     else {
+                                                                         sp3.setVisibility(View.GONE);
+                                                                     }
 
                                                                  }
                                                              }
@@ -3239,6 +3363,7 @@ catch (Exception ex){
 
 
 
+                    //sp3.setVisibility(View.GONE);
                 }
 
             }
@@ -3272,6 +3397,14 @@ catch (Exception ex){
                                                                  }
 
 
+                                                                 if(radioSex_re_S.equals("เคย")){
+                                                                     CheckerCard_Answer3(idcard,conno);
+
+                                                                     sp3.setVisibility(View.VISIBLE);
+                                                                 }
+                                                                 else {
+                                                                     sp3.setVisibility(View.GONE);
+                                                                 }
 
 
                                                              }
@@ -3308,7 +3441,14 @@ catch (Exception ex){
                                                                  li_remarket.setBackgroundColor(0xffffffff);
                                                              }
 
+                                                             if(radioSex_re_S.equals("เคย")){
+                                                                 CheckerCard_Answer3(idcard,conno);
 
+                                                                 sp3.setVisibility(View.VISIBLE);
+                                                             }
+                                                             else {
+                                                                 sp3.setVisibility(View.GONE);
+                                                             }
 
 
                                                          }
@@ -3758,6 +3898,25 @@ catch (Exception ex){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private void check_box_new1(){
         try {
             String checkedText_radioSex_con_ONBACK= MyApplication.getInstance().getPrefManager().getPreferrence("checkedText_radioSex_con_ONBACK")+"";
@@ -4089,6 +4248,20 @@ catch (Exception ex){
 
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private void view_data_size(){
         allSampleData1.clear();
         allSampleData2.clear();
@@ -4806,6 +4979,27 @@ catch (Exception ex){
                             lili_line2.setVisibility(View.VISIBLE);
                             li1.setVisibility(View.VISIBLE);
                             li2.setVisibility(View.VISIBLE);
+
+                            li5.setVisibility(View.VISIBLE);
+                            li_new1.setVisibility(View.VISIBLE);
+                            li_new2.setVisibility(View.VISIBLE);
+                            li_new3.setVisibility(View.VISIBLE);
+                            li_new4.setVisibility(View.VISIBLE);
+                            li_new5.setVisibility(View.VISIBLE);
+                            li_new6.setVisibility(View.VISIBLE);
+                            li_new7.setVisibility(View.VISIBLE);
+                            li_new8.setVisibility(View.VISIBLE);
+                            li_new9.setVisibility(View.VISIBLE);
+                            li_line_new1.setVisibility(View.VISIBLE);
+                            li_line_new2.setVisibility(View.VISIBLE);
+                            li_line_new3.setVisibility(View.VISIBLE);
+                            li_line_new4.setVisibility(View.VISIBLE);
+                            li_line_new5.setVisibility(View.VISIBLE);
+                            li_line_new6.setVisibility(View.VISIBLE);
+                            li_line_new7.setVisibility(View.VISIBLE);
+                            li_line_new8.setVisibility(View.VISIBLE);
+                            li_line_new9.setVisibility(View.VISIBLE);
+
                             lili_text_select4.setVisibility(View.GONE);
 
 
@@ -4929,6 +5123,28 @@ catch (Exception ex){
                             lili_line2.setVisibility(View.VISIBLE);
                             li1.setVisibility(View.VISIBLE);
                             li2.setVisibility(View.VISIBLE);
+
+                            li5.setVisibility(View.VISIBLE);
+                            li_new1.setVisibility(View.VISIBLE);
+                            li_new2.setVisibility(View.VISIBLE);
+                            li_new3.setVisibility(View.VISIBLE);
+                            li_new4.setVisibility(View.VISIBLE);
+                            li_new5.setVisibility(View.VISIBLE);
+                            li_new6.setVisibility(View.VISIBLE);
+                            li_new7.setVisibility(View.VISIBLE);
+                            li_new8.setVisibility(View.VISIBLE);
+                            li_new9.setVisibility(View.VISIBLE);
+                            li_line_new1.setVisibility(View.VISIBLE);
+
+                            li_line_new2.setVisibility(View.VISIBLE);
+                            li_line_new3.setVisibility(View.VISIBLE);
+                            li_line_new4.setVisibility(View.VISIBLE);
+                            li_line_new5.setVisibility(View.VISIBLE);
+                            li_line_new6.setVisibility(View.VISIBLE);
+                            li_line_new7.setVisibility(View.VISIBLE);
+                            li_line_new8.setVisibility(View.VISIBLE);
+                            li_line_new9.setVisibility(View.VISIBLE);
+
                             lili_text_select4.setVisibility(View.GONE);
 
                             Log.e("assanee","5");
@@ -5041,6 +5257,28 @@ catch (Exception ex){
                             li1.setVisibility(View.VISIBLE);
                             li2.setVisibility(View.VISIBLE);
                             lili_text_select4.setVisibility(View.GONE);
+
+                            li5.setVisibility(View.GONE);
+                            li_new1.setVisibility(View.GONE);
+                            li_new2.setVisibility(View.GONE);
+                            li_new3.setVisibility(View.GONE);
+                            li_new4.setVisibility(View.GONE);
+                            li_new5.setVisibility(View.GONE);
+                            li_new6.setVisibility(View.GONE);
+                            li_new7.setVisibility(View.GONE);
+                            li_new8.setVisibility(View.GONE);
+                            li_new9.setVisibility(View.GONE);
+                            li_line_new1.setVisibility(View.GONE);
+
+                            li_line_new2.setVisibility(View.GONE);
+                            li_line_new3.setVisibility(View.GONE);
+                            li_line_new4.setVisibility(View.GONE);
+                            li_line_new5.setVisibility(View.GONE);
+                            li_line_new6.setVisibility(View.GONE);
+                            li_line_new7.setVisibility(View.GONE);
+                            li_line_new8.setVisibility(View.GONE);
+                            li_line_new9.setVisibility(View.GONE);
+
                             item_click=2;
                         }
 
@@ -5149,6 +5387,27 @@ catch (Exception ex){
                             lili_line2.setVisibility(View.GONE);
                             li1.setVisibility(View.GONE);
                             li2.setVisibility(View.GONE);
+
+                            li5.setVisibility(View.GONE);
+                            li_new1.setVisibility(View.GONE);
+                            li_new2.setVisibility(View.GONE);
+                            li_new3.setVisibility(View.GONE);
+                            li_new4.setVisibility(View.GONE);
+                            li_new5.setVisibility(View.GONE);
+                            li_new6.setVisibility(View.GONE);
+                            li_new7.setVisibility(View.GONE);
+                            li_new8.setVisibility(View.GONE);
+                            li_new9.setVisibility(View.GONE);
+                            li_line_new1.setVisibility(View.GONE);
+
+                            li_line_new2.setVisibility(View.GONE);
+                            li_line_new3.setVisibility(View.GONE);
+                            li_line_new4.setVisibility(View.GONE);
+                            li_line_new5.setVisibility(View.GONE);
+                            li_line_new6.setVisibility(View.GONE);
+                            li_line_new7.setVisibility(View.GONE);
+                            li_line_new8.setVisibility(View.GONE);
+                            li_line_new9.setVisibility(View.GONE);
                             lili_text_select4.setVisibility(View.VISIBLE);
                             item_click=3;
                         }
@@ -5258,6 +5517,28 @@ catch (Exception ex){
                             lili_line2.setVisibility(View.GONE);
                             li1.setVisibility(View.GONE);
                             li2.setVisibility(View.GONE);
+
+                            li5.setVisibility(View.GONE);
+                            li_new1.setVisibility(View.GONE);
+                            li_new2.setVisibility(View.GONE);
+                            li_new3.setVisibility(View.GONE);
+                            li_new4.setVisibility(View.GONE);
+                            li_new5.setVisibility(View.GONE);
+                            li_new6.setVisibility(View.GONE);
+                            li_new7.setVisibility(View.GONE);
+                            li_new8.setVisibility(View.GONE);
+                            li_new9.setVisibility(View.GONE);
+                            li_line_new1.setVisibility(View.GONE);
+
+                            li_line_new2.setVisibility(View.GONE);
+                            li_line_new3.setVisibility(View.GONE);
+                            li_line_new4.setVisibility(View.GONE);
+                            li_line_new5.setVisibility(View.GONE);
+                            li_line_new6.setVisibility(View.GONE);
+                            li_line_new7.setVisibility(View.GONE);
+                            li_line_new8.setVisibility(View.GONE);
+                            li_line_new9.setVisibility(View.GONE);
+
                             lili_text_select4.setVisibility(View.VISIBLE);
                             item_click=4;
                         }
@@ -5320,6 +5601,28 @@ catch (Exception ex){
                             li_line11.setVisibility(View.GONE);
                             li_line12.setVisibility(View.GONE);
                             li_pay2_2_3.setVisibility(View.GONE);
+
+                            li5.setVisibility(View.GONE);
+                            li_new1.setVisibility(View.GONE);
+                            li_new2.setVisibility(View.GONE);
+                            li_new3.setVisibility(View.GONE);
+                            li_new4.setVisibility(View.GONE);
+                            li_new5.setVisibility(View.GONE);
+                            li_new6.setVisibility(View.GONE);
+                            li_new7.setVisibility(View.GONE);
+                            li_new8.setVisibility(View.GONE);
+                            li_new9.setVisibility(View.GONE);
+                            li_line_new1.setVisibility(View.GONE);
+
+                            li_line_new2.setVisibility(View.GONE);
+                            li_line_new3.setVisibility(View.GONE);
+                            li_line_new4.setVisibility(View.GONE);
+                            li_line_new5.setVisibility(View.GONE);
+                            li_line_new6.setVisibility(View.GONE);
+                            li_line_new7.setVisibility(View.GONE);
+                            li_line_new8.setVisibility(View.GONE);
+                            li_line_new9.setVisibility(View.GONE);
+
                             Log.e("assanee","3");
                         }
 
@@ -5382,6 +5685,28 @@ catch (Exception ex){
                         li_line11.setVisibility(View.GONE);
                         li_line12.setVisibility(View.GONE);
                         li_pay2_2_3.setVisibility(View.GONE);
+
+                        li5.setVisibility(View.GONE);
+                        li_new1.setVisibility(View.GONE);
+                        li_new2.setVisibility(View.GONE);
+                        li_new3.setVisibility(View.GONE);
+                        li_new4.setVisibility(View.GONE);
+                        li_new5.setVisibility(View.GONE);
+                        li_new6.setVisibility(View.GONE);
+                        li_new7.setVisibility(View.GONE);
+                        li_new8.setVisibility(View.GONE);
+                        li_new9.setVisibility(View.GONE);
+                        li_line_new1.setVisibility(View.GONE);
+
+                        li_line_new2.setVisibility(View.GONE);
+                        li_line_new3.setVisibility(View.GONE);
+                        li_line_new4.setVisibility(View.GONE);
+                        li_line_new5.setVisibility(View.GONE);
+                        li_line_new6.setVisibility(View.GONE);
+                        li_line_new7.setVisibility(View.GONE);
+                        li_line_new8.setVisibility(View.GONE);
+                        li_line_new9.setVisibility(View.GONE);
+
                         Log.e("assanee","2");
 
                     }
@@ -5443,6 +5768,27 @@ catch (Exception ex){
                     li_line11.setVisibility(View.GONE);
                     li_line12.setVisibility(View.GONE);
                     li_pay2_2_3.setVisibility(View.GONE);
+
+                    li5.setVisibility(View.GONE);
+                    li_new1.setVisibility(View.GONE);
+                    li_new2.setVisibility(View.GONE);
+                    li_new3.setVisibility(View.GONE);
+                    li_new4.setVisibility(View.GONE);
+                    li_new5.setVisibility(View.GONE);
+                    li_new6.setVisibility(View.GONE);
+                    li_new7.setVisibility(View.GONE);
+                    li_new8.setVisibility(View.GONE);
+                    li_new9.setVisibility(View.GONE);
+                    li_line_new1.setVisibility(View.GONE);
+
+                    li_line_new2.setVisibility(View.GONE);
+                    li_line_new3.setVisibility(View.GONE);
+                    li_line_new4.setVisibility(View.GONE);
+                    li_line_new5.setVisibility(View.GONE);
+                    li_line_new6.setVisibility(View.GONE);
+                    li_line_new7.setVisibility(View.GONE);
+                    li_line_new8.setVisibility(View.GONE);
+                    li_line_new9.setVisibility(View.GONE);
 
                     Log.e("assanee","1");
                 }
@@ -7988,7 +8334,7 @@ Log.e("size1", String.valueOf(size1));
                 MyApplication.getInstance().getPrefManager().getPreferrence("part_image");
                 String FILE="";
                 try {
-                    VersionOS = android.os.Build.VERSION.RELEASE;
+                    VersionOS = Build.VERSION.RELEASE;
 
                     if((VersionOS.equals("6.0"))|(VersionOS.equals("6.0.0"))|(VersionOS.equals("6.0.1"))|(VersionOS.equals("6.1"))|(VersionOS.equals("6.1.0"))|(VersionOS.equals("7.0"))|(VersionOS.equals("7.0.0"))|(VersionOS.equals("7.0.1"))|(VersionOS.equals("7.1"))|(VersionOS.equals("7.1.0"))|(VersionOS.equals("7.1.1"))|(VersionOS.equals("7.1.2"))|(VersionOS.equals("8.0"))|(VersionOS.equals("8.0.0"))|(VersionOS.equals("8.1.0"))|(VersionOS.equals("8.0"))|(VersionOS.equals("8.1"))|(VersionOS.equals("8.1.1"))|(VersionOS.equals("9"))|(VersionOS.equals("9.0"))|(VersionOS.equals("9.0.0"))|(VersionOS.equals("9.1"))|(VersionOS.equals("9.1.0"))){
                         FILE=MyApplication.getInstance().getPrefManager().getPreferrence("part_image")+"/"+MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+".jpg";
@@ -8150,7 +8496,7 @@ Log.e("size1", String.valueOf(size1));
                 MyApplication.getInstance().getPrefManager().getPreferrence("part_image");
                 String FILE="";
                 try {
-                    VersionOS = android.os.Build.VERSION.RELEASE;
+                    VersionOS = Build.VERSION.RELEASE;
 
                     if((VersionOS.equals("6.0"))|(VersionOS.equals("6.0.0"))|(VersionOS.equals("6.0.1"))|(VersionOS.equals("6.1"))|(VersionOS.equals("6.1.0"))|(VersionOS.equals("7.0"))|(VersionOS.equals("7.0.0"))|(VersionOS.equals("7.0.1"))|(VersionOS.equals("7.1"))|(VersionOS.equals("7.1.0"))|(VersionOS.equals("7.1.1"))|(VersionOS.equals("7.1.2"))|(VersionOS.equals("8.0"))|(VersionOS.equals("8.0.0"))|(VersionOS.equals("8.1.0"))|(VersionOS.equals("8.0"))|(VersionOS.equals("8.1"))|(VersionOS.equals("8.1.1"))|(VersionOS.equals("9"))|(VersionOS.equals("9.0"))|(VersionOS.equals("9.0.0"))|(VersionOS.equals("9.1"))|(VersionOS.equals("9.1.0"))){
                         FILE=MyApplication.getInstance().getPrefManager().getPreferrence("part_image")+"/"+MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+".jpg";
@@ -9533,7 +9879,7 @@ Log.e("size1", String.valueOf(size1));
 
                                //Parsing the date
                                LocalDate dateBefore = null;
-                               if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                               if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                                    try {
                                        dateBefore = LocalDate.parse(dateBeforeString);
                                    }
@@ -9543,7 +9889,7 @@ Log.e("size1", String.valueOf(size1));
 
                                }
                                LocalDate dateAfter = null;
-                               if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                               if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                                    try {
                                        dateAfter = LocalDate.parse(dateAfterString);
                                    }
@@ -9556,7 +9902,7 @@ Log.e("size1", String.valueOf(size1));
                                //calculating number of days in between
 
                                try {
-                                   if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                                   if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                                        noOfDaysBetween = ChronoUnit.DAYS.between(dateBefore, dateAfter);
                                    }
                                    // Log.e("noOfDaysBetween", String.valueOf(noOfDaysBetween));
@@ -10235,6 +10581,13 @@ Log.e("size1", String.valueOf(size1));
                     sweet_dailog_waining_checker("ยังไม่เลือก การชำระงวด 2?","10");
                 }
 
+                else if(AnswerName4.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก ช่องทางชำระเงิน","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+
                 else if(data_redio3.isEmpty()){
                     Log.e("test_error", "17");
                     //Log.e("no_data","no_data");
@@ -10299,21 +10652,7 @@ Log.e("size1", String.valueOf(size1));
 
 
 
-                else if(status_pen==0){
-                    Log.e("test_error", "19");
 
-                    li_pen.setBackgroundColor(0xffff0000);
-
-                    if(GET_date2.equals("-")){
-                        li_pay2.setBackgroundColor(0xffff0000);
-
-                    }
-                    if(data_radioSex_con.isEmpty()){
-                        li_conveniently.setBackgroundColor(0xffff0000);
-
-                    }
-                    sweet_dailog_waining_checker("ยังไม่ เซ็นชื่อ","12");
-                }
 
 
 
@@ -10937,6 +11276,72 @@ Log.e("size1", String.valueOf(size1));
                     li_conveniently.setBackgroundColor(0xffff0000);
 
                 }
+                else if(AnswerName1.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก สถานที่อยู่อาศัย","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName2.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก ระยะเวลาที่อยู่อาศัย","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+
+                else if(AnswerName5.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก สถานภาพ","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName6.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก อาชีพ","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName7.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก อายุงาน","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName8.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก รายได้ต่อเดือน","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName9.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก รายได่ต่อเดือนครอบครัว","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName10.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก จำนวนสมาชิกในครอบครัว","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+
+                else if(status_pen==0){
+                    Log.e("test_error", "19");
+
+                    li_pen.setBackgroundColor(0xffff0000);
+
+                    if(GET_date2.equals("-")){
+                        li_pay2.setBackgroundColor(0xffff0000);
+
+                    }
+                    if(data_radioSex_con.isEmpty()){
+                        li_conveniently.setBackgroundColor(0xffff0000);
+
+                    }
+                    sweet_dailog_waining_checker("ยังไม่ เซ็นชื่อ","12");
+                }
+
 
                 else if(select_color==0){
                     Log.e("test_error", "23");
@@ -10968,6 +11373,7 @@ Log.e("size1", String.valueOf(size1));
                     TextView   count1=(TextView)dialog.findViewById(R.id.count1);
                     TextView  count2=(TextView)dialog.findViewById(R.id.count2);
                     TextView count3=(TextView)dialog.findViewById(R.id.count3);
+                    TextView count4=(TextView)dialog.findViewById(R.id.count4);
                     RelativeLayout r_sddddave=(RelativeLayout)dialog.findViewById(R.id.r_sddddave);
                     LinearLayout li_text=(LinearLayout)dialog.findViewById(R.id.li_text);
                     RelativeLayout exit=(RelativeLayout)dialog.findViewById(R.id.exit);
@@ -10978,7 +11384,7 @@ Log.e("size1", String.valueOf(size1));
 
                     count1.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("✔");count2.setText("");count3.setText("");
+                            count1.setText("✔");count2.setText("");count3.setText("");count4.setText("");
                             //color=0xfff40707;
                             select_color=1;
                             select_color_S="03";
@@ -10990,7 +11396,7 @@ Log.e("size1", String.valueOf(size1));
                     });
                     count2.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("");count2.setText("✔");count3.setText("");
+                            count1.setText("");count2.setText("✔");count3.setText("");count4.setText("");
                             //color=0xfffcc7c7;
                             select_color=2;
                             select_color_S="02";
@@ -11002,10 +11408,23 @@ Log.e("size1", String.valueOf(size1));
                     });
                     count3.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("");count2.setText("");count3.setText("✔");
+                            count1.setText("");count2.setText("");count3.setText("✔");count4.setText("");
                             //color=0xff808080;
                             select_color=3;
                             select_color_S="01";
+                            if(select_color!=0){
+                                li_line8.setBackgroundColor(0xffffffff);
+                            }
+                            li_text.setVisibility(View.GONE);
+                        }
+                    });
+
+                    count4.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            count1.setText("");count2.setText("");count3.setText("");count4.setText("✔");
+                            //color=0xff808080;
+                            select_color=4;
+                            select_color_S="04";
                             if(select_color!=0){
                                 li_line8.setBackgroundColor(0xffffffff);
                             }
@@ -11326,6 +11745,16 @@ Log.e("size1", String.valueOf(size1));
                                     insert_CheckerCard_Details_tain();
                                     insert_CheckerCard_Details_date_to_date();
                                     insert_remarket();
+                                    insert_CheckerCard_Details_new1();
+                                    insert_CheckerCard_Details_new2();
+
+                                    insert_CheckerCard_Details_new4();
+                                    insert_CheckerCard_Details_new5();
+                                    insert_CheckerCard_Details_new6();
+                                    insert_CheckerCard_Details_new7();
+                                    insert_CheckerCard_Details_new8();
+                                    insert_CheckerCard_Details_new9();
+                                    insert_CheckerCard_Details_new10();
 
                                     if (CheckBox_status==1){
                                         insert_CheckerCard_Details_customer2();
@@ -11348,7 +11777,16 @@ Log.e("size1", String.valueOf(size1));
                                     insert_CheckerCard_Details_tain();
                                     insert_CheckerCard_Details_date_to_date();
                                     insert_remarket();
+                                    insert_CheckerCard_Details_new1();
+                                    insert_CheckerCard_Details_new2();
 
+                                    insert_CheckerCard_Details_new4();
+                                    insert_CheckerCard_Details_new5();
+                                    insert_CheckerCard_Details_new6();
+                                    insert_CheckerCard_Details_new7();
+                                    insert_CheckerCard_Details_new8();
+                                    insert_CheckerCard_Details_new9();
+                                    insert_CheckerCard_Details_new10();
                                     if (CheckBox_status==1){
                                         insert_CheckerCard_Details_customer2();
                                     }
@@ -11761,7 +12199,16 @@ Log.e("size1", String.valueOf(size1));
                         insert_CheckerCard_Details_tain();
                         insert_CheckerCard_Details_date_to_date();
                         insert_remarket();
+                        insert_CheckerCard_Details_new1();
+                        insert_CheckerCard_Details_new2();
 
+                        insert_CheckerCard_Details_new4();
+                        insert_CheckerCard_Details_new5();
+                        insert_CheckerCard_Details_new6();
+                        insert_CheckerCard_Details_new7();
+                        insert_CheckerCard_Details_new8();
+                        insert_CheckerCard_Details_new9();
+                        insert_CheckerCard_Details_new10();
                         if (CheckBox_status==1){
                             insert_CheckerCard_Details_customer2();
                         }
@@ -11779,7 +12226,16 @@ Log.e("size1", String.valueOf(size1));
                         insert_CheckerCard_Details_tain();
                         insert_CheckerCard_Details_date_to_date();
                         insert_remarket();
+                        insert_CheckerCard_Details_new1();
+                        insert_CheckerCard_Details_new2();
 
+                        insert_CheckerCard_Details_new4();
+                        insert_CheckerCard_Details_new5();
+                        insert_CheckerCard_Details_new6();
+                        insert_CheckerCard_Details_new7();
+                        insert_CheckerCard_Details_new8();
+                        insert_CheckerCard_Details_new9();
+                        insert_CheckerCard_Details_new10();
                         if (CheckBox_status==1){
                             insert_CheckerCard_Details_customer2();
                         }
@@ -12088,6 +12544,12 @@ Log.e("size1", String.valueOf(size1));
                     sweet_dailog_waining_checker("ยังไม่เลือก การชำระงวด 2?","10");
                 }
 
+                else if(AnswerName4.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก ช่องทางชำระเงิน","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
                 else if(data_redio3.isEmpty()){
                     Log.e("test_error", "17");
                     //Log.e("no_data","no_data");
@@ -12152,6 +12614,63 @@ Log.e("size1", String.valueOf(size1));
 
 
 
+
+
+
+                else if(data_radioSex_con.isEmpty()){
+                    li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+
+                else if(AnswerName1.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก สถานที่อยู่อาศัย","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName2.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก ระยะเวลาที่อยู่อาศัย","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+
+                else if(AnswerName5.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก สถานภาพ","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName6.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก อาชีพ","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName7.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก อายุงาน","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName8.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก รายได้ต่อเดือน","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName9.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก รายได่ต่อเดือนครอบครัว","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
+                else if(AnswerName10.equals("กรุณาเลือก")){
+                    sweet_dailog_waining_checker("ยังไม่เลือก จำนวนสมาชิกในครอบครัว","2");
+
+                    // li_conveniently.setBackgroundColor(0xffff0000);
+
+                }
                 else if(status_pen==0){
                     Log.e("test_error", "19");
 
@@ -12167,12 +12686,6 @@ Log.e("size1", String.valueOf(size1));
                     }
                     sweet_dailog_waining_checker("ยังไม่ เซ็นชื่อ","12");
                 }
-
-                else if(data_radioSex_con.isEmpty()){
-                    li_conveniently.setBackgroundColor(0xffff0000);
-
-                }
-
                 else if(select_color==0){
 
                     if (check_nonti_web == 0) {
@@ -12200,6 +12713,7 @@ Log.e("size1", String.valueOf(size1));
                     TextView   count1=(TextView)dialog.findViewById(R.id.count1);
                     TextView  count2=(TextView)dialog.findViewById(R.id.count2);
                     TextView count3=(TextView)dialog.findViewById(R.id.count3);
+                    TextView count4=(TextView)dialog.findViewById(R.id.count4);
                     RelativeLayout r_sddddave=(RelativeLayout)dialog.findViewById(R.id.r_sddddave);
                     LinearLayout li_text=(LinearLayout)dialog.findViewById(R.id.li_text);
                     RelativeLayout exit=(RelativeLayout)dialog.findViewById(R.id.exit);
@@ -12209,7 +12723,7 @@ Log.e("size1", String.valueOf(size1));
 
                     count1.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("✔");count2.setText("");count3.setText("");
+                            count1.setText("✔");count2.setText("");count3.setText("");count4.setText("");
                             //color=0xfff40707;
                             select_color=1;
                             select_color_S="03";
@@ -12221,7 +12735,7 @@ Log.e("size1", String.valueOf(size1));
                     });
                     count2.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("");count2.setText("✔");count3.setText("");
+                            count1.setText("");count2.setText("✔");count3.setText("");count4.setText("");
                             //color=0xfffcc7c7;
                             select_color=2;
                             select_color_S="02";
@@ -12233,10 +12747,22 @@ Log.e("size1", String.valueOf(size1));
                     });
                     count3.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("");count2.setText("");count3.setText("✔");
+                            count1.setText("");count2.setText("");count3.setText("✔");count4.setText("");
                             //color=0xff808080;
                             select_color=3;
                             select_color_S="01";
+                            if(select_color!=0){
+                                li_line8.setBackgroundColor(0xffffffff);
+                            }
+                            li_text.setVisibility(View.GONE);
+                        }
+                    });
+                    count4.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            count1.setText("");count2.setText("");count3.setText("");count4.setText("✔");
+                            //color=0xff808080;
+                            select_color=4;
+                            select_color_S="04";
                             if(select_color!=0){
                                 li_line8.setBackgroundColor(0xffffffff);
                             }
@@ -12566,6 +13092,16 @@ Log.e("size1", String.valueOf(size1));
                                     insert_CheckerCard_Details_tain();
                                     insert_CheckerCard_Details_date_to_date();
                                     insert_remarket();
+                                    insert_CheckerCard_Details_new1();
+                                    insert_CheckerCard_Details_new2();
+
+                                    insert_CheckerCard_Details_new4();
+                                    insert_CheckerCard_Details_new5();
+                                    insert_CheckerCard_Details_new6();
+                                    insert_CheckerCard_Details_new7();
+                                    insert_CheckerCard_Details_new8();
+                                    insert_CheckerCard_Details_new9();
+                                    insert_CheckerCard_Details_new10();
                                     if (CheckBox_status==1){
                                         insert_CheckerCard_Details_customer2();
                                     }
@@ -12967,6 +13503,16 @@ Log.e("size1", String.valueOf(size1));
                         insert_CheckerCard_Details_tain();
                         insert_CheckerCard_Details_date_to_date();
                         insert_remarket();
+                        insert_CheckerCard_Details_new1();
+                        insert_CheckerCard_Details_new2();
+
+                        insert_CheckerCard_Details_new4();
+                        insert_CheckerCard_Details_new5();
+                        insert_CheckerCard_Details_new6();
+                        insert_CheckerCard_Details_new7();
+                        insert_CheckerCard_Details_new8();
+                        insert_CheckerCard_Details_new9();
+                        insert_CheckerCard_Details_new10();
                         if (CheckBox_status==1){
                             insert_CheckerCard_Details_customer2();
                         }
@@ -12984,6 +13530,16 @@ Log.e("size1", String.valueOf(size1));
                         insert_CheckerCard_Details_tain();
                         insert_CheckerCard_Details_date_to_date();
                         insert_remarket();
+                        insert_CheckerCard_Details_new1();
+                        insert_CheckerCard_Details_new2();
+
+                        insert_CheckerCard_Details_new4();
+                        insert_CheckerCard_Details_new5();
+                        insert_CheckerCard_Details_new6();
+                        insert_CheckerCard_Details_new7();
+                        insert_CheckerCard_Details_new8();
+                        insert_CheckerCard_Details_new9();
+                        insert_CheckerCard_Details_new10();
                         if (CheckBox_status==1){
                             insert_CheckerCard_Details_customer2();
                         }
@@ -13135,6 +13691,7 @@ Log.e("size1", String.valueOf(size1));
                     TextView   count1=(TextView)dialog.findViewById(R.id.count1);
                     TextView  count2=(TextView)dialog.findViewById(R.id.count2);
                     TextView count3=(TextView)dialog.findViewById(R.id.count3);
+                    TextView count4=(TextView)dialog.findViewById(R.id.count4);
                     RelativeLayout r_sddddave=(RelativeLayout)dialog.findViewById(R.id.r_sddddave);
                     LinearLayout li_text=(LinearLayout)dialog.findViewById(R.id.li_text);
                     RelativeLayout exit=(RelativeLayout)dialog.findViewById(R.id.exit);
@@ -13144,7 +13701,7 @@ Log.e("size1", String.valueOf(size1));
 
                     count1.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("✔");count2.setText("");count3.setText("");
+                            count1.setText("✔");count2.setText("");count3.setText("");count4.setText("");
                             //color=0xfff40707;
                             select_color=1;
                             select_color_S="03";
@@ -13156,7 +13713,7 @@ Log.e("size1", String.valueOf(size1));
                     });
                     count2.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("");count2.setText("✔");count3.setText("");
+                            count1.setText("");count2.setText("✔");count3.setText("");count4.setText("");
                             //color=0xfffcc7c7;
                             select_color=2;
                             select_color_S="02";
@@ -13168,10 +13725,22 @@ Log.e("size1", String.valueOf(size1));
                     });
                     count3.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("");count2.setText("");count3.setText("✔");
+                            count1.setText("");count2.setText("");count3.setText("✔");count4.setText("");
                             //color=0xff808080;
                             select_color=3;
                             select_color_S="01";
+                            if(select_color!=0){
+                                li_line8.setBackgroundColor(0xffffffff);
+                            }
+                            li_text.setVisibility(View.GONE);
+                        }
+                    });
+                    count4.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            count1.setText("");count2.setText("");count3.setText("");count4.setText("✔");
+                            //color=0xff808080;
+                            select_color=4;
+                            select_color_S="04";
                             if(select_color!=0){
                                 li_line8.setBackgroundColor(0xffffffff);
                             }
@@ -13487,6 +14056,16 @@ Log.e("size1", String.valueOf(size1));
                                     insert_CheckerCard_Details_tain();
                                     insert_CheckerCard_Details_date_to_date();
                                     insert_remarket();
+                                    insert_CheckerCard_Details_new1();
+                                    insert_CheckerCard_Details_new2();
+
+                                    insert_CheckerCard_Details_new4();
+                                    insert_CheckerCard_Details_new5();
+                                    insert_CheckerCard_Details_new6();
+                                    insert_CheckerCard_Details_new7();
+                                    insert_CheckerCard_Details_new8();
+                                    insert_CheckerCard_Details_new9();
+                                    insert_CheckerCard_Details_new10();
                                     if (CheckBox_status==1){
                                         insert_CheckerCard_Details_customer2();
                                     }
@@ -13504,6 +14083,16 @@ Log.e("size1", String.valueOf(size1));
                                     insert_CheckerCard_Details_tain();
                                     insert_CheckerCard_Details_date_to_date();
                                     insert_remarket();
+                                    insert_CheckerCard_Details_new1();
+                                    insert_CheckerCard_Details_new2();
+
+                                    insert_CheckerCard_Details_new4();
+                                    insert_CheckerCard_Details_new5();
+                                    insert_CheckerCard_Details_new6();
+                                    insert_CheckerCard_Details_new7();
+                                    insert_CheckerCard_Details_new8();
+                                    insert_CheckerCard_Details_new9();
+                                    insert_CheckerCard_Details_new10();
                                     if (CheckBox_status==1){
                                         insert_CheckerCard_Details_customer2();
                                     }
@@ -13925,6 +14514,16 @@ Log.e("size1", String.valueOf(size1));
                         insert_CheckerCard_Details_tain();
                         insert_CheckerCard_Details_date_to_date();
                         insert_remarket();
+                        insert_CheckerCard_Details_new1();
+                        insert_CheckerCard_Details_new2();
+
+                        insert_CheckerCard_Details_new4();
+                        insert_CheckerCard_Details_new5();
+                        insert_CheckerCard_Details_new6();
+                        insert_CheckerCard_Details_new7();
+                        insert_CheckerCard_Details_new8();
+                        insert_CheckerCard_Details_new9();
+                        insert_CheckerCard_Details_new10();
                         if (CheckBox_status==1){
                             insert_CheckerCard_Details_customer2();
                         }
@@ -13942,6 +14541,16 @@ Log.e("size1", String.valueOf(size1));
                         insert_CheckerCard_Details_tain();
                         insert_CheckerCard_Details_date_to_date();
                         insert_remarket();
+                        insert_CheckerCard_Details_new1();
+                        insert_CheckerCard_Details_new2();
+
+                        insert_CheckerCard_Details_new4();
+                        insert_CheckerCard_Details_new5();
+                        insert_CheckerCard_Details_new6();
+                        insert_CheckerCard_Details_new7();
+                        insert_CheckerCard_Details_new8();
+                        insert_CheckerCard_Details_new9();
+                        insert_CheckerCard_Details_new10();
                         if (CheckBox_status==1){
                             insert_CheckerCard_Details_customer2();
                         }
@@ -14114,6 +14723,7 @@ Log.e("size1", String.valueOf(size1));
                     TextView   count1=(TextView)dialog.findViewById(R.id.count1);
                     TextView  count2=(TextView)dialog.findViewById(R.id.count2);
                     TextView count3=(TextView)dialog.findViewById(R.id.count3);
+                    TextView count4=(TextView)dialog.findViewById(R.id.count4);
                     RelativeLayout r_sddddave=(RelativeLayout)dialog.findViewById(R.id.r_sddddave);
                     LinearLayout li_text=(LinearLayout)dialog.findViewById(R.id.li_text);
                     RelativeLayout exit=(RelativeLayout)dialog.findViewById(R.id.exit);
@@ -14123,7 +14733,7 @@ Log.e("size1", String.valueOf(size1));
 
                     count1.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("✔");count2.setText("");count3.setText("");
+                            count1.setText("✔");count2.setText("");count3.setText("");count4.setText("");
                             //color=0xfff40707;
                             select_color=1;
                             select_color_S="03";
@@ -14135,7 +14745,7 @@ Log.e("size1", String.valueOf(size1));
                     });
                     count2.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("");count2.setText("✔");count3.setText("");
+                            count1.setText("");count2.setText("✔");count3.setText("");count4.setText("");
                             //color=0xfffcc7c7;
                             select_color=2;
                             select_color_S="02";
@@ -14147,7 +14757,7 @@ Log.e("size1", String.valueOf(size1));
                     });
                     count3.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            count1.setText("");count2.setText("");count3.setText("✔");
+                            count1.setText("");count2.setText("");count3.setText("✔");count4.setText("");
                             //color=0xff808080;
                             select_color=3;
                             select_color_S="01";
@@ -14157,7 +14767,18 @@ Log.e("size1", String.valueOf(size1));
                             li_text.setVisibility(View.GONE);
                         }
                     });
-
+                    count4.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            count1.setText("");count2.setText("");count3.setText("");count4.setText("✔");
+                            //color=0xff808080;
+                            select_color=4;
+                            select_color_S="04";
+                            if(select_color!=0){
+                                li_line8.setBackgroundColor(0xffffffff);
+                            }
+                            li_text.setVisibility(View.GONE);
+                        }
+                    });
                     exit.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -18264,6 +18885,7 @@ Log.e("map","1111");
             if(!url_image2.equals("null")){
                // insert_CheckerCard_Images_install(order_image2,Url2,Image_Name2,Image_Type2,Image_Size2);
                 //insert_CheckerCard_Images_confrim(order_image2,Url2,Image_Name2,Image_Type2,Image_Size2);
+                insert_CheckerCard_Images_who(order_image2,Url2,Image_Name2,Image_Type2,Image_Size2);
             }
             if(!url_image3.equals("null")){
                 insert_CheckerCard_Images_confrim(order_image3,Url3,Image_Name3,Image_Type3,Image_Size3);
@@ -18289,68 +18911,6 @@ Log.e("map","1111");
             }
 
 
-
-
-
-
-
-
-
-
-/*
-            SQLiteDataBaseBuild1();
-            SQLiteTableBuild1();
-
-
-            cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+SQLiteHelper_image_buffer_checker1.TABLE_NAME+"" +" WHERE url_image ="+"'"+data_image_to_qry+"'"  , null);
-
-            if (cursor.moveToFirst()) {
-                do {
-
-                    part_image=cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer_checker1.Table_url_image));
-*/
-/*                    datetime=cursor.getString(cursor.getColumnIndex(SQLiteHelper_problem_id_image_checker1.Table_ProblemDetail));
-                    Url=cursor.getString(cursor.getColumnIndex(SQLiteHelper_problem_id_image_checker1.Table_Url));
-                    Image_Name=cursor.getString(cursor.getColumnIndex(SQLiteHelper_problem_id_image_checker1.Table_Image_Name));
-                    Image_Size=cursor.getString(cursor.getColumnIndex(SQLiteHelper_problem_id_image_checker1.Table_Image_Size));
-                    Image_Type=cursor.getString(cursor.getColumnIndex(SQLiteHelper_problem_id_image_checker1.Table_Image_Type));
-                    Image_id_item=cursor.getString(cursor.getColumnIndex(SQLiteHelper_problem_id_image_checker1.Table_order_image));*//*
-
-
-                    //INSENT_Problem_Inform_Details_Images();
-
-                    Log.e("part_image_final",part_image);
-                } while (cursor.moveToNext());
-            }
-            cursor.close();
-*/
-
-
-
-
-
-/*
-            SQLiteDataBaseBuild1();
-            SQLiteTableBuild1();
-
-
-            cursor = sqLiteDatabase.rawQuery("SELECT *  FROM " + SQLiteHelper_image_buffer_checker1.TABLE_NAME, null);
-
-            if (cursor.moveToFirst()) {
-                do {
-
-                    String part_image = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer_checker1.Table_url_image));
-                    String part_id = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer_checker1.Table_part_id));
-                    // Log.e("oooo", part_image);
-                    if (!part_image.equals("null")) {
-                        Log.e("part_image_final",part_image);
-
-                    }
-
-
-                } while (cursor.moveToNext());
-            }
-            cursor.close();*/
 
 
 
@@ -20583,6 +21143,107 @@ String new_message_scan_S=new_message_scan.getText().toString();
 
 
     }
+    private void insert_CheckerCard_Images_who(String Items1,String URL1,String ImageName1,String ImageType1,String ImageSize1){
+
+
+
+        String Contno=conno;
+
+
+        String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
+        String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+
+        String ipaddress3="";
+        String computername3="";
+
+
+        if(ipaddress2.equals("null")){
+            ipaddress3="-";
+        }
+        else {
+            ipaddress3="-";
+
+        }
+
+
+
+
+
+        if(computername2.equals("null")){
+            computername3="-";
+        }
+        else {
+
+            computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+        }
+
+        String ipaddress = ipaddress3;
+        String computername = computername3;
+        String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+        String TopicID="56";
+     //   String AnswerID="09";
+       // String AnswerNote="ทดสอบ9";
+
+        String Items=Items1;
+        String URL=URL1;
+        String ImageName=ImageName1;
+        String ImageType=ImageType1;
+        String ImageSize=ImageSize1;
+
+
+        try {
+            Log.e("URL_Images_who",API_URL_ALL.GET_JSON_insert_CheckerCard_Images+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&Items="+Items+"&URL="+URL+"&ImageName="+URLEncoder.encode(ImageName, "UTF-8")+"&ImageType="+ImageType+"&ImageSize="+ImageSize+"&user_code="+InformEmpID+"&NoID="+NoID);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+
+
+        try {
+            jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_insert_CheckerCard_Images+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&Items="+Items+"&URL="+URL+"&ImageName="+URLEncoder.encode(ImageName, "UTF-8")+"&ImageType="+ImageType+"&ImageSize="+ImageSize+"&user_code="+InformEmpID+"&NoID="+NoID,
+
+
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            try {
+                requestQueue = Volley.newRequestQueue(this);
+                requestQueue.add(jsonArrayRequest);
+
+                int MY_SOCKET_TIMEOUT_MS=10000;
+
+                jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            }
+            catch (RuntimeException ex){
+
+            }
+        }
+        catch (OutOfMemoryError EX){
+
+        }
+
+
+    }
     private void insert_CheckerCard_Images_gps_maker(String Items1,String URL1,String ImageName1,String ImageType1,String ImageSize1){
 
 
@@ -21882,7 +22543,26 @@ String new_message_scan_S=new_message_scan.getText().toString();
 
             linearlayout_show_problem_tain.setVisibility(View.VISIBLE);
 
+            li5.setVisibility(View.VISIBLE);
+            li_new1.setVisibility(View.VISIBLE);
+            li_new2.setVisibility(View.VISIBLE);
+            li_new3.setVisibility(View.VISIBLE);
+            li_new4.setVisibility(View.VISIBLE);
+            li_new5.setVisibility(View.VISIBLE);
+            li_new6.setVisibility(View.VISIBLE);
+            li_new7.setVisibility(View.VISIBLE);
+            li_new8.setVisibility(View.VISIBLE);
+            li_new9.setVisibility(View.VISIBLE);
+            li_line_new1.setVisibility(View.VISIBLE);
 
+            li_line_new2.setVisibility(View.VISIBLE);
+            li_line_new3.setVisibility(View.VISIBLE);
+            li_line_new4.setVisibility(View.VISIBLE);
+            li_line_new5.setVisibility(View.VISIBLE);
+            li_line_new6.setVisibility(View.VISIBLE);
+            li_line_new7.setVisibility(View.VISIBLE);
+            li_line_new8.setVisibility(View.VISIBLE);
+            li_line_new9.setVisibility(View.VISIBLE);
 
           //  li_install_re_tain.setVisibility(View.VISIBLE);
             linearlayout_date_to_date.setVisibility(View.VISIBLE);
@@ -22009,6 +22689,26 @@ String new_message_scan_S=new_message_scan.getText().toString();
 
             linearlayout_show_problem_tain.setVisibility(View.VISIBLE);
 
+            li5.setVisibility(View.VISIBLE);
+            li_new1.setVisibility(View.VISIBLE);
+            li_new2.setVisibility(View.VISIBLE);
+            li_new3.setVisibility(View.VISIBLE);
+            li_new4.setVisibility(View.VISIBLE);
+            li_new5.setVisibility(View.VISIBLE);
+            li_new6.setVisibility(View.VISIBLE);
+            li_new7.setVisibility(View.VISIBLE);
+            li_new8.setVisibility(View.VISIBLE);
+            li_new9.setVisibility(View.VISIBLE);
+            li_line_new1.setVisibility(View.VISIBLE);
+
+            li_line_new2.setVisibility(View.VISIBLE);
+            li_line_new3.setVisibility(View.VISIBLE);
+            li_line_new4.setVisibility(View.VISIBLE);
+            li_line_new5.setVisibility(View.VISIBLE);
+            li_line_new6.setVisibility(View.VISIBLE);
+            li_line_new7.setVisibility(View.VISIBLE);
+            li_line_new8.setVisibility(View.VISIBLE);
+            li_line_new9.setVisibility(View.VISIBLE);
 
            // li_install_re_tain.setVisibility(View.VISIBLE);
             linearlayout_date_to_date.setVisibility(View.VISIBLE);
@@ -22138,6 +22838,27 @@ String new_message_scan_S=new_message_scan.getText().toString();
             li_line12.setVisibility(View.GONE);
             li_pay2_2_3.setVisibility(View.GONE);
 
+            li5.setVisibility(View.GONE);
+            li_new1.setVisibility(View.GONE);
+            li_new2.setVisibility(View.GONE);
+            li_new3.setVisibility(View.GONE);
+            li_new4.setVisibility(View.GONE);
+            li_new5.setVisibility(View.GONE);
+            li_new6.setVisibility(View.GONE);
+            li_new7.setVisibility(View.GONE);
+            li_new8.setVisibility(View.GONE);
+            li_new9.setVisibility(View.GONE);
+            li_line_new1.setVisibility(View.GONE);
+
+            li_line_new2.setVisibility(View.GONE);
+            li_line_new3.setVisibility(View.GONE);
+            li_line_new4.setVisibility(View.GONE);
+            li_line_new5.setVisibility(View.GONE);
+            li_line_new6.setVisibility(View.GONE);
+            li_line_new7.setVisibility(View.GONE);
+            li_line_new8.setVisibility(View.GONE);
+            li_line_new9.setVisibility(View.GONE);
+
             li3.setVisibility(View.GONE);
             my_recycler_view5.setVisibility(View.GONE);
             my_recycler_view1.setVisibility(View.GONE);
@@ -22256,8 +22977,26 @@ String new_message_scan_S=new_message_scan.getText().toString();
 
 
 
+            li5.setVisibility(View.GONE);
+            li_new1.setVisibility(View.GONE);
+            li_new2.setVisibility(View.GONE);
+            li_new3.setVisibility(View.GONE);
+            li_new4.setVisibility(View.GONE);
+            li_new5.setVisibility(View.GONE);
+            li_new6.setVisibility(View.GONE);
+            li_new7.setVisibility(View.GONE);
+            li_new8.setVisibility(View.GONE);
+            li_new9.setVisibility(View.GONE);
+            li_line_new1.setVisibility(View.GONE);
 
-
+            li_line_new2.setVisibility(View.GONE);
+            li_line_new3.setVisibility(View.GONE);
+            li_line_new4.setVisibility(View.GONE);
+            li_line_new5.setVisibility(View.GONE);
+            li_line_new6.setVisibility(View.GONE);
+            li_line_new7.setVisibility(View.GONE);
+            li_line_new8.setVisibility(View.GONE);
+            li_line_new9.setVisibility(View.GONE);
 
 
             lili_1.setVisibility(View.GONE);
@@ -22368,8 +23107,26 @@ String new_message_scan_S=new_message_scan.getText().toString();
             li_qr1.setVisibility(View.GONE);
 
 
+            li5.setVisibility(View.GONE);
+            li_new1.setVisibility(View.GONE);
+            li_new2.setVisibility(View.GONE);
+            li_new3.setVisibility(View.GONE);
+            li_new4.setVisibility(View.GONE);
+            li_new5.setVisibility(View.GONE);
+            li_new6.setVisibility(View.GONE);
+            li_new7.setVisibility(View.GONE);
+            li_new8.setVisibility(View.GONE);
+            li_new9.setVisibility(View.GONE);
+            li_line_new1.setVisibility(View.GONE);
 
-
+            li_line_new2.setVisibility(View.GONE);
+            li_line_new3.setVisibility(View.GONE);
+            li_line_new4.setVisibility(View.GONE);
+            li_line_new5.setVisibility(View.GONE);
+            li_line_new6.setVisibility(View.GONE);
+            li_line_new7.setVisibility(View.GONE);
+            li_line_new8.setVisibility(View.GONE);
+            li_line_new9.setVisibility(View.GONE);
 
 
 
@@ -23444,6 +24201,2013 @@ catch (Exception ex){
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private void CheckerCard_Answer1(String TopicID) {
+
+        try {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service request = retrofit.create(com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service.class);
+            Call call = request.getCheckerCard_Answer(TopicID);
+            call.enqueue(new Callback() {
+                @Override
+                public void onResponse(Call call, retrofit2.Response response) {
+
+                    Gson gson=new Gson();
+                    try {
+                        JSONObject jsonObject=new JSONObject(gson.toJson(response.body()));
+                        JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer1(jsonObject.getJSONArray("data"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+
+                    }
+
+
+                }
+
+                @Override
+                public void onFailure(Call call, Throwable t) {
+
+
+
+                }
+            });
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    private void CheckerCard_Answer2(String TopicID) {
+
+        try {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service request = retrofit.create(com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service.class);
+            Call call = request.getCheckerCard_Answer(TopicID);
+            call.enqueue(new Callback() {
+                @Override
+                public void onResponse(Call call, retrofit2.Response response) {
+
+                    Gson gson=new Gson();
+                    try {
+                        JSONObject jsonObject=new JSONObject(gson.toJson(response.body()));
+                        JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer2(jsonObject.getJSONArray("data"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+
+                    }
+
+
+                }
+
+                @Override
+                public void onFailure(Call call, Throwable t) {
+
+
+
+                }
+            });
+
+        } catch (Exception e) {
+
+        }
+    }
+
+
+
+    private void CheckerCard_Answer3(String idcard,String CONTNO) {
+
+        Log.e("ggga",idcard+","+CONTNO);
+
+        try {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service request = retrofit.create(com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service.class);
+            Call call = request.getContractGrade(idcard,CONTNO);
+            call.enqueue(new Callback() {
+                @Override
+                public void onResponse(Call call, retrofit2.Response response) {
+
+                    Gson gson=new Gson();
+                    try {
+                        JSONObject jsonObject=new JSONObject(gson.toJson(response.body()));
+                        JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer3(jsonObject.getJSONArray("data"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+
+                    }
+
+
+                }
+
+                @Override
+                public void onFailure(Call call, Throwable t) {
+
+
+
+                }
+            });
+
+        } catch (Exception e) {
+
+        }
+    }
+
+
+
+    private void CheckerCard_Answer4(String TopicID) {
+
+        try {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service request = retrofit.create(com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service.class);
+            Call call = request.getCheckerCard_Answer(TopicID);
+            call.enqueue(new Callback() {
+                @Override
+                public void onResponse(Call call, retrofit2.Response response) {
+
+                    Gson gson=new Gson();
+                    try {
+                        JSONObject jsonObject=new JSONObject(gson.toJson(response.body()));
+                        JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer4(jsonObject.getJSONArray("data"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+
+                    }
+
+
+                }
+
+                @Override
+                public void onFailure(Call call, Throwable t) {
+
+
+
+                }
+            });
+
+        } catch (Exception e) {
+
+        }
+    }
+
+
+
+    private void CheckerCard_Answer5(String TopicID) {
+
+        try {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service request = retrofit.create(com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service.class);
+            Call call = request.getCheckerCard_Answer(TopicID);
+            call.enqueue(new Callback() {
+                @Override
+                public void onResponse(Call call, retrofit2.Response response) {
+
+                    Gson gson=new Gson();
+                    try {
+                        JSONObject jsonObject=new JSONObject(gson.toJson(response.body()));
+                        JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer5(jsonObject.getJSONArray("data"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+
+                    }
+
+
+                }
+
+                @Override
+                public void onFailure(Call call, Throwable t) {
+
+
+
+                }
+            });
+
+        } catch (Exception e) {
+
+        }
+    }
+
+
+
+    private void CheckerCard_Answer6(String TopicID) {
+
+        try {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service request = retrofit.create(com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service.class);
+            Call call = request.getCheckerCard_Answer(TopicID);
+            call.enqueue(new Callback() {
+                @Override
+                public void onResponse(Call call, retrofit2.Response response) {
+
+                    Gson gson=new Gson();
+                    try {
+                        JSONObject jsonObject=new JSONObject(gson.toJson(response.body()));
+                        JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer6(jsonObject.getJSONArray("data"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+
+                    }
+
+
+                }
+
+                @Override
+                public void onFailure(Call call, Throwable t) {
+
+
+
+                }
+            });
+
+        } catch (Exception e) {
+
+        }
+    }
+
+
+    private void CheckerCard_Answer7(String TopicID) {
+
+        try {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service request = retrofit.create(com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service.class);
+            Call call = request.getCheckerCard_Answer(TopicID);
+            call.enqueue(new Callback() {
+                @Override
+                public void onResponse(Call call, retrofit2.Response response) {
+
+                    Gson gson=new Gson();
+                    try {
+                        JSONObject jsonObject=new JSONObject(gson.toJson(response.body()));
+                        JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer7(jsonObject.getJSONArray("data"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+
+                    }
+
+
+                }
+
+                @Override
+                public void onFailure(Call call, Throwable t) {
+
+
+
+                }
+            });
+
+        } catch (Exception e) {
+
+        }
+    }
+
+
+    private void CheckerCard_Answer8(String TopicID) {
+
+        try {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service request = retrofit.create(com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service.class);
+            Call call = request.getCheckerCard_Answer(TopicID);
+            call.enqueue(new Callback() {
+                @Override
+                public void onResponse(Call call, retrofit2.Response response) {
+
+                    Gson gson=new Gson();
+                    try {
+                        JSONObject jsonObject=new JSONObject(gson.toJson(response.body()));
+                        JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer8(jsonObject.getJSONArray("data"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+
+                    }
+
+
+                }
+
+                @Override
+                public void onFailure(Call call, Throwable t) {
+
+
+
+                }
+            });
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    private void CheckerCard_Answer9(String TopicID) {
+
+        try {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service request = retrofit.create(com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service.class);
+            Call call = request.getCheckerCard_Answer(TopicID);
+            call.enqueue(new Callback() {
+                @Override
+                public void onResponse(Call call, retrofit2.Response response) {
+
+                    Gson gson=new Gson();
+                    try {
+                        JSONObject jsonObject=new JSONObject(gson.toJson(response.body()));
+                        JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer9(jsonObject.getJSONArray("data"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+
+                    }
+
+
+                }
+
+                @Override
+                public void onFailure(Call call, Throwable t) {
+
+
+
+                }
+            });
+
+        } catch (Exception e) {
+
+        }
+    }
+
+
+
+    private void CheckerCard_Answer10(String TopicID) {
+
+        try {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service request = retrofit.create(com.tsr.tsrproblemreport_tossticket_checker.retrofit.api.Service.class);
+            Call call = request.getCheckerCard_Answer(TopicID);
+            call.enqueue(new Callback() {
+                @Override
+                public void onResponse(Call call, retrofit2.Response response) {
+
+                    Gson gson=new Gson();
+                    try {
+                        JSONObject jsonObject=new JSONObject(gson.toJson(response.body()));
+                        JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer10(jsonObject.getJSONArray("data"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+
+                    }
+
+
+                }
+
+                @Override
+                public void onFailure(Call call, Throwable t) {
+
+
+
+                }
+            });
+
+        } catch (Exception e) {
+
+        }
+    }
+
+
+
+
+
+
+
+
+    public void JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer1(JSONArray array) {
+
+        for (int i = 0; i < array.length(); i++) {
+
+            final Get_data_Answer1 GetDataAdapter2 = new Get_data_Answer1();
+
+            JSONObject json = null;
+            try {
+                json = array.getJSONObject(i);
+                GetDataAdapter2.setAnswerID(json.getString("AnswerID"));
+                GetDataAdapter2.setTopicID(json.getString("TopicID"));
+                GetDataAdapter2.setAnswerName(json.getString("AnswerName"));
+                // GetDataAdapter2.setProblemName(json.getString("ProblemName"));
+
+
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+            get_data_answer1s.add(GetDataAdapter2);
+            // value=GetDataAdapter2.getProblemName();
+        }
+        String[] array2 = new String[get_data_answer1s.size()];
+        String[] array3 = new String[get_data_answer1s.size()];
+        int i;
+        ArrayAdapter<String> adapter = null ;
+
+        for ( i = 0; i < get_data_answer1s.size(); i++) {
+            final Get_data_Answer1 contact = get_data_answer1s.get(i);
+            array2[i]= contact.getAnswerName();
+
+            try {
+                adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                //adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+            }
+            catch (Exception ex){
+
+            }
+
+        }
+
+
+
+        sp1.setAdapter(adapter);
+
+        sp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                item = parent.getItemAtPosition(position).toString();
+
+                MyApplication.getInstance().getPrefManager().setPreferrence("item", item);
+
+                final Get_data_Answer1 contact = get_data_answer1s.get(position);
+                AnswerID1= contact.getAnswerID();
+                TopicID1= contact.getTopicID();
+                AnswerName1= contact.getAnswerName();
+
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+    }
+
+
+
+    public void JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer2(JSONArray array) {
+
+        for (int i = 0; i < array.length(); i++) {
+
+            final Get_data_Answer2 GetDataAdapter2 = new Get_data_Answer2();
+
+            JSONObject json = null;
+            try {
+                json = array.getJSONObject(i);
+                GetDataAdapter2.setAnswerID(json.getString("AnswerID"));
+                GetDataAdapter2.setTopicID(json.getString("TopicID"));
+                GetDataAdapter2.setAnswerName(json.getString("AnswerName"));
+                // GetDataAdapter2.setProblemName(json.getString("ProblemName"));
+
+
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+            get_data_answer2s.add(GetDataAdapter2);
+            // value=GetDataAdapter2.getProblemName();
+        }
+        String[] array2 = new String[get_data_answer2s.size()];
+        String[] array3 = new String[get_data_answer2s.size()];
+        int i;
+        ArrayAdapter<String> adapter = null ;
+
+        for ( i = 0; i < get_data_answer2s.size(); i++) {
+            final Get_data_Answer2 contact = get_data_answer2s.get(i);
+            array2[i]= contact.getAnswerName();
+
+            try {
+                adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                //adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+            }
+            catch (Exception ex){
+
+            }
+
+        }
+
+
+
+        sp2.setAdapter(adapter);
+
+        sp2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+              //  item = parent.getItemAtPosition(position).toString();
+
+               // MyApplication.getInstance().getPrefManager().setPreferrence("item", item);
+
+                final Get_data_Answer2 contact = get_data_answer2s.get(position);
+                AnswerID2= contact.getAnswerID();
+                TopicID2= contact.getTopicID();
+                AnswerName2= contact.getAnswerName();
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+    }
+
+    String ContractGrade="";
+    public void JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer3(JSONArray array) {
+        get_data_answer3s.clear();
+
+        if(array.length()==0){
+            sp3.setVisibility(View.GONE);
+
+            SweetAlertDialog sweetAlertDialog=    new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE);
+                    //.setTitleText("! ข้อมูลยังไม่ครบ")
+            sweetAlertDialog.setContentText("ไม่พบข้อมูลประวัติ!");
+            sweetAlertDialog.setCancelable(false);
+
+            sweetAlertDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                @Override
+                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                    sweetAlertDialog.cancel();
+                    sweetAlertDialog.dismiss();
+                    ((RadioButton)radioSex_re.getChildAt(1)).setChecked(true);
+                    ((RadioButton)radioSex_re.getChildAt(0)).setChecked(false);
+                }
+            });
+                    //.setConfirmText("OK!")
+            sweetAlertDialog .show();
+
+
+
+
+        }
+        else {
+            sp3.setVisibility(View.VISIBLE);
+
+
+
+            for (int i = 0; i < array.length(); i++) {
+
+                final Get_data_Answer3 GetDataAdapter2 = new Get_data_Answer3();
+
+                JSONObject json = null;
+                try {
+                    json = array.getJSONObject(i);
+                    //   GetDataAdapter2.setAnswerID(json.getString("AnswerID"));
+                    //   GetDataAdapter2.setTopicID(json.getString("TopicID"));
+                    GetDataAdapter2.setAnswerName("เกรด " + json.getString("ContractGrade"));
+                    // GetDataAdapter2.setProblemName(json.getString("ProblemName"));
+
+
+                } catch (JSONException e) {
+
+                    e.printStackTrace();
+                }
+                get_data_answer3s.add(GetDataAdapter2);
+                // value=GetDataAdapter2.getProblemName();
+            }
+            String[] array2 = new String[get_data_answer3s.size()];
+            String[] array3 = new String[get_data_answer3s.size()];
+            int i;
+            ArrayAdapter<String> adapter = null;
+
+            for (i = 0; i < get_data_answer3s.size(); i++) {
+                final Get_data_Answer3 contact = get_data_answer3s.get(i);
+                array2[i] = contact.getAnswerName();
+
+                try {
+                    adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                    //adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                } catch (Exception ex) {
+
+                }
+
+            }
+
+
+            sp3.setAdapter(adapter);
+
+            sp3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    //  item = parent.getItemAtPosition(position).toString();
+
+                    // MyApplication.getInstance().getPrefManager().setPreferrence("item", item);
+
+                    //  final Get_data_Answer3 contact = get_data_answer3s.get(position);
+                    //AnswerID3= contact.getAnswerID();
+                    //TopicID3= contact.getTopicID();
+                    //    AnswerName3= contact.getAnswerName();
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+        }
+    }
+
+
+
+    public void JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer4(JSONArray array) {
+
+        for (int i = 0; i < array.length(); i++) {
+
+            final Get_data_Answer4 GetDataAdapter2 = new Get_data_Answer4();
+
+            JSONObject json = null;
+            try {
+                json = array.getJSONObject(i);
+                GetDataAdapter2.setAnswerID(json.getString("AnswerID"));
+                GetDataAdapter2.setTopicID(json.getString("TopicID"));
+                GetDataAdapter2.setAnswerName(json.getString("AnswerName"));
+                // GetDataAdapter2.setProblemName(json.getString("ProblemName"));
+
+
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+            get_data_answer4s.add(GetDataAdapter2);
+            // value=GetDataAdapter2.getProblemName();
+        }
+        String[] array2 = new String[get_data_answer4s.size()];
+        String[] array3 = new String[get_data_answer4s.size()];
+        int i;
+        ArrayAdapter<String> adapter = null ;
+
+        for ( i = 0; i < get_data_answer4s.size(); i++) {
+            final Get_data_Answer4 contact = get_data_answer4s.get(i);
+            array2[i]= contact.getAnswerName();
+
+            try {
+                adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                //adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+            }
+            catch (Exception ex){
+
+            }
+
+        }
+
+
+
+        sp4.setAdapter(adapter);
+
+        sp4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+               // item = parent.getItemAtPosition(position).toString();
+
+              //  MyApplication.getInstance().getPrefManager().setPreferrence("item", item);
+
+                final Get_data_Answer4 contact = get_data_answer4s.get(position);
+                AnswerID4= contact.getAnswerID();
+                TopicID4= contact.getTopicID();
+                AnswerName4= contact.getAnswerName();
+                Log.e("AnswerName4",AnswerName4);
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+    }
+
+
+    public void JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer5(JSONArray array) {
+
+        for (int i = 0; i < array.length(); i++) {
+
+            final Get_data_Answer5 GetDataAdapter2 = new Get_data_Answer5();
+
+            JSONObject json = null;
+            try {
+                json = array.getJSONObject(i);
+                GetDataAdapter2.setAnswerID(json.getString("AnswerID"));
+                GetDataAdapter2.setTopicID(json.getString("TopicID"));
+                GetDataAdapter2.setAnswerName(json.getString("AnswerName"));
+                // GetDataAdapter2.setProblemName(json.getString("ProblemName"));
+
+
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+            get_data_answer5s.add(GetDataAdapter2);
+            // value=GetDataAdapter2.getProblemName();
+        }
+        String[] array2 = new String[get_data_answer5s.size()];
+        String[] array3 = new String[get_data_answer5s.size()];
+        int i;
+        ArrayAdapter<String> adapter = null ;
+
+        for ( i = 0; i < get_data_answer5s.size(); i++) {
+            final Get_data_Answer5 contact = get_data_answer5s.get(i);
+            array2[i]= contact.getAnswerName();
+
+            try {
+                adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                //adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+            }
+            catch (Exception ex){
+
+            }
+
+        }
+
+
+
+        sp5.setAdapter(adapter);
+
+        sp5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //item = parent.getItemAtPosition(position).toString();
+
+                //MyApplication.getInstance().getPrefManager().setPreferrence("item", item);
+
+                final Get_data_Answer5 contact = get_data_answer5s.get(position);
+                AnswerID5= contact.getAnswerID();
+                TopicID5= contact.getTopicID();
+                AnswerName5= contact.getAnswerName();
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+    }
+
+
+    public void JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer6(JSONArray array) {
+
+        for (int i = 0; i < array.length(); i++) {
+
+            final Get_data_Answer6 GetDataAdapter2 = new Get_data_Answer6();
+
+            JSONObject json = null;
+            try {
+                json = array.getJSONObject(i);
+                GetDataAdapter2.setAnswerID(json.getString("AnswerID"));
+                GetDataAdapter2.setTopicID(json.getString("TopicID"));
+                GetDataAdapter2.setAnswerName(json.getString("AnswerName"));
+                // GetDataAdapter2.setProblemName(json.getString("ProblemName"));
+
+
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+            get_data_answer6s.add(GetDataAdapter2);
+            // value=GetDataAdapter2.getProblemName();
+        }
+        String[] array2 = new String[get_data_answer6s.size()];
+        String[] array3 = new String[get_data_answer6s.size()];
+        int i;
+        ArrayAdapter<String> adapter = null ;
+
+        for ( i = 0; i < get_data_answer6s.size(); i++) {
+            final Get_data_Answer6 contact = get_data_answer6s.get(i);
+            array2[i]= contact.getAnswerName();
+
+            try {
+                adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                //adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+            }
+            catch (Exception ex){
+
+            }
+
+        }
+
+
+
+        sp6.setAdapter(adapter);
+
+        sp6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+             //   item = parent.getItemAtPosition(position).toString();
+
+               // MyApplication.getInstance().getPrefManager().setPreferrence("item", item);
+
+                final Get_data_Answer6 contact = get_data_answer6s.get(position);
+                AnswerID6= contact.getAnswerID();
+                TopicID6= contact.getTopicID();
+                AnswerName6= contact.getAnswerName();
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+    }
+
+    public void JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer7(JSONArray array) {
+
+        for (int i = 0; i < array.length(); i++) {
+
+            final Get_data_Answer7 GetDataAdapter2 = new Get_data_Answer7();
+
+            JSONObject json = null;
+            try {
+                json = array.getJSONObject(i);
+                GetDataAdapter2.setAnswerID(json.getString("AnswerID"));
+                GetDataAdapter2.setTopicID(json.getString("TopicID"));
+                GetDataAdapter2.setAnswerName(json.getString("AnswerName"));
+                // GetDataAdapter2.setProblemName(json.getString("ProblemName"));
+
+
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+            get_data_answer7s.add(GetDataAdapter2);
+            // value=GetDataAdapter2.getProblemName();
+        }
+        String[] array2 = new String[get_data_answer7s.size()];
+        String[] array3 = new String[get_data_answer7s.size()];
+        int i;
+        ArrayAdapter<String> adapter = null ;
+
+        for ( i = 0; i < get_data_answer7s.size(); i++) {
+            final Get_data_Answer7 contact = get_data_answer7s.get(i);
+            array2[i]= contact.getAnswerName();
+
+            try {
+                adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                //adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+            }
+            catch (Exception ex){
+
+            }
+
+        }
+
+
+
+        sp7.setAdapter(adapter);
+
+        sp7.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+              //  item = parent.getItemAtPosition(position).toString();
+
+              //  MyApplication.getInstance().getPrefManager().setPreferrence("item", item);
+
+                final Get_data_Answer7 contact = get_data_answer7s.get(position);
+                AnswerID7= contact.getAnswerID();
+                TopicID7= contact.getTopicID();
+                AnswerName7= contact.getAnswerName();
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+    }
+
+
+    public void JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer8(JSONArray array) {
+
+        for (int i = 0; i < array.length(); i++) {
+
+            final Get_data_Answer8 GetDataAdapter2 = new Get_data_Answer8();
+
+            JSONObject json = null;
+            try {
+                json = array.getJSONObject(i);
+                GetDataAdapter2.setAnswerID(json.getString("AnswerID"));
+                GetDataAdapter2.setTopicID(json.getString("TopicID"));
+                GetDataAdapter2.setAnswerName(json.getString("AnswerName"));
+                // GetDataAdapter2.setProblemName(json.getString("ProblemName"));
+
+
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+            get_data_answer8s.add(GetDataAdapter2);
+            // value=GetDataAdapter2.getProblemName();
+        }
+        String[] array2 = new String[get_data_answer8s.size()];
+        String[] array3 = new String[get_data_answer8s.size()];
+        int i;
+        ArrayAdapter<String> adapter = null ;
+
+        for ( i = 0; i < get_data_answer8s.size(); i++) {
+            final Get_data_Answer8 contact = get_data_answer8s.get(i);
+            array2[i]= contact.getAnswerName();
+
+            try {
+                adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                //adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+            }
+            catch (Exception ex){
+
+            }
+
+        }
+
+
+
+        sp8.setAdapter(adapter);
+
+        sp8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+               // item = parent.getItemAtPosition(position).toString();
+
+               // MyApplication.getInstance().getPrefManager().setPreferrence("item", item);
+
+                final Get_data_Answer8 contact = get_data_answer8s.get(position);
+                AnswerID8= contact.getAnswerID();
+                TopicID8= contact.getTopicID();
+                AnswerName8= contact.getAnswerName();
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+    }
+
+
+    public void JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer9(JSONArray array) {
+
+        for (int i = 0; i < array.length(); i++) {
+
+            final Get_data_Answer9 GetDataAdapter2 = new Get_data_Answer9();
+
+            JSONObject json = null;
+            try {
+                json = array.getJSONObject(i);
+                GetDataAdapter2.setAnswerID(json.getString("AnswerID"));
+                GetDataAdapter2.setTopicID(json.getString("TopicID"));
+                GetDataAdapter2.setAnswerName(json.getString("AnswerName"));
+                // GetDataAdapter2.setProblemName(json.getString("ProblemName"));
+
+
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+            get_data_answer9s.add(GetDataAdapter2);
+            // value=GetDataAdapter2.getProblemName();
+        }
+        String[] array2 = new String[get_data_answer9s.size()];
+        String[] array3 = new String[get_data_answer9s.size()];
+        int i;
+        ArrayAdapter<String> adapter = null ;
+
+        for ( i = 0; i < get_data_answer9s.size(); i++) {
+            final Get_data_Answer9 contact = get_data_answer9s.get(i);
+            array2[i]= contact.getAnswerName();
+
+            try {
+                adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                //adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+            }
+            catch (Exception ex){
+
+            }
+
+        }
+
+
+
+        sp9.setAdapter(adapter);
+
+        sp9.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //item = parent.getItemAtPosition(position).toString();
+
+                //MyApplication.getInstance().getPrefManager().setPreferrence("item", item);
+
+                final Get_data_Answer9 contact = get_data_answer9s.get(position);
+                AnswerID9= contact.getAnswerID();
+                TopicID9= contact.getTopicID();
+                AnswerName9= contact.getAnswerName();
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+    }
+
+
+    public void JSON_PARSE_DATA_AFTER_WEBCALL_CheckerCard_Answer10(JSONArray array) {
+
+        for (int i = 0; i < array.length(); i++) {
+
+            final Get_data_Answer10 GetDataAdapter2 = new Get_data_Answer10();
+
+            JSONObject json = null;
+            try {
+                json = array.getJSONObject(i);
+                GetDataAdapter2.setAnswerID(json.getString("AnswerID"));
+                GetDataAdapter2.setTopicID(json.getString("TopicID"));
+                GetDataAdapter2.setAnswerName(json.getString("AnswerName"));
+                // GetDataAdapter2.setProblemName(json.getString("ProblemName"));
+
+
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+            get_data_answer10s.add(GetDataAdapter2);
+            // value=GetDataAdapter2.getProblemName();
+        }
+        String[] array2 = new String[get_data_answer10s.size()];
+        String[] array3 = new String[get_data_answer10s.size()];
+        int i;
+        ArrayAdapter<String> adapter = null ;
+
+        for ( i = 0; i < get_data_answer10s.size(); i++) {
+            final Get_data_Answer10 contact = get_data_answer10s.get(i);
+            array2[i]= contact.getAnswerName();
+
+            try {
+                adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+                //adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, android.R.id.text1, array2);
+            }
+            catch (Exception ex){
+
+            }
+
+        }
+
+
+
+        sp10.setAdapter(adapter);
+
+        sp10.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //item = parent.getItemAtPosition(position).toString();
+
+                //MyApplication.getInstance().getPrefManager().setPreferrence("item", item);
+
+                final Get_data_Answer10 contact = get_data_answer10s.get(position);
+                AnswerID10= contact.getAnswerID();
+                TopicID10= contact.getTopicID();
+                AnswerName10= contact.getAnswerName();
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+    }
+
+
+
+
+
+
+    private void insert_CheckerCard_Details_new1(){
+
+        String Contno=conno;
+
+
+        String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
+        String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+
+        String ipaddress3="";
+        String computername3="";
+
+
+        if(ipaddress2.equals("null")){
+            ipaddress3="-";
+        }
+        else {
+            ipaddress3="-";
+
+        }
+
+
+
+
+
+        if(computername2.equals("null")){
+            computername3="-";
+        }
+        else {
+
+            computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+        }
+
+        String ipaddress = ipaddress3;
+        String computername = computername3;
+        String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+        String TopicID=TopicID1;
+        String AnswerID=AnswerID1;
+        String AnswerNote="-";
+
+
+
+
+
+        try {
+            jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_insert_CheckerCard_Dedails+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&AnswerID="+AnswerID+"&AnswerNote="+URLEncoder.encode(AnswerNote, "UTF-8")+"&ipaddress="+ipaddress+"&computername="+URLEncoder.encode(computername, "UTF-8")+"&user_code="+InformEmpID+"&NoID="+NoID,
+
+
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            try {
+                requestQueue = Volley.newRequestQueue(this);
+                requestQueue.add(jsonArrayRequest);
+
+                int MY_SOCKET_TIMEOUT_MS=10000;
+
+                jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            }
+            catch (RuntimeException ex){
+
+            }
+        }
+        catch (OutOfMemoryError EX){
+
+        }
+
+
+    }
+    private void insert_CheckerCard_Details_new2(){
+
+        String Contno=conno;
+
+
+        String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
+        String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+
+        String ipaddress3="";
+        String computername3="";
+
+
+        if(ipaddress2.equals("null")){
+            ipaddress3="-";
+        }
+        else {
+            ipaddress3="-";
+
+        }
+
+
+
+
+
+        if(computername2.equals("null")){
+            computername3="-";
+        }
+        else {
+
+            computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+        }
+
+        String ipaddress = ipaddress3;
+        String computername = computername3;
+        String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+        String TopicID=TopicID2;
+        String AnswerID=AnswerID2;
+        String AnswerNote="-";
+
+
+
+
+
+
+        try {
+            jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_insert_CheckerCard_Dedails+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&AnswerID="+AnswerID+"&AnswerNote="+URLEncoder.encode(AnswerNote, "UTF-8")+"&ipaddress="+ipaddress+"&computername="+URLEncoder.encode(computername, "UTF-8")+"&user_code="+InformEmpID+"&NoID="+NoID,
+
+
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            try {
+                requestQueue = Volley.newRequestQueue(this);
+                requestQueue.add(jsonArrayRequest);
+
+                int MY_SOCKET_TIMEOUT_MS=10000;
+
+                jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            }
+            catch (RuntimeException ex){
+
+            }
+        }
+        catch (OutOfMemoryError EX){
+
+        }
+
+
+    }
+    private void insert_CheckerCard_Details_new4(){
+
+        String Contno=conno;
+
+
+        String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
+        String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+
+        String ipaddress3="";
+        String computername3="";
+
+
+        if(ipaddress2.equals("null")){
+            ipaddress3="-";
+        }
+        else {
+            ipaddress3="-";
+
+        }
+
+
+
+
+
+        if(computername2.equals("null")){
+            computername3="-";
+        }
+        else {
+
+            computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+        }
+
+        String ipaddress = ipaddress3;
+        String computername = computername3;
+        String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+        String TopicID=TopicID4;
+        String AnswerID=AnswerID4;
+        String AnswerNote="-";
+
+
+
+
+
+        try {
+            jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_insert_CheckerCard_Dedails+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&AnswerID="+AnswerID+"&AnswerNote="+URLEncoder.encode(AnswerNote, "UTF-8")+"&ipaddress="+ipaddress+"&computername="+URLEncoder.encode(computername, "UTF-8")+"&user_code="+InformEmpID+"&NoID="+NoID,
+
+
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            try {
+                requestQueue = Volley.newRequestQueue(this);
+                requestQueue.add(jsonArrayRequest);
+
+                int MY_SOCKET_TIMEOUT_MS=10000;
+
+                jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            }
+            catch (RuntimeException ex){
+
+            }
+        }
+        catch (OutOfMemoryError EX){
+
+        }
+
+
+    }
+    private void insert_CheckerCard_Details_new5(){
+
+        String Contno=conno;
+
+
+        String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
+        String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+
+        String ipaddress3="";
+        String computername3="";
+
+
+        if(ipaddress2.equals("null")){
+            ipaddress3="-";
+        }
+        else {
+            ipaddress3="-";
+
+        }
+
+
+
+
+
+        if(computername2.equals("null")){
+            computername3="-";
+        }
+        else {
+
+            computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+        }
+
+        String ipaddress = ipaddress3;
+        String computername = computername3;
+        String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+        String TopicID=TopicID5;
+        String AnswerID=AnswerID5;
+        String AnswerNote="-";
+
+
+
+
+
+        try {
+            jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_insert_CheckerCard_Dedails+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&AnswerID="+AnswerID+"&AnswerNote="+URLEncoder.encode(AnswerNote, "UTF-8")+"&ipaddress="+ipaddress+"&computername="+URLEncoder.encode(computername, "UTF-8")+"&user_code="+InformEmpID+"&NoID="+NoID,
+
+
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            try {
+                requestQueue = Volley.newRequestQueue(this);
+                requestQueue.add(jsonArrayRequest);
+
+                int MY_SOCKET_TIMEOUT_MS=10000;
+
+                jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            }
+            catch (RuntimeException ex){
+
+            }
+        }
+        catch (OutOfMemoryError EX){
+
+        }
+
+
+    }
+    private void insert_CheckerCard_Details_new6(){
+
+        String Contno=conno;
+
+
+        String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
+        String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+
+        String ipaddress3="";
+        String computername3="";
+
+
+        if(ipaddress2.equals("null")){
+            ipaddress3="-";
+        }
+        else {
+            ipaddress3="-";
+
+        }
+
+
+
+
+
+        if(computername2.equals("null")){
+            computername3="-";
+        }
+        else {
+
+            computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+        }
+
+        String ipaddress = ipaddress3;
+        String computername = computername3;
+        String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+        String TopicID=TopicID6;
+        String AnswerID=AnswerID6;
+        String AnswerNote="-";
+
+
+
+
+
+        try {
+            jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_insert_CheckerCard_Dedails+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&AnswerID="+AnswerID+"&AnswerNote="+URLEncoder.encode(AnswerNote, "UTF-8")+"&ipaddress="+ipaddress+"&computername="+URLEncoder.encode(computername, "UTF-8")+"&user_code="+InformEmpID+"&NoID="+NoID,
+
+
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            try {
+                requestQueue = Volley.newRequestQueue(this);
+                requestQueue.add(jsonArrayRequest);
+
+                int MY_SOCKET_TIMEOUT_MS=10000;
+
+                jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            }
+            catch (RuntimeException ex){
+
+            }
+        }
+        catch (OutOfMemoryError EX){
+
+        }
+
+
+    }
+    private void insert_CheckerCard_Details_new7(){
+
+        String Contno=conno;
+
+
+        String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
+        String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+
+        String ipaddress3="";
+        String computername3="";
+
+
+        if(ipaddress2.equals("null")){
+            ipaddress3="-";
+        }
+        else {
+            ipaddress3="-";
+
+        }
+
+
+
+
+
+        if(computername2.equals("null")){
+            computername3="-";
+        }
+        else {
+
+            computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+        }
+
+        String ipaddress = ipaddress3;
+        String computername = computername3;
+        String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+        String TopicID=TopicID7;
+        String AnswerID=AnswerID7;
+        String AnswerNote="-";
+
+
+
+
+
+
+        try {
+            jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_insert_CheckerCard_Dedails+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&AnswerID="+AnswerID+"&AnswerNote="+URLEncoder.encode(AnswerNote, "UTF-8")+"&ipaddress="+ipaddress+"&computername="+URLEncoder.encode(computername, "UTF-8")+"&user_code="+InformEmpID+"&NoID="+NoID,
+
+
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            try {
+                requestQueue = Volley.newRequestQueue(this);
+                requestQueue.add(jsonArrayRequest);
+
+                int MY_SOCKET_TIMEOUT_MS=10000;
+
+                jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            }
+            catch (RuntimeException ex){
+
+            }
+        }
+        catch (OutOfMemoryError EX){
+
+        }
+
+
+    }
+    private void insert_CheckerCard_Details_new8(){
+
+        String Contno=conno;
+
+
+        String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
+        String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+
+        String ipaddress3="";
+        String computername3="";
+
+
+        if(ipaddress2.equals("null")){
+            ipaddress3="-";
+        }
+        else {
+            ipaddress3="-";
+
+        }
+
+
+
+
+
+        if(computername2.equals("null")){
+            computername3="-";
+        }
+        else {
+
+            computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+        }
+
+        String ipaddress = ipaddress3;
+        String computername = computername3;
+        String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+        String TopicID=TopicID8;
+        String AnswerID=AnswerID8;
+        String AnswerNote="-";
+
+
+
+
+
+
+        try {
+            jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_insert_CheckerCard_Dedails+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&AnswerID="+AnswerID+"&AnswerNote="+URLEncoder.encode(AnswerNote, "UTF-8")+"&ipaddress="+ipaddress+"&computername="+URLEncoder.encode(computername, "UTF-8")+"&user_code="+InformEmpID+"&NoID="+NoID,
+
+
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            try {
+                requestQueue = Volley.newRequestQueue(this);
+                requestQueue.add(jsonArrayRequest);
+
+                int MY_SOCKET_TIMEOUT_MS=10000;
+
+                jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            }
+            catch (RuntimeException ex){
+
+            }
+        }
+        catch (OutOfMemoryError EX){
+
+        }
+
+
+    }
+    private void insert_CheckerCard_Details_new9(){
+
+        String Contno=conno;
+
+
+        String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
+        String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+
+        String ipaddress3="";
+        String computername3="";
+
+
+        if(ipaddress2.equals("null")){
+            ipaddress3="-";
+        }
+        else {
+            ipaddress3="-";
+
+        }
+
+
+
+
+
+        if(computername2.equals("null")){
+            computername3="-";
+        }
+        else {
+
+            computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+        }
+
+        String ipaddress = ipaddress3;
+        String computername = computername3;
+        String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+        String TopicID=TopicID9;
+        String AnswerID=AnswerID9;
+        String AnswerNote="-";
+
+
+
+
+
+
+        try {
+            jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_insert_CheckerCard_Dedails+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&AnswerID="+AnswerID+"&AnswerNote="+URLEncoder.encode(AnswerNote, "UTF-8")+"&ipaddress="+ipaddress+"&computername="+URLEncoder.encode(computername, "UTF-8")+"&user_code="+InformEmpID+"&NoID="+NoID,
+
+
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            try {
+                requestQueue = Volley.newRequestQueue(this);
+                requestQueue.add(jsonArrayRequest);
+
+                int MY_SOCKET_TIMEOUT_MS=10000;
+
+                jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            }
+            catch (RuntimeException ex){
+
+            }
+        }
+        catch (OutOfMemoryError EX){
+
+        }
+
+
+    }
+    private void insert_CheckerCard_Details_new10(){
+
+        String Contno=conno;
+
+
+        String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
+        String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+
+        String ipaddress3="";
+        String computername3="";
+
+
+        if(ipaddress2.equals("null")){
+            ipaddress3="-";
+        }
+        else {
+            ipaddress3="-";
+
+        }
+
+
+
+
+
+        if(computername2.equals("null")){
+            computername3="-";
+        }
+        else {
+
+            computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
+        }
+
+        String ipaddress = ipaddress3;
+        String computername = computername3;
+        String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+        String TopicID=TopicID10;
+        String AnswerID=AnswerID10;
+        String AnswerNote="-";
+
+
+        try {
+            Log.e("URL10",API_URL_ALL.GET_JSON_insert_CheckerCard_Dedails+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&AnswerID="+AnswerID+"&AnswerNote="+URLEncoder.encode(AnswerNote, "UTF-8")+"&ipaddress="+ipaddress+"&computername="+URLEncoder.encode(computername, "UTF-8")+"&user_code="+InformEmpID+"&NoID="+NoID);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+
+        try {
+            jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_insert_CheckerCard_Dedails+"?Contno="+Contno+"&FnYear="+FnYear+"&FnMonth="+FnMonth+"&TopicID="+TopicID+"&AnswerID="+AnswerID+"&AnswerNote="+URLEncoder.encode(AnswerNote, "UTF-8")+"&ipaddress="+ipaddress+"&computername="+URLEncoder.encode(computername, "UTF-8")+"&user_code="+InformEmpID+"&NoID="+NoID,
+
+
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            try {
+                requestQueue = Volley.newRequestQueue(this);
+                requestQueue.add(jsonArrayRequest);
+
+                int MY_SOCKET_TIMEOUT_MS=10000;
+
+                jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            }
+            catch (RuntimeException ex){
+
+            }
+        }
+        catch (OutOfMemoryError EX){
+
+        }
+
+
+    }
 
 }
 

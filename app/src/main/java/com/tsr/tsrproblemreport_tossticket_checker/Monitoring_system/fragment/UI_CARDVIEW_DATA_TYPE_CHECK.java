@@ -272,7 +272,9 @@ public class UI_CARDVIEW_DATA_TYPE_CHECK extends Fragment implements RecyclerVie
     public void click2(View v, int position) {
 
         if(position==0){
-             Intent = new Intent(getActivity(), Detali_check1.class);
+           //  Intent = new Intent(getActivity(), Detali_check1.class);
+            Intent = new Intent(getActivity(), Detali_check1.class);
+
         }
         else if(position==1){
              Intent = new Intent(getActivity(), Detali_check2.class);

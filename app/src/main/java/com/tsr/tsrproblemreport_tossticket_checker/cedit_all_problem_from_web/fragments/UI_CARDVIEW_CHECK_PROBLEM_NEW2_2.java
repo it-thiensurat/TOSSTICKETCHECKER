@@ -2609,7 +2609,6 @@ Log.e("getEmpID",GetDataAdapter2.getEmpID());
 }
 
         select_status_non();
-        //SELECT_DATA_PROBLEM_GORY();
        // GetDataAdapter1.clear();
        // JSON_DATA_WEB_CALL();
 
@@ -3263,6 +3262,8 @@ String CONTNO_CHECK_CONTNO="",CashName_CHECK_CONTNO="",CashTeamCode_CHECK_CONTNO
 
                             Log.e("itemitem",item);
                             MyApplication.getInstance().getPrefManager().setPreferrence("item_DATA", item);
+                            MyApplication.getInstance().getPrefManager().setPreferrence("chaeck_save_data", "0");
+
 
                             linear_gory2.setVisibility(View.GONE);
                             //SELECT_DATA_PROBLEM_MAIN();
@@ -3276,6 +3277,8 @@ String CONTNO_CHECK_CONTNO="",CashName_CHECK_CONTNO="",CashTeamCode_CHECK_CONTNO
 
                             Log.e("itemitem",item);
                             MyApplication.getInstance().getPrefManager().setPreferrence("item_DATA", item);
+                            MyApplication.getInstance().getPrefManager().setPreferrence("chaeck_save_data", "0");
+
                             linear_gory2.setVisibility(View.GONE);
                             //SELECT_DATA_PROBLEM_MAIN();
                         }
@@ -3288,6 +3291,8 @@ String CONTNO_CHECK_CONTNO="",CashName_CHECK_CONTNO="",CashTeamCode_CHECK_CONTNO
 
                             Log.e("itemitem",item);
                             MyApplication.getInstance().getPrefManager().setPreferrence("item_DATA", item);
+                            MyApplication.getInstance().getPrefManager().setPreferrence("chaeck_save_data", "0");
+
                             linear_gory2.setVisibility(View.VISIBLE);
                             SELECT_DATA_PROBLEM_GORY2();
 
@@ -3297,11 +3302,14 @@ String CONTNO_CHECK_CONTNO="",CashName_CHECK_CONTNO="",CashTeamCode_CHECK_CONTNO
                             API_URL_ALL.GET_JSON_DATA_HTTP_URL_INSENT_DATA_SALE=BASE_URL+"assanee/api_report_problem_from_contno/report_promlem_contno3.php";
                             API_URL_ALL.GET_JSON_DATA_HTTP_URL_main=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/select_main_problem2.php";
                             API_URL_ALL.GET_JSON_DATA_HTTP_URL_sub=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/select_sub_problem2.php";
+
                             API_URL_ALL.GET_JSON_insent_Problem_Inform_Master=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/insent_Problem_Inform_Master_Copy_real2_2.php";
                             API_URL_ALL.GET_JSON_insent_Problem_Inform_Master_new=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/insent_Problem_Inform_Master_Copy_real_new_2.php";
 
                             Log.e("itemitem",item);
                             MyApplication.getInstance().getPrefManager().setPreferrence("item_DATA", item);
+                            MyApplication.getInstance().getPrefManager().setPreferrence("chaeck_save_data", "0");
+
                             linear_gory2.setVisibility(View.VISIBLE);
                             SELECT_DATA_PROBLEM_GORY2();
 
@@ -5462,7 +5470,7 @@ else {
                                         } else if (status_Shortcut.equals("2")) {
                                             SELECT_DATA_PROBLEM_SUB_ALL();
                                         } else {
-                                            SELECT_DATA_PROBLEM_GORY();
+                                          //  SELECT_DATA_PROBLEM_GORY();
                                         }
 
 
@@ -5564,7 +5572,7 @@ else {
                             } else if (status_Shortcut.equals("2")) {
                                 SELECT_DATA_PROBLEM_SUB_ALL();
                             } else {
-                                SELECT_DATA_PROBLEM_GORY();
+                               // SELECT_DATA_PROBLEM_GORY();
                             }
 
 
@@ -6227,12 +6235,21 @@ Log.e("image_final",data_image_to_qry);
               //  select_id_from_Problem_Inform_Master();
 
 
-                    if (item.equals("ปัญหาอื่นๆ")) {
+
+
+
+                String item_DATA=MyApplication.getInstance().getPrefManager().getPreferrence("item_DATA");
+
+                if(item_DATA.equals("ปัญหาอื่นๆ")){
+
+                 //   if (item.equals("ปัญหาอื่นๆ")) {
                         INSENT_Problem_Details2();
 
                     } else {
                         INSENT_Problem_Details();
-                        if (item.equals("ปัญหาการ์ดตรวจสอบ")) {
+                    if(item_DATA.equals("ปัญหาการ์ดตรวจสอบ")){
+
+                      //  if (item.equals("ปัญหาการ์ดตรวจสอบ")) {
                             insert_log_problem();
                         }
 
@@ -7370,6 +7387,30 @@ Log.e("image_final",data_image_to_qry);
 
     String Problem_Status="";
     public   void INSENT_Problem_Master(){
+
+        String item_DATA=MyApplication.getInstance().getPrefManager().getPreferrence("item_DATA");
+
+Log.e("item_DATA",item_DATA);
+        if(item_DATA.equals("ปัญหาอื่นๆ")){
+
+            API_URL_ALL.GET_JSON_insent_Problem_Inform_Master=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/insent_Problem_Inform_Master_Copy_real2_2.php";
+
+        }
+
+        else {
+
+            API_URL_ALL.GET_JSON_insent_Problem_Inform_Master=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/insent_Problem_Inform_Master_Copy_real2.php";
+
+        }
+
+
+
+
+
+
+
+
+
         String CashTeamCode="";
 
 
@@ -7921,6 +7962,22 @@ int ee=0;
     }
 
     public   void INSENT_Problem_Master_new(){
+
+        String item_DATA=MyApplication.getInstance().getPrefManager().getPreferrence("item_DATA");
+
+
+        if(item_DATA.equals("ปัญหาอื่นๆ")){
+
+            API_URL_ALL.GET_JSON_insent_Problem_Inform_Master_new=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/insent_Problem_Inform_Master_Copy_real_new_2.php";
+        }
+
+        else {
+
+            API_URL_ALL.GET_JSON_insent_Problem_Inform_Master_new=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/insent_Problem_Inform_Master_Copy_real_new.php";
+        }
+
+
+
         String CashTeamCode="";
 
 

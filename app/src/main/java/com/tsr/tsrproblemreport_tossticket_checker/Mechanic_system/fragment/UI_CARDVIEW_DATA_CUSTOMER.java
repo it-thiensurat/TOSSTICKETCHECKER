@@ -21,20 +21,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.tsr.tsrproblemreport_tossticket_checker.Mechanic_system.activity.Activity_tel_custo;
 import com.tsr.tsrproblemreport_tossticket_checker.Mechanic_system.adapter.RecyclerViewAdapter_custo;
 import com.tsr.tsrproblemreport_tossticket_checker.Mechanic_system.api.Service;
 import com.tsr.tsrproblemreport_tossticket_checker.Mechanic_system.model.Get_data_customer;
-import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.activity.Detali_check1;
-import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.activity.Detali_check2;
-import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.activity.Detali_check3;
-import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.adapter.RecyclerViewAdapter_type_check;
-import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.model.Get_data_type_check;
 import com.tsr.tsrproblemreport_tossticket_checker.R;
 import com.tsr.tsrproblemreport_tossticket_checker.other_all.MyApplication;
 

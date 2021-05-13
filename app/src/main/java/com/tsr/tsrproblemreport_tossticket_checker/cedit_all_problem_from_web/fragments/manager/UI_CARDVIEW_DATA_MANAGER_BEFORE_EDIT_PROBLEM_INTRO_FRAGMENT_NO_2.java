@@ -484,25 +484,11 @@ public class UI_CARDVIEW_DATA_MANAGER_BEFORE_EDIT_PROBLEM_INTRO_FRAGMENT_NO_2 ex
                 int scrollPosition = GetDataAdapter1.size();
 //                recyclerViewDataAdapter.notifyItemRemoved(scrollPosition);
 
-      /*          GetDataAdapter1.remove(GetDataAdapter1.size() - 1);
-                int scrollPosition = GetDataAdapter1.size();
-                recyclerViewDataAdapter.notifyItemRemoved(scrollPosition);
-                int currentSize = scrollPosition;
-                int nextLimit = currentSize + 10;
-
-                while (currentSize - 1 < nextLimit) {
-
-                   // GetDataAdapter1.add("Item " + currentSize);
-
-                    currentSize++;
-                }
-
-                recyclerViewDataAdapter.notifyDataSetChanged();
-                isLoading = false;*/
 
 
 
                 if(select_date==0){
+
                     JSON_DATA_WEB_CALL3();
                 }
                 else {
@@ -641,6 +627,7 @@ public class UI_CARDVIEW_DATA_MANAGER_BEFORE_EDIT_PROBLEM_INTRO_FRAGMENT_NO_2 ex
     public void JSON_DATA_WEB_CALL3() {
 
         String user_code= MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+        Log.e("number_page2",API_URL_ALL.GET_JSON_DATA_HTTP_URL_2+"?user_code="+user_code +"&page="+number_page);
 
         //  jsonArrayRequest = new JsonArrayRequest(GET_JSON_DATA_HTTP_URL+"?user_code="+user_code ,
         jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_DATA_HTTP_URL_2+"?user_code="+user_code +"&page="+number_page ,
