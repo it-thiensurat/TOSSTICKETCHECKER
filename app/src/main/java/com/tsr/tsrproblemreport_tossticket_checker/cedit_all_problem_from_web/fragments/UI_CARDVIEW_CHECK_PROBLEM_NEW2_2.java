@@ -8439,10 +8439,10 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                 File file21 = new File(filepath);
                 String filePath = file21.getPath();
 //                Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), data.getData());
                 /**
                  * Edit by Teerayut Klinsanga
                  */
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), data.getData());
                 bitmap = ic.NewresizeBitmap(bitmap);
                 Log.e("Bitmap size", bitmap.getWidth() + ", " + bitmap.getHeight());
                 /**

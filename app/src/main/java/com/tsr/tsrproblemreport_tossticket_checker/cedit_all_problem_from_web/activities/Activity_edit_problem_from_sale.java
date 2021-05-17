@@ -2565,12 +2565,10 @@ Log.e("UPDATE_Master",API_URL_ALL.GET_JSON_UPDATE_from_Problem_Respon_Master_Act
 
                 File file21 = new File(filepath);
                 String filePath = file21.getPath();
-//                Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-//                ic.getResizedBiBitmaptmap(bitmap,"open");
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
                 /**
                  * Edit by Teerayut Klinsanga
                  */
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
                 bitmap = ic.NewresizeBitmap(bitmap);
                 Log.e("Bitmap size", bitmap.getWidth() + ", " + bitmap.getHeight());
                 /**

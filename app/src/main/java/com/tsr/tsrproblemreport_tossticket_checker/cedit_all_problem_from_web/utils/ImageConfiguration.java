@@ -519,7 +519,7 @@ public class ImageConfiguration {
      *
      */
     public Bitmap NewresizeBitmap(Bitmap bmp) {
-        Bitmap b2 = Bitmap.createScaledBitmap(bmp, 512, 512, true);
+        Bitmap b2 = Bitmap.createScaledBitmap(bmp, (bmp.getWidth() / 2), (bmp.getHeight() / 2), true);
         File storageDir = context.getExternalFilesDir(
                 Environment.DIRECTORY_PICTURES + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("contno_save") + "/" + "report_problem" + "/" + "ID" + "ALL" + "/" + "image_error" + "/");
 
