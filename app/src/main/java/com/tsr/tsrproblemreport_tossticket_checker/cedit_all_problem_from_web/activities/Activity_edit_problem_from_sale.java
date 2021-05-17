@@ -2565,8 +2565,17 @@ Log.e("UPDATE_Master",API_URL_ALL.GET_JSON_UPDATE_from_Problem_Respon_Master_Act
 
                 File file21 = new File(filepath);
                 String filePath = file21.getPath();
-                Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                ic.getResizedBiBitmaptmap(bitmap,"open");
+//                Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+//                ic.getResizedBiBitmaptmap(bitmap,"open");
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
+                /**
+                 * Edit by Teerayut Klinsanga
+                 */
+                bitmap = ic.NewresizeBitmap(bitmap);
+                Log.e("Bitmap size", bitmap.getWidth() + ", " + bitmap.getHeight());
+                /**
+                 * End
+                 */
                 FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
             }
@@ -3451,13 +3460,11 @@ Log.e("UPDATE_Master",API_URL_ALL.GET_JSON_UPDATE_from_Problem_Respon_Master_Act
 
             ;
         }
-
-
-
     }
+
     private void checkCameraPermission() {
         Dexter.withActivity(this)
-                .withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE)
                 .withListener(new MultiplePermissionsListener() {
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
