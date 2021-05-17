@@ -3,9 +3,9 @@
 3    package="com.github.zagum.speechrecognitionview" >
 4
 5    <uses-sdk android:minSdkVersion="17" />
-5-->/Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml
+5-->D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml
 6
 7    <application />
-7-->/Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml:3:5-19
+7-->D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml:3:5-19
 8
 9</manifest>

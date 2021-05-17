@@ -2772,7 +2772,7 @@ public class Activity_edit_problem_from_sale_edit_new_uat extends AppCompatActiv
                     Bitmap bitmap = BitmapFactory.decodeFile(filePath);
 
 
-                    ic.getResizedBiBitmaptmap(bitmap,"camera");
+                    ic.NewresizeBitmap(bitmap);
 
                     FILE = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
@@ -3007,8 +3007,15 @@ public class Activity_edit_problem_from_sale_edit_new_uat extends AppCompatActiv
 
                 File file21 = new File(filepath);
                 String filePath = file21.getPath();
-                Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                ic.getResizedBiBitmaptmap(bitmap,"open");
+             //   Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+             //   ic.getResizedBiBitmaptmap(bitmap,"open");
+
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
+                /**
+                 * Edit by Teerayut Klinsanga
+                 */
+                bitmap = ic.NewresizeBitmap(bitmap);
+
                 FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
             }

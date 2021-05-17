@@ -1,10 +1,10 @@
+com/github/zagum/speechrecognitionview/animators/IdleAnimator.java
+ com.github.zagum.speechrecognitionview.animators.IdleAnimator
+com/github/zagum/speechrecognitionview/animators/RotatingAnimator.java
+ com.github.zagum.speechrecognitionview.animators.RotatingAnimator
 com/github/zagum/speechrecognitionview/animators/TransformAnimator.java
  com.github.zagum.speechrecognitionview.animators.TransformAnimator
  com.github.zagum.speechrecognitionview.animators.TransformAnimator$OnInterpolationFinishedListener
-com/github/zagum/speechrecognitionview/animators/RotatingAnimator.java
- com.github.zagum.speechrecognitionview.animators.RotatingAnimator
-com/github/zagum/speechrecognitionview/animators/IdleAnimator.java
- com.github.zagum.speechrecognitionview.animators.IdleAnimator
 com/github/zagum/speechrecognitionview/animators/RmsAnimator.java
  com.github.zagum.speechrecognitionview.animators.RmsAnimator
 com/github/zagum/speechrecognitionview/adapters/RecognitionListenerAdapter.java

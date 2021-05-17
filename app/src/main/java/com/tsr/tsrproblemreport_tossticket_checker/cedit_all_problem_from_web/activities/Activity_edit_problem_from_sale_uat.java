@@ -2645,7 +2645,7 @@ Log.e("UPDATE_Master",API_URL_ALL.GET_JSON_UPDATE_from_Problem_Respon_Master+"?I
                     Bitmap bitmap = BitmapFactory.decodeFile(filePath);
 
 
-                    ic.getResizedBiBitmaptmap(bitmap,"camera");
+                    ic.NewresizeBitmap(bitmap);
 
                     FILE = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
@@ -2882,8 +2882,14 @@ Log.e("UPDATE_Master",API_URL_ALL.GET_JSON_UPDATE_from_Problem_Respon_Master+"?I
 
                 File file21 = new File(filepath);
                 String filePath = file21.getPath();
-                Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                ic.getResizedBiBitmaptmap(bitmap,"open");
+               // Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+               // ic.getResizedBiBitmaptmap(bitmap,"open");
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
+                /**
+                 * Edit by Teerayut Klinsanga
+                 */
+                bitmap = ic.NewresizeBitmap(bitmap);
+
                 FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
             }
