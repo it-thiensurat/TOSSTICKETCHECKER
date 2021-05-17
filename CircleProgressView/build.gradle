@@ -5,17 +5,17 @@ group = 'com.github.jakob-grabner'
 android {
     signingConfigs {
         debug {
-            storeFile file('D:\\TOSSTICKETCHECKER\\app\\toss_ticket.keystore')
-            keyPassword 'assanee'
-            keyAlias = 'key0'
-            storePassword 'tsr1234'
+//            storeFile file('D:\\TOSSTICKETCHECKER\\app\\toss_ticket.keystore')
+//            keyPassword 'assanee'
+//            keyAlias = 'key0'
+//            storePassword 'tsr1234'
         }
     }
-    compileSdkVersion 30
-    buildToolsVersion '29.0.3'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 30
+        minSdkVersion 19
+        targetSdkVersion 29
         versionCode 3
         versionName "1.2"
     }

@@ -1,21 +1,21 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml:1:1-5:12
+ADDED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml:1:1-5:12
+INJECTED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml:1:1-5:12
+INJECTED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml:1:1-5:12
 	package
-		ADDED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml:1:11-59
-		INJECTED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml
-		INJECTED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml
+		ADDED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml:1:11-59
+		INJECTED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml
+		INJECTED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml:1:1-5:12
+		ADDED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml:1:1-5:12
 application
-ADDED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml:3:5-19
+ADDED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml:3:5-19
 uses-sdk
-INJECTED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml
-INJECTED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml
+INJECTED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml
+INJECTED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml
-		ADDED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml
-		INJECTED from D:\TOSSTICKETCHECKER\speechrecognitionview\src\main\AndroidManifest.xml
+		INJECTED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml
+		ADDED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml
+		INJECTED from /Users/zone-ideainnovation/Documents/workspace/AndroidStudio/TOSSTICKETCHECKER/speechrecognitionview/src/main/AndroidManifest.xml

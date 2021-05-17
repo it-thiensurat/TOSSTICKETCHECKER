@@ -53,31 +53,6 @@ String BASE_URL="";
  //public static  String BASE_URL = getTsrUrl();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  /* แจ้งปัญหา เคดิต*/
  public static   String GET_JSON_DATA_HTTP_URL_gory = "";
  public   static String GET_JSON_DATA_HTTP_URL_gory_2= BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/select_gory_problem_2.php";

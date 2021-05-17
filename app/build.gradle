@@ -2,17 +2,17 @@ apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 android {
     signingConfigs {
-        config {
-            keyAlias 'key0'
-            keyPassword 'assanee'
-            storeFile file('D:/TOSSTICKETCHECKER/app/toss_ticket.keystore')
-            storePassword 'tsr1234'
-        }
+//        config {
+//            keyAlias 'key0'
+//            keyPassword 'assanee'
+//            storeFile file('D:/TOSSTICKETCHECKER/app/toss_ticket.keystore')
+//            storePassword 'tsr1234'
+//        }
     }
 
 
-    compileSdkVersion 30
-   // buildToolsVersion "30.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
 
     def versionCodes = {
         return 55
@@ -28,7 +28,7 @@ android {
     defaultConfig {
         applicationId "com.tsr.tsrproblemreport_tossticket_checker"
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdkVersion 29
         versionCode versionCodes()
         versionName "2.55"
        // testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -54,17 +54,15 @@ android {
 
             // signingConfig signingConfigs.release
             // signingConfig signingConfigs.config
-            signingConfig signingConfigs.config
+//            signingConfig signingConfigs.config
 
             //  multiDexKeepFile file('multidex-config.txt')
 
         }
         debug{
             minifyEnabled false // Enables code shrinking for the release build type.
-            signingConfig signingConfigs.config
+//            signingConfig signingConfigs.config
         }
-
-
     }
 
 
@@ -116,8 +114,6 @@ android {
         }
     }
 
-
-
     lintOptions {
         disable 'MissingTranslation'
 
@@ -129,9 +125,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-
-
 }
 
 
@@ -142,15 +135,9 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     //testImplementation 'junit:junit:4.12'
     testImplementation 'junit:junit:4.+'
-
     // androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-
     implementation 'com.android.support:support-annotations:27.1.0'
-
-
-
-
     implementation files('libs/commons-lang-2.5.jar')
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.google.code.gson:gson:2.6.2'
@@ -229,23 +216,11 @@ dependencies {
     //implementation 'com.github.gcacace:android-signaturepad:v1.2.1'
     implementation project(':signature-pad')
     implementation 'de.codecrafters.tableview:tableview:2.8.0'
-
-
-
     implementation 'org.jsoup:jsoup:1.10.2'
-
     implementation 'com.github.chrisbanes:PhotoView:2.1.3'
     //implementation project(path: ':carouselview')
-
-
-
-
-
     implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
     implementation 'com.github.halysongoncalves:pugnotification:1.8.1'
-
     implementation 'q.rorbin:badgeview:1.1.0'
-
-
 }
 apply plugin: 'com.google.gms.google-services'

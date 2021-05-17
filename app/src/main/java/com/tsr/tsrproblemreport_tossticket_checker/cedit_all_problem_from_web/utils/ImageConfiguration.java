@@ -480,43 +480,86 @@ public class ImageConfiguration {
         return resizedBitmap;
     }*/
 
+    public static Bitmap resizeBitmap(Bitmap source, int maxLength) {
+        try {
+            if (source.getHeight() >= source.getWidth()) {
+                int targetHeight = maxLength;
+                if (source.getHeight() <= targetHeight) { // if image already smaller than the required height
+                    return source;
+                }
+
+                double aspectRatio = (double) source.getWidth() / (double) source.getHeight();
+                int targetWidth = (int) (targetHeight * aspectRatio);
+
+                Bitmap result = Bitmap.createScaledBitmap(source, targetWidth, targetHeight, false);
+                return result;
+            } else {
+                int targetWidth = maxLength;
+
+                if (source.getWidth() <= targetWidth) { // if image already smaller than the required height
+                    return source;
+                }
+
+                double aspectRatio = ((double) source.getHeight()) / ((double) source.getWidth());
+                int targetHeight = (int) (targetWidth * aspectRatio);
+
+                Bitmap result = Bitmap.createScaledBitmap(source, targetWidth, targetHeight, false);
+                return result;
+
+            }
+        } catch (Exception e) {
+            return source;
+        }
+    }
+
+    /**
+     *
+     * Created by Teerayut Klinsanga
+     * Date 17/05/2021 11:30
+     *
+     */
+    public Bitmap NewresizeBitmap(Bitmap bmp) {
+        Bitmap b2 = Bitmap.createScaledBitmap(bmp, 512, 512, true);
+        File storageDir = context.getExternalFilesDir(
+                Environment.DIRECTORY_PICTURES + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("contno_save") + "/" + "report_problem" + "/" + "ID" + "ALL" + "/" + "image_error" + "/");
+
+        File imageFile = null;
+        FileOutputStream fileoutStream = null;
+        try {
+            imageFile = new File(storageDir, MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new"+".png");
+            fileoutStream = new FileOutputStream(imageFile);
+            b2.compress(Bitmap.CompressFormat.PNG, 100, fileoutStream);
+            fileoutStream.flush();
+            fileoutStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return BitmapFactory.decodeFile(imageFile.getAbsolutePath());
+    }
+
+    /**
+     * End
+     */
 
 
-
-    public Bitmap getResizedBiBitmaptmap(Bitmap bm,String IN_SELECT) {
+    public Bitmap getResizedBiBitmaptmap(Bitmap bm, String IN_SELECT) {
         int width = bm.getWidth();
         int height = bm.getHeight();
-
         int bitmapByteCount= BitmapCompat.getAllocationByteCount(bm);
         bitmapByteCount=(bitmapByteCount/10000)/10;
-
-
         Log.e("resizedBitmap1", String.valueOf(bitmapByteCount));
         float scaleWidth = 0,scaleHeight=0;
-
         float x=bitmapByteCount/100;
         //float x2=bitmapByteCount/10;
-
-
         if(IN_SELECT.equals("camera")){
-
-
             //int x=0;
             //x=bitmapByteCount/400;
-
             scaleWidth = ((float) width/x) / width;
             scaleHeight = ((float) height/x) / height;
-
-
-
          //   tt=scaleWidth/500;
           //  tt2=scaleHeight/500;
             Log.e("scaleWidth_x", String.valueOf(scaleWidth));
             Log.e("scaleWidth_y", String.valueOf(scaleHeight));
-
-
-
-
             scaleWidth=scaleWidth/2;
             scaleHeight=scaleHeight/2;
 
@@ -607,10 +650,7 @@ public class ImageConfiguration {
                 scaleWidth = ((float) width/4) / width;
                 scaleHeight = ((float) height/4) / height;
             }*/
-        }
-        else {
-
-
+        } else {
             scaleWidth = ((float) width/x) / width;
             scaleHeight = ((float) height/x) / height;
             scaleWidth=scaleWidth/2;
@@ -704,24 +744,14 @@ public class ImageConfiguration {
                 scaleHeight = ((float) height/2) / height;
             }
 */
-
-
         }
-
-
-
-
-
 
         Matrix matrix = new Matrix();
         matrix.postScale(scaleWidth, scaleHeight);
         Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
         bm.recycle();
-
         Log.e("resizedBitmap2", String.valueOf(resizedBitmap));
-
         convertToPNG(resizedBitmap);
-
         return resizedBitmap;
     }
 
