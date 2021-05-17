@@ -519,7 +519,19 @@ public class ImageConfiguration {
      *
      */
     public Bitmap NewresizeBitmap(Bitmap bmp) {
-        Bitmap b2 = Bitmap.createScaledBitmap(bmp, (bmp.getWidth() / 2), (bmp.getHeight() / 2), true);
+        int width = bmp.getWidth();
+        int height = bmp.getHeight();
+        int bounding = dpToPx(250);
+
+        float xScale = ((float) bounding) / width;
+        float yScale = ((float) bounding) / height;
+        float scale = (xScale <= yScale) ? xScale : yScale;
+
+        Matrix matrix = new Matrix();
+        matrix.postScale(scale, scale);
+        Bitmap b2 = Bitmap.createBitmap(bmp, 0, 0, width, height, matrix, true);
+
+//        Bitmap b2 = Bitmap.createScaledBitmap(bmp, (bmp.getWidth() / 2), (bmp.getHeight() / 2), true);
         File storageDir = context.getExternalFilesDir(
                 Environment.DIRECTORY_PICTURES + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("contno_save") + "/" + "report_problem" + "/" + "ID" + "ALL" + "/" + "image_error" + "/");
 
@@ -535,6 +547,11 @@ public class ImageConfiguration {
             e.printStackTrace();
         }
         return BitmapFactory.decodeFile(imageFile.getAbsolutePath());
+    }
+
+    private int dpToPx(int dp) {
+        float density = this.context.getResources().getDisplayMetrics().density;
+        return Math.round((float)dp * density);
     }
 
     /**
