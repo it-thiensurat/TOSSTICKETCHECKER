@@ -260,6 +260,8 @@ public class Activity_edit_problem_from_sale extends AppCompatActivity implement
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         VersionOSM = android.os.Build.VERSION.RELEASE;
 
+        Log.e("page","1");
+
         my_recycler_view2 = (RecyclerView) findViewById(R.id.my_recycler_view2);
         my_recycler_view = (RecyclerView) findViewById(R.id.my_recycler_view);
 
@@ -1132,7 +1134,31 @@ public class Activity_edit_problem_from_sale extends AppCompatActivity implement
         if (view == open_camera) {
 
             checkCameraPermission();
-            try {
+
+
+
+            if (!marshMallowPermission.checkPermissionForCamera()) {
+                marshMallowPermission.requestPermissionForCamera();
+            } else {
+                if (!marshMallowPermission.checkPermissionForExternalStorage()) {
+                    marshMallowPermission.requestPermissionForExternalStorage();
+                } else {
+
+                    CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                    ic = new ImageConfiguration(this,PATH);
+                    file = ic.createImageByType_error(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
+                            "report_problem", "ALL");
+
+                    fileUri = FileProvider.getUriForFile(this,
+                            BuildConfig.APPLICATION_ID + ".provider",
+                            file);
+                    // fileUri = Uri.fromFile(file);
+                    CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+                    startActivityForResult(CamIntent, 1);
+                }
+            }
+/*            try {
                 if ((VersionOSM.equals("5.0"))|(VersionOSM.equals("5.0.1"))|(VersionOSM.equals("5.0.2"))|(VersionOSM.equals("5.1.3"))|(VersionOSM.equals("5.1"))|(VersionOSM.equals("5.1.1"))|(VersionOSM.equals("5.1.0"))|(VersionOSM.equals("5.1.2"))) {
                     CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
@@ -1186,7 +1212,7 @@ public class Activity_edit_problem_from_sale extends AppCompatActivity implement
                 // fileUri = Uri.fromFile(file);
                 CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
                 startActivityForResult(CamIntent, 1);
-            }
+            }*/
 
 
 
@@ -2325,7 +2351,7 @@ Log.e("UPDATE_Master",API_URL_ALL.GET_JSON_UPDATE_from_Problem_Respon_Master_Act
                     Bitmap bitmap = BitmapFactory.decodeFile(filePath);
 
 
-                    ic.getResizedBiBitmaptmap(bitmap,"camera");
+                    ic.NewresizeBitmap(bitmap);
 
                     FILE = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
@@ -2437,14 +2463,20 @@ Log.e("UPDATE_Master",API_URL_ALL.GET_JSON_UPDATE_from_Problem_Respon_Master_Act
                 VersionOS = android.os.Build.VERSION.RELEASE;
 
                 if((VersionOS.equals("6.0"))|(VersionOS.equals("6.0.0"))|(VersionOS.equals("6.0.1"))|(VersionOS.equals("6.1"))|(VersionOS.equals("6.1.0"))|(VersionOS.equals("7.0"))|(VersionOS.equals("7.0.0"))|(VersionOS.equals("7.0.1"))|(VersionOS.equals("7.1"))|(VersionOS.equals("7.1.0"))|(VersionOS.equals("7.1.1"))|(VersionOS.equals("7.1.2"))|(VersionOS.equals("8.0"))|(VersionOS.equals("8.0.0"))|(VersionOS.equals("8.1.0"))|(VersionOS.equals("8.0"))|(VersionOS.equals("8.1"))|(VersionOS.equals("9"))|(VersionOS.equals("9.0"))|(VersionOS.equals("9.0.0"))|(VersionOS.equals("9.1"))|(VersionOS.equals("9.1.0"))){
-                    FILE=MyApplication.getInstance().getPrefManager().getPreferrence("part_image")+"/"+MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+".jpg";
+                   // FILE=MyApplication.getInstance().getPrefManager().getPreferrence("part_image")+"/"+MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+".jpg";
+                    FILE=file.getAbsolutePath();
+
                 }
                 else {
-                    FILE=file.getAbsolutePath();
+                    FILE=MyApplication.getInstance().getPrefManager().getPreferrence("part_image")+"/"+MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+".jpg";
+
+                        FILE=file.getAbsolutePath();
                 }
             }
             catch (Exception ex){
-                FILE=file.getAbsolutePath();
+                FILE=MyApplication.getInstance().getPrefManager().getPreferrence("part_image")+"/"+MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+".jpg";
+
+                  FILE=file.getAbsolutePath();
             }
 
             //String FILE=file.getAbsolutePath();

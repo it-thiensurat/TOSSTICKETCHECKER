@@ -6162,7 +6162,7 @@ Log.e("size1", String.valueOf(size1));
                         Bitmap bitmap = BitmapFactory.decodeFile(filePath);
 
 
-                        ic.getResizedBiBitmaptmap(bitmap,"camera");
+                        ic.NewresizeBitmap(bitmap);
 
                         FILE = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
                  //   }
@@ -6430,7 +6430,7 @@ Log.e("size1", String.valueOf(size1));
                     Bitmap bitmap = BitmapFactory.decodeFile(filePath);
 
 
-                    ic.getResizedBiBitmaptmap(bitmap,"camera");
+                    ic.NewresizeBitmap(bitmap);
 
                     FILE = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
@@ -6697,7 +6697,7 @@ Log.e("size1", String.valueOf(size1));
                     Bitmap bitmap = BitmapFactory.decodeFile(filePath);
 
 
-                    ic.getResizedBiBitmaptmap(bitmap,"camera");
+                    ic.NewresizeBitmap(bitmap);
 
                     FILE = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
               //  }
@@ -6938,7 +6938,7 @@ Log.e("size1", String.valueOf(size1));
                     Bitmap bitmap = BitmapFactory.decodeFile(filePath);
 
 
-                    ic.getResizedBiBitmaptmap(bitmap,"camera");
+                    ic.NewresizeBitmap(bitmap);
 
                     FILE = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
@@ -7186,7 +7186,7 @@ Log.e("size1", String.valueOf(size1));
                     File file21 = new File(FILE2);
                     String filePath = file21.getPath();
                     Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                    ic.getResizedBiBitmaptmap(bitmap,"camera");
+                    ic.NewresizeBitmap(bitmap);
                     FILE = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
             }
@@ -7441,8 +7441,11 @@ Log.e("size1", String.valueOf(size1));
 
                             File file21 = new File(filepath);
                             String filePath = file21.getPath();
-                            Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                            ic.getResizedBiBitmaptmap(bitmap,"open");
+                           // Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+                           // ic.getResizedBiBitmaptmap(bitmap,"open");
+                            Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
+                            bitmap = ic.NewresizeBitmap(bitmap);
+
                             FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
                         }
@@ -7610,8 +7613,12 @@ Log.e("size1", String.valueOf(size1));
 
                             File file21 = new File(filepath);
                             String filePath = file21.getPath();
-                            Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                            ic.getResizedBiBitmaptmap(bitmap,"open");
+                            //Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+                           // ic.getResizedBiBitmaptmap(bitmap,"open");
+                            Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
+                            bitmap = ic.NewresizeBitmap(bitmap);
+
+
                             FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
                         }
@@ -7784,8 +7791,11 @@ Log.e("size1", String.valueOf(size1));
 
                             File file21 = new File(filepath);
                             String filePath = file21.getPath();
-                            Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                            ic.getResizedBiBitmaptmap(bitmap,"open");
+                           // Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+                            //ic.getResizedBiBitmaptmap(bitmap,"open");
+                            Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
+                            bitmap = ic.NewresizeBitmap(bitmap);
+
                             FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
                         }
@@ -7948,8 +7958,12 @@ Log.e("size1", String.valueOf(size1));
 
                     File file21 = new File(filepath);
                     String filePath = file21.getPath();
-                    Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                    ic.getResizedBiBitmaptmap(bitmap,"open");
+                   // Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+                  //  ic.getResizedBiBitmaptmap(bitmap,"open");
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
+                    bitmap = ic.NewresizeBitmap(bitmap);
+
+
                     FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
                 }
@@ -8149,8 +8163,12 @@ Log.e("size1", String.valueOf(size1));
 
                         File file21 = new File(filepath);
                         String filePath = file21.getPath();
-                        Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                        ic.getResizedBiBitmaptmap(bitmap,"open");
+                       // Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+                      //  ic.getResizedBiBitmaptmap(bitmap,"open");
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
+                        bitmap = ic.NewresizeBitmap(bitmap);
+
+
                         FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
                     }

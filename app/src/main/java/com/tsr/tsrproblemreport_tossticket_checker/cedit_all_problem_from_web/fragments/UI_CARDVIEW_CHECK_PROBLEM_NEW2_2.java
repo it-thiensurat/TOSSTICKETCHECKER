@@ -81,7 +81,6 @@ import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.tsr.tsrproblemreport_tossticket_checker.API_URL_ALL;
-//import com.tsr.tsrproblemreport_tossticket_checker.BuildConfig;
 import com.tsr.tsrproblemreport_tossticket_checker.BuildConfig;
 import com.tsr.tsrproblemreport_tossticket_checker.INSERT_GPS_GIS;
 import com.tsr.tsrproblemreport_tossticket_checker.Monitoring_system.adapter.RecyclerViewAdapter_type_check_susscess;
@@ -177,6 +176,7 @@ public class UI_CARDVIEW_CHECK_PROBLEM_NEW2_2 extends Fragment implements View.O
 
 
     INSERT_GPS_GIS insert_gps_gis;
+
 
     public static UI_CARDVIEW_CHECK_PROBLEM_NEW2_2 getInstance(){
         return new UI_CARDVIEW_CHECK_PROBLEM_NEW2_2();
@@ -715,6 +715,11 @@ String ProcessTypeID_checker="";
 
         }
 
+
+
+
+
+
         try {
             if(getEmployeeName.equals("null")){
 
@@ -786,6 +791,41 @@ String ProcessTypeID_checker="";
         catch (Exception ex){
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*try {
     String  contno_by_checker=MyApplication.getInstance().getPrefManager().getPreferrence("contno_by_checker")+"";
     if(!contno_by_checker.equals("null")){
@@ -804,12 +844,56 @@ String ProcessTypeID_checker="";
 catch (Exception EX){
 
 }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Log.e("555","555");
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public class DirectoryCleaner {
         private final File mFile;
@@ -1906,16 +1990,22 @@ private void data_checker_problem_for_report(){
             try {
                 pDialogg.dismiss();
                 pDialogg.cancel();
-            } catch (Exception    EX){
+            }
+            catch (Exception    EX){
 
             }
+
         }
+
+
+
     }
 }
 
+
     private void checkCameraPermission() {
         Dexter.withActivity(getActivity())
-                .withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE)
+                .withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 .withListener(new MultiplePermissionsListener() {
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
@@ -2028,9 +2118,17 @@ private void data_checker_problem_for_report(){
     public void INSENT_DATA_SALE_FOR_CHECKER() {
         String user_code2=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
         String user_code=MyApplication.getInstance().getPrefManager().getPreferrence("CashTeamCode");
+/*        if(item.equals("อื่นๆ")){
+            ID_SUB="0";
+        }
+        else {
+          GGGGG
+
+    }*/
 
         Log.e("url",API_URL_ALL.GET_JSON_DATA_HTTP_URL_INSENT_DATA_SALE555+"?contno="+contno_checker+"&ProblemID="+ProblemID_checker+"&user_code="+user_code+"&user_code2="+user_code2  );
         jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_DATA_HTTP_URL_INSENT_DATA_SALE555+"?contno="+contno_checker+"&ProblemID="+ProblemID_checker+"&user_code="+user_code+"&user_code2="+user_code2  ,
+
 
                 new Response.Listener<JSONArray>() {
                     @Override
@@ -2059,12 +2157,15 @@ private void data_checker_problem_for_report(){
                         DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                         DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
-            } catch (RuntimeException ex){
+            }
+            catch (RuntimeException ex){
 
             }
-        } catch (OutOfMemoryError EX){
+        }
+        catch (OutOfMemoryError EX){
 
         }
+
     }
 
 
@@ -2072,7 +2173,12 @@ private void data_checker_problem_for_report(){
 
 
     public void INSENT_DATA_CHECK_CONTNO() {
+
+
+
         jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_DATA_HTTP_URL_INSENT_DATA_CHECK_CONTNO+"?contno="+contno,
+
+
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -4885,7 +4991,8 @@ else {
             }
 
 
-        } else {
+        }
+        else {
 
                 SweetAlertDialog sweetAlertDialog = new SweetAlertDialog(getActivity(), SweetAlertDialog.ERROR_TYPE);
                 sweetAlertDialog.setTitleText("เลขที่สัญญาไม่ถูกต้อง!");
@@ -4901,18 +5008,34 @@ else {
                     }
                 });
                 sweetAlertDialog.show();
+
         }
 
-        } else if(view==open_camera){
+
+
+
+
+
+
+
+
+
+
+        }
+        else if(view==open_camera){
             checkCameraPermission();
 
           // Log.e("VersionOSM",VersionOSM);
 
             if((check!=0)|(!CHECK_contno.equals("null"))) {
+                //checkCameraPermission();
                 contno_save = MyApplication.getInstance().getPrefManager().getPreferrence("contno_save") + "";
+               // Log.e("contno_real",contno_save);
                 String strinputText = inputText.getText().toString();
+
                 if (TextUtils.isEmpty(strinputText)) {
                     inputText.setError("!กรุณาพิมพ์เลขที่สัญญา");
+                    //if((contno_save.equals("null"))|(contno_save.isEmpty())){
                     long[] pattern = {0, 200, 500};
                     Vibrator v = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -4921,6 +5044,7 @@ else {
 
                         v.vibrate(200);
                     }
+
 
                     SweetAlertDialog sweetAlertDialog = new SweetAlertDialog(getActivity(), SweetAlertDialog.ERROR_TYPE);
                     sweetAlertDialog.setTitleText("เลขที่สัญญาไม่ถูกต้อง!");
@@ -4938,6 +5062,7 @@ else {
                     sweetAlertDialog.show();
 
                 } else {
+
                     try {
                         if ((VersionOSM.equals("5.0"))|(VersionOSM.equals("5.0.1"))|(VersionOSM.equals("5.0.2"))|(VersionOSM.equals("5.1.3"))|(VersionOSM.equals("5.1"))|(VersionOSM.equals("5.1.1"))|(VersionOSM.equals("5.1.0"))|(VersionOSM.equals("5.1.2"))) {
                             CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -4945,40 +5070,146 @@ else {
                             ic = new ImageConfiguration(getActivity(),PATH);
                             file = ic.createImageByType_error(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
                                     "report_problem", "ALL");
+
+
                             fileUri = Uri.fromFile(file);
                             CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
                             startActivityForResult(CamIntent, 1);
-                        } else {
+                        }/* else  if((VersionOSM.equals("6.0"))|(VersionOSM.equals("6.0.0"))|(VersionOSM.equals("6.0.1"))|(VersionOSM.equals("6.1"))|(VersionOSM.equals("6.1.0"))|(VersionOSM.equals("7.0"))|(VersionOSM.equals("7.0.0"))|(VersionOSM.equals("7.0.1"))|(VersionOSM.equals("7.1"))|(VersionOSM.equals("7.1.0"))|(VersionOSM.equals("7.1.1"))|(VersionOSM.equals("7.1.2"))|(VersionOSM.equals("8.0"))|(VersionOSM.equals("8.0.0"))|(VersionOSM.equals("8.1.0"))|(VersionOSM.equals("8.0"))|(VersionOSM.equals("8.1"))|(VersionOSM.equals("8.1.1"))|(VersionOSM.equals("9"))|(VersionOSM.equals("9.0"))|(VersionOSM.equals("9.0.0"))|(VersionOSM.equals("9.1"))|(VersionOSM.equals("9.1.0"))) {
+
                             if (!marshMallowPermission.checkPermissionForCamera()) {
                                 marshMallowPermission.requestPermissionForCamera();
+
+
                             } else {
                                 if (!marshMallowPermission.checkPermissionForExternalStorage()) {
                                     marshMallowPermission.requestPermissionForExternalStorage();
                                 } else {
+
                                     CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                                    //CamIntent = new Intent("android.media.action.IMAGE_CAPTURE");
                                     ic = new ImageConfiguration(getActivity(), PATH);
                                     file = ic.createImageByType_error(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
                                             "report_problem", "ALL");
+
+                                    fileUri = FileProvider.getUriForFile(getActivity(),
+                                            BuildConfig.APPLICATION_ID + ".provider",
+                                            file);
+                                    // fileUri = Uri.fromFile(file);
                                     CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
                                     startActivityForResult(CamIntent, 1);
+
+
+                                    //Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                                    // startActivity(intent);
+
+
                                 }
                             }
-                        }
-                    } catch (Exception ex) {
-                        try {
-                            CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                        }*/
+
+
+                        else {
+/*                            CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
                             ic = new ImageConfiguration(getActivity(),PATH);
                             file = ic.createImageByType_error(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
                                     "report_problem", "ALL");
+
+                            fileUri = FileProvider.getUriForFile(getActivity(),
+                                    BuildConfig.APPLICATION_ID + ".provider",
+                                    file);
+                            // fileUri = Uri.fromFile(file);
                             CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-                            startActivityForResult(CamIntent, 1);
+                            startActivityForResult(CamIntent, 1);*/
+
+
+
+                            if (!marshMallowPermission.checkPermissionForCamera()) {
+                                marshMallowPermission.requestPermissionForCamera();
+
+
+                            } else {
+                                if (!marshMallowPermission.checkPermissionForExternalStorage()) {
+                                    marshMallowPermission.requestPermissionForExternalStorage();
+                                } else {
+
+                                    CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                                    //CamIntent = new Intent("android.media.action.IMAGE_CAPTURE");
+                                    ic = new ImageConfiguration(getActivity(), PATH);
+                                    file = ic.createImageByType_error(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
+                                            "report_problem", "ALL");
+
+                                    fileUri = FileProvider.getUriForFile(getActivity(),
+                                            BuildConfig.APPLICATION_ID + ".provider",
+                                            file);
+                                    // fileUri = Uri.fromFile(file);
+                                    CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+                                    startActivityForResult(CamIntent, 1);
+
+
+                                    //Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                                    // startActivity(intent);
+
+
+                                }
+                            }
+
+
+
+
+
+                        }
+                    } catch (Exception ex) {
+
+
+
+
+
+                        try {
+                            CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                            ic = new ImageConfiguration(getActivity(),PATH);
+                            file = ic.createImageByType_error(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
+                                    "report_problem", "ALL");
+
+
+                            fileUri = FileProvider.getUriForFile(getActivity(),
+                                    BuildConfig.APPLICATION_ID + ".provider",
+                                    file);
+
+
+                            // fileUri = Uri.fromFile(file);
+                            CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+
+                            try {
+                                startActivityForResult(CamIntent, 1);
+                            } catch (Exception e) {
+
+                            }
                         }
                         catch (Exception e){
 
                         }
+
+
+
+
+
+
+
+
+
+
+
+
                     }
+
+
                 }
-            } else {
+
+            }
+            else {
 
                 SweetAlertDialog sweetAlertDialog = new SweetAlertDialog(getActivity(), SweetAlertDialog.ERROR_TYPE);
                 sweetAlertDialog.setTitleText("เลขที่สัญญาไม่ถูกต้อง!");
@@ -4994,11 +5225,32 @@ else {
                     }
                 });
                 sweetAlertDialog.show();
+
+
             }
-        } else if(view==open_image){
+
+
+
+
+
+
+
+
+
+        }
+
+
+        else if(view==open_image){
             if((check!=0)|(!CHECK_contno.equals("null"))) {
                 checkCameraPermission();
+
+               // Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+              //  startActivityForResult(intent, 77);
+
+
+
                 Intent intent    = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                //CamIntent = new Intent("android.media.action.IMAGE_CAPTURE");
                 ic = new ImageConfiguration(getActivity(), PATH);
                 file = ic.createImageByType_error(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
                         "report_problem", "ALL");
@@ -5006,10 +5258,13 @@ else {
                 fileUri = FileProvider.getUriForFile(getActivity(),
                         BuildConfig.APPLICATION_ID + ".provider",
                         file);
-//                fileUri = Uri.fromFile(file);
+                // fileUri = Uri.fromFile(file);
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
                 startActivityForResult(intent, 77);
-            } else {
+
+
+            }
+            else {
                 SweetAlertDialog sweetAlertDialog = new SweetAlertDialog(getActivity(), SweetAlertDialog.ERROR_TYPE);
                 sweetAlertDialog.setTitleText("เลขที่สัญญาไม่ถูกต้อง!");
                 sweetAlertDialog.setContentText("*กรุณาลองใหม่อีกครั้ง*");
@@ -5017,29 +5272,50 @@ else {
                 sweetAlertDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
+
+
                         Log.e("dialog", "ปิด dialog");
                         sDialog.dismissWithAnimation();
                     }
                 });
                 sweetAlertDialog.show();
             }
-        } else if(view==switcher){
+        }
+        else if(view==switcher){
             Intent intent = new Intent(getActivity(), MainActivity_qr_report_problem.class);
             startActivityForResult(intent,80);
-        } else if(view==switcher2){
+
+        }
+        else if(view==switcher2){
+
             check_sale_contno = MyApplication.getInstance().getPrefManager().getPreferrence("check");
             if (!menuOpen) {
+
                 if(error==0){
                     revealMenu();
-                } else {
+
+                }
+                else {
                     revealMenu2();
                 }
+
+
+
+
             } else {
                 if(error==0){
                     hideMenu();
-                } else {
-                    hideMenu2();
+
                 }
+                else {
+                    hideMenu2();
+
+                }
+
+
+
+
+
             }
 
             //linear_sale1.setVisibility(View.VISIBLE);
@@ -5050,7 +5326,9 @@ else {
             dialog.setContentView(R.layout.custom_dialog_data_sale);
             dialog.setCancelable(false);
             dialog.show();*/
-        } else if(view==btn_report){
+        }
+
+        else if(view==btn_report){
 
             if(count_checker_problem>0){
 
@@ -5088,8 +5366,19 @@ else {
                     catch (Exception    EX){
 
                     }
+
+
                 }
-            } else {
+
+
+
+            }
+
+
+
+            else {
+
+
                 if (s > 0) {
                     if (date_real == 0) {
                         Log.e("แก้ได้", "แก้ได้");
@@ -5102,8 +5391,12 @@ else {
                         sweetAlertDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
                             @Override
                             public void onClick(SweetAlertDialog sDialog) {
+
+
                                 Log.e("dialog", "ปิด dialog");
                                 sDialog.dismissWithAnimation();
+
+
                             }
                         });
 
@@ -5162,8 +5455,13 @@ else {
                                         sweetAlertDialog.show();
 
                                     } else {
+
                                         select_id_from_Problem_Inform_Master_new();
+
+
                                         sent_nontification_to_web();
+
+
                                         getData_select_topic_problem_gories.clear();
                                         getData_select_topic_problem_mains.clear();
                                         getData_select_topic_problem_subs.clear();
@@ -5174,11 +5472,19 @@ else {
                                         } else {
                                           //  SELECT_DATA_PROBLEM_GORY();
                                         }
+
+
                                     }
+
+
                                 }
+
+
                                 //sDialog.dismissWithAnimation();
                             }
                         });
+
+
                         sweetAlertDialog.show();
                     } else {
                         SweetAlertDialog sweetAlertDialog = new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE);
@@ -5190,12 +5496,19 @@ else {
                         sweetAlertDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
                             @Override
                             public void onClick(SweetAlertDialog sDialog) {
+
+
                                 Log.e("dialog", "ปิด dialog");
                                 sDialog.dismissWithAnimation();
+
+
                             }
                         });
                         sweetAlertDialog.show();
+
                     }
+
+
                 } else {
                     contno_save = MyApplication.getInstance().getPrefManager().getPreferrence("contno_save") + "";
                     if (getData_check_problems.size() == 0) {
@@ -5261,7 +5574,11 @@ else {
                             } else {
                                // SELECT_DATA_PROBLEM_GORY();
                             }
+
+
                         }
+
+
                     }
                 }
 
@@ -5275,9 +5592,19 @@ else {
                     } catch (Exception e) {
 
                     }
+
                 }
+
+
             }
-        } else if(view==delete_problem_name){
+
+
+
+
+
+        }
+
+        else if(view==delete_problem_name){
             linear_problem.setVisibility(View.GONE);
             linear_gory.setVisibility(View.VISIBLE);
             linearlayout_show_problem_main.setVisibility(View.VISIBLE);
@@ -5285,12 +5612,16 @@ else {
             status_Shortcut="0";
             edittext_se.setText("");
 
-        } else if(view==relativeLayout_check_net){
+        }
+
+        else if(view==relativeLayout_check_net){
             Log.e("fffd","ddss");
             Intent intent = new Intent(Settings.ACTION_SETTINGS);
             // intent.setClassName("com.android.settings", "com.android.settings.wifi.WifiSettings");
             startActivityForResult(intent, 11);
-        } else if(view==tesss){
+        }
+
+        else if(view==tesss){
             final Dialog dialog = new Dialog(getActivity());
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setContentView(R.layout.custom_dialog_data_sale2);
@@ -5303,13 +5634,21 @@ else {
                     dialog.dismiss();
                 }
             });
+
+
             dialog.show();
         }
+
+
     }
+
 
     private void openActivity(Class<?> cls) {
 
     }
+
+
+
 
     public void sent_nontification_to_web(){
         String EmpIDForm=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
@@ -5504,6 +5843,15 @@ Log.e("image_final",data_image_to_qry);
 
                                     Log.e("dialog","ปิด dialog");
                                     sDialog.dismissWithAnimation();
+
+
+
+
+
+
+
+
+
                                     MyApplication.getInstance().getPrefManager().setPreferrence("getCONTNO","null");
                                     MyApplication.getInstance().getPrefManager().setPreferrence("getProductName","null");
                                     MyApplication.getInstance().getPrefManager().setPreferrence("getProductPrice","null");
@@ -5589,14 +5937,37 @@ Log.e("image_final",data_image_to_qry);
             });
 
             thread.start();
-        } catch (Exception ex){
+        }
+        catch (Exception ex){
            pDialogg.dismiss();
            // pDialogg.cancel();
 
         }
+
+
+
+
     }
 
+
+
+
+
+    //String GET_JSON_insent_Problem_Inform_Details_for_checker="http://app.thiensurat.co.th/assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/insent_Problem_Inform_Details_Copy_real_for_checker.php";
+
+
+
+
+    //
+    //
+
+
+
+
+
     public void select_id_from_Problem_Inform_Master(){
+
+
             jsonArrayRequest = new JsonArrayRequest(API_URL_ALL.GET_JSON_select_id_from_Problem_Inform_Master,
 
 
@@ -5920,6 +6291,12 @@ Log.e("image_final",data_image_to_qry);
         }
         cursor.close();
 
+
+
+
+
+
+
         cursor = sqLiteDatabase.rawQuery("SELECT *  FROM " + SQLiteHelper_problem_id_image.TABLE_NAME, null);
 
         if (cursor.moveToFirst()) {
@@ -5939,6 +6316,13 @@ Log.e("image_final",data_image_to_qry);
             } while (cursor.moveToNext());
         }
         cursor.close();
+
+
+
+
+
+
+
 
         VersionOS= Build.VERSION.RELEASE;
 
@@ -5995,7 +6379,24 @@ Log.e("image_final",data_image_to_qry);
         catch (Exception ex){
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        //INSENT_Problem_Master();
+
     }
+
+
+
 
     public void JSON_PARSE_DATA_AFTER_select_id_from_Problem_Inform_Master_for_checker(JSONArray array) {
         count_id_inform=array.length();
@@ -6029,10 +6430,52 @@ Log.e("image_final",data_image_to_qry);
             // value=GetDataAdapter2.getProblemName();
         }
 
+
         Log.e("InformID_checker",InformID);
+
         InformID_REAL=InformID;
-        INSENT_Problem_Master_for_checker();
+
+
+
+       // for (int i = 0; i < 2; i++) {
+            INSENT_Problem_Master_for_checker();
         INSENT_Problem_Details_for_checker();
+
+
+       // }
+
+    /*    for (int i = 0; i < getData_check_problems2.size(); i++) {
+            // getData_uploade_images.get(i);
+            GetData_check_problem2 contact = getData_check_problems2.get(i);
+            ProblemID_checker = contact.getProblemID();
+            Details_checker=contact.getMain_problems()+","+contact.getProblemDetail();
+            Topic_checker=contact.getSubject();
+
+            contno_checker=contact.getCONTNO();
+            ProcessTypeID_checker=contact.getProcessTypeID();
+
+
+            INSENT_Problem_Details_for_checker();
+
+
+        }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         VersionOS= Build.VERSION.RELEASE;
 
@@ -6138,7 +6581,22 @@ Log.e("image_final",data_image_to_qry);
             contno_checker=contact.getCONTNO();
             ProcessTypeID_checker=contact.getProcessTypeID();
 
+
+
+
+
         }*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -6669,9 +7127,24 @@ Log.e("image_final",data_image_to_qry);
         catch (OutOfMemoryError EX){
 
         }
-    }
 
+
+
+
+
+
+    }
     public   void INSENT_Problem_Details_for_checker(){
+
+
+
+
+
+
+
+
+
+
             ProblemID_checker=MyApplication.getInstance().getPrefManager().getPreferrence("ProblemID_checker");
             Log.e("IDD",ProblemID_checker);
             String ProblemTopic=Topic_checker;
@@ -6757,8 +7230,22 @@ Log.e("image_final",data_image_to_qry);
             catch (OutOfMemoryError EX){
 
             }
-    }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
     public   void INSENT_Problem_Details2(){   // have cs
 
 
@@ -6908,10 +7395,28 @@ Log.e("item_DATA",item_DATA);
 
             API_URL_ALL.GET_JSON_insent_Problem_Inform_Master=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/insent_Problem_Inform_Master_Copy_real2_2.php";
 
-        } else {
-            API_URL_ALL.GET_JSON_insent_Problem_Inform_Master=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/insent_Problem_Inform_Master_Copy_real2.php";
         }
+
+        else {
+
+            API_URL_ALL.GET_JSON_insent_Problem_Inform_Master=BASE_URL+"assanee/api_sale_all_problem_from_cedit_by_db_kiw/api_report_problem_from_contno/insent_Problem_Inform_Master_Copy_real2.php";
+
+        }
+
+
+
+
+
+
+
+
+
         String CashTeamCode="";
+
+
+
+
+
         String Contno=MyApplication.getInstance().getPrefManager().getPreferrence("contno_save");
         String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
         String InformDepartID=MyApplication.getInstance().getPrefManager().getPreferrence("DepartId");
@@ -7024,10 +7529,32 @@ Log.e("item_DATA",item_DATA);
         catch (OutOfMemoryError EX){
 
         }
+
+
+
+
+
+        //update_data_cannal_master_new(Contno); // อัพเดท data cannal
     }
+
+
+
+
+
+
+
+
+
+
+
 
     public   void INSENT_Problem_Master_for_checker(){
         String CashTeamCode="";
+
+
+
+
+
         String Contno=contno_checker;
         String ProcessTypeID=ProcessTypeID_checker;
         String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
@@ -7181,6 +7708,11 @@ Log.e("item_DATA",item_DATA);
 int ee=0;
     public   void INSENT_Problem_Master_for_checker2(){
         String CashTeamCode="";
+
+
+
+
+
         String Contno=contno_checker;
         String ProcessTypeID=ProcessTypeID_checker;
         String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
@@ -7327,6 +7859,20 @@ int ee=0;
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void Delete_data_credit(){
         String Contno=MyApplication.getInstance().getPrefManager().getPreferrence("contno_save");
@@ -7592,6 +8138,17 @@ public static String InformID_M="",InformID_D="",InformID_I="";
 
      Log.e("InformID_ALL_FULL",InformID_M+","+InformID_D+","+InformID_I+","+InformID_REAL);
 
+
+
+
+
+
+
+
+
+
+
+
         if((InformID_M.equals(InformID_REAL))&(InformID_D.equals(InformID_REAL))){
 
 
@@ -7638,6 +8195,9 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                     }
 
 
+
+
+
                     insert_data_to_cs();  // add data to cs
 
                     SQLiteDataBaseBuild2();
@@ -7649,6 +8209,16 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                     Log.e("dire", String.valueOf(dire));
                     new DirectoryCleaner(dire).clean();
                     dire.delete();
+
+
+
+
+
+
+
+
+
+
 
                     try {
 
@@ -7672,6 +8242,17 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                     catch (Exception ex){
 
                     }
+
+
+
+
+
+
+
+
+
+
+
 
                     Log.e("dialog", "ปิด dialog");
                     sDialog.dismissWithAnimation();
@@ -7763,10 +8344,21 @@ public static String InformID_M="",InformID_D="",InformID_I="";
 
         }
         else {
+
+
+
+
+
+
+
+
             pDialogg.dismiss();
             pDialogg.cancel();
             //  Log.d(TAG, "Error " + t.getMessage());
             //finalThread.stop();
+
+
+
             SweetAlertDialog sweetAlertDialog=  new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE);
             sweetAlertDialog.setTitleText("ผิดพลาด!");
             sweetAlertDialog.setContentText("*อัพโหลดข้อมูลไม่สำเร็จ กรุณาลองอีกครั้ง*");
@@ -7811,6 +8403,14 @@ public static String InformID_M="",InformID_D="",InformID_I="";
 
                     Log.e("dialog","ปิด dialog");
                     sDialog.dismissWithAnimation();
+
+
+
+
+
+
+
+
 
                     MyApplication.getInstance().getPrefManager().setPreferrence("getCONTNO","null");
                     MyApplication.getInstance().getPrefManager().setPreferrence("getProductName","null");
@@ -7891,9 +8491,28 @@ public static String InformID_M="",InformID_D="",InformID_I="";
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     private  void INSENT_Problem_Inform_Details_Images(){
+
+
         String ProblemID=part_id;
         String ImageItem=Image_id_item ;
+
+
+
+
         String ImageUrl=Url;
         String ImageName=Image_Name;
         String ImageSize=Image_Size;
@@ -7949,12 +8568,27 @@ public static String InformID_M="",InformID_D="",InformID_I="";
         catch (OutOfMemoryError EX){
 
         }
+
+
+
+
+
+
+
     }
 
 
+
+
     private  void INSENT_Problem_Inform_Details_Images2(){
+
+
         String ProblemID=part_id;
         String ImageItem=Image_id_item ;
+
+
+
+
         String ImageUrl=Url;
         String ImageName=Image_Name;
         String ImageSize=Image_Size;
@@ -8010,7 +8644,19 @@ public static String InformID_M="",InformID_D="",InformID_I="";
         catch (OutOfMemoryError EX){
 
         }
+
+
+
+
+
+
+
     }
+
+
+
+
+
 
     int idid2;
     String is ="";
@@ -8071,9 +8717,13 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                         } while (cursor.moveToNext());
                     }
                     cursor.close();
+
+
+
             }
 
-        } else {
+        }
+        else {
 
             for (idid2 = 0; idid2 < 2000; idid2++) {
                 if (idid2 > 122 && idid2 < 1071) {
@@ -8179,12 +8829,16 @@ public static String InformID_M="",InformID_D="",InformID_I="";
             catch (Exception x){
 
             }
-        } else if(requestCode == 1){
+        }
+        else if(requestCode == 1){
             if(resultCode==RESULT_OK) {
                 allSampleData.clear();
+                //CropImage();
+
                 if(item.equals("อื่นๆ")){
                     ID_SUB="0";
-                } else {
+                }
+                else {
                     if (status_Shortcut.equals("1")) {
                         ID_SUB = ID_PROMLEM_NUMBER;
                     } else if (status_Shortcut.equals("2")) {
@@ -8194,72 +8848,119 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                     }
                 }
 
+
+
                 order_image=order_image+1;
                 order_image2=order_image+1;
                 MyApplication.getInstance().getPrefManager().getPreferrence("part_image");
                 String FILE2= "";
                 String FILE= "";
                 try {
+
+
+
                     FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName") + ".jpg";
                     File file21 = new File(FILE2);
                     String filePath = file21.getPath();
                     Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                    /**
-                     * Edit by Teerayut Klinsanga
-                     */
                     ic.NewresizeBitmap(bitmap);
-                    /**
-                     * End
-                     */
-                    FILE = String.format("%s/%s/new.png", MyApplication.getInstance().getPrefManager().getPreferrence("part_image"),  MyApplication.getInstance().getPrefManager().getPreferrence("imageName"));
-                } catch (Exception ex){
+                    FILE = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
+
+                }
+                catch (Exception ex){
                     FILE=file.getAbsolutePath();
                 }
 
-                String image_name = String.format("%snew", MyApplication.getInstance().getPrefManager().getPreferrence("imageName"));
+
+
+                String image_name = MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new";
                // String image_name=MyApplication.getInstance().getPrefManager().getPreferrence("imageName");
+
+
                 //  Log.e("image_name",image_name);
-                String Url= SERVER_PATH + "suploads_image_report_problem/" + image_name +".png";
+
+                String Url=SERVER_PATH+"uploads_image_report_problem/"+image_name+".png";
              //   String Url="http://app.thiensurat.co.th/assanee/uploads_image_report_problem/"+image_name+".png";
                 //String Url="http://app.thiensurat.co.th/assanee/uploads_image_report_problem/"+image_name+".jpg";
                 // Log.e("Url_image_name",Url);
+
+
+
+
+
                 File file2 = new File(FILE);
                 long length = file2.length();
                 length = length/1024;
                 String number="";
                 if(check_buttom_remove_image==1){
                     number = String.valueOf(2);
-                } else {
+                }
+                else {
                      number= String.valueOf(1);
                 }
 
+
                 SQLiteDataBaseBuild();
                 SQLiteTableBuild();
+
                 String SQLiteDataBaseQueryHolder = "INSERT INTO " + SQLiteHelper_image_buffer.TABLE_NAME + " (part_id,name_image,url_image,Url,Image_Name,Image_Size,Image_Type,order_image) VALUES('" + ID_SUB + "','" + number + "','" + FILE + "','" + Url + "','" + image_name + "','" + length + "','" + "jpg" + "','" + order_image + "');";
                 // String SQLiteDataBaseQueryHolder = "INSERT INTO " + SQLiteHelper.TABLE_NAME + " (part_id,part_image,type_image) VALUES('" + id_image_success + "', '" + file.getAbsolutePath() + "', '" + "image_success" + "');";
                 sqLiteDatabase.execSQL(SQLiteDataBaseQueryHolder);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 for (int i = 1; i <=1; i++) {
+
                     SectionDataModel dm = new SectionDataModel();
+
                     dm.setHeaderTitle("ล่าสุด ");
+
                     ArrayList<SingleItemModel> singleItem = new ArrayList<SingleItemModel>();
+
+
+
+
                     Log.e("sdd", String.valueOf(check_buttom_remove_image));
                     if(check_buttom_remove_image==1){
                         cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+SQLiteHelper_image_buffer.TABLE_NAME+""  +" WHERE name_image ="+"'"+"2"+"'"   , null);
                         if (cursor.moveToFirst()) {
                             do {
+
                                 String FA = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer.Table_url_image));
                                 String f = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer.Table_order_image));
                                 Log.e("A", FA);
+
+                                // GetDataAdapter2.setMp3_thumbnail_s2(json.getString("artist_image_thumb"));
+
+                                // String f= String.valueOf(order_image);
                                 singleItem.add(new SingleItemModel("รูป " + f, FA));
+
                                 size = singleItem.size();
                                 MyApplication.getInstance().getPrefManager().setPreferrence("cancal", "1");
                             } while (cursor.moveToNext());
                         }
                         cursor.close();
-                    } else {
+                    }
+                    else {
+
                         cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + SQLiteHelper_image_buffer.TABLE_NAME + "", null);
+
                         if (cursor.moveToFirst()) {
                             do {
+
                                 String FA = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer.Table_url_image));
                                 String f = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer.Table_order_image));
                                 Log.e("AAAAAAAA", FA);
@@ -8275,23 +8976,42 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                         }
                         cursor.close();
                     }
+
+
+
+
+
+
+
                     dm.setAllItemsInSection(singleItem);
+
                     allSampleData.add(dm);
+
+
                 }
+
 
                 RecyclerViewDataAdapter5 adapter = new RecyclerViewDataAdapter5(getActivity(), allSampleData);
                 my_recycler_view.setAdapter(adapter);
                 adapter.setitemclick_deleteAll3(this);
                 if(size==0){
                     my_recycler_view.setVisibility(View.GONE);
-                } else {
-                    my_recycler_view.setVisibility(View.VISIBLE);
                 }
+                else {
+                    my_recycler_view.setVisibility(View.VISIBLE);
+
+                }
+
             }
-        } else if (requestCode == 2){
+
+        }
+
+        else if (requestCode == 2){
+
             if(item.equals("อื่นๆ")){
                 ID_SUB="0";
-            } else {
+            }
+            else {
                 if (status_Shortcut.equals("1")) {
                     ID_SUB = ID_PROMLEM_NUMBER;
                 } else if (status_Shortcut.equals("2")) {
@@ -8301,20 +9021,33 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                 }
             }
 
+
+
             order_image=order_image+1;
             order_image2=order_image+1;
             MyApplication.getInstance().getPrefManager().getPreferrence("part_image");
             String FILE="";
             try {
                 VersionOS = Build.VERSION.RELEASE;
+
                 if((VersionOS.equals("6.0"))|(VersionOS.equals("6.0.0"))|(VersionOS.equals("6.0.1"))|(VersionOS.equals("6.1"))|(VersionOS.equals("6.1.0"))|(VersionOS.equals("7.0"))|(VersionOS.equals("7.0.0"))|(VersionOS.equals("7.0.1"))|(VersionOS.equals("7.1"))|(VersionOS.equals("7.1.0"))|(VersionOS.equals("7.1.1"))|(VersionOS.equals("7.1.2"))|(VersionOS.equals("8.0"))|(VersionOS.equals("8.0.0"))|(VersionOS.equals("8.1.0"))|(VersionOS.equals("8.0"))|(VersionOS.equals("8.1"))|(VersionOS.equals("8.1.1"))|(VersionOS.equals("9"))|(VersionOS.equals("9.0"))|(VersionOS.equals("9.0.0"))|(VersionOS.equals("9.1"))|(VersionOS.equals("9.1.0"))){
                     FILE=MyApplication.getInstance().getPrefManager().getPreferrence("part_image")+"/"+MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+".jpg";
-                } else {
+
+
+
+
+
+                }
+                else {
                     FILE=file.getAbsolutePath();
                 }
-            } catch (Exception ex){
+            }
+            catch (Exception ex){
                 FILE=file.getAbsolutePath();
             }
+
+
+
 
             String image_name=MyApplication.getInstance().getPrefManager().getPreferrence("imageName");
 
@@ -8333,7 +9066,8 @@ public static String InformID_M="",InformID_D="",InformID_I="";
             String number="";
             if(check_buttom_remove_image==1){
                  number= String.valueOf(2);
-            } else {
+            }
+            else {
                  number= String.valueOf(1);
             }
 
@@ -8344,10 +9078,31 @@ public static String InformID_M="",InformID_D="",InformID_I="";
             // String SQLiteDataBaseQueryHolder = "INSERT INTO " + SQLiteHelper.TABLE_NAME + " (part_id,part_image,type_image) VALUES('" + id_image_success + "', '" + file.getAbsolutePath() + "', '" + "image_success" + "');";
             sqLiteDatabase.execSQL(SQLiteDataBaseQueryHolder);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             for (int i = 1; i <=1; i++) {
+
                 SectionDataModel dm = new SectionDataModel();
+
                 dm.setHeaderTitle("ล่าสุด ");
+
                 ArrayList<SingleItemModel> singleItem = new ArrayList<SingleItemModel>();
+
+
+
                 if(check_buttom_remove_image==1){
                     cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+SQLiteHelper_image_buffer.TABLE_NAME+""  +" WHERE name_image ="+"'"+"2"+"'"   , null);
                     if (cursor.moveToFirst()) {
@@ -8367,8 +9122,12 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                         } while (cursor.moveToNext());
                     }
                     cursor.close();
-                } else {
+                }
+                else {
+
+
                     cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + SQLiteHelper_image_buffer.TABLE_NAME + "", null);
+
                     if (cursor.moveToFirst()) {
                         do {
 
@@ -8387,23 +9146,33 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                     }
                     cursor.close();
                 }
+
                 dm.setAllItemsInSection(singleItem);
 
                 allSampleData.add(dm);
+
+
             }
+
 
             RecyclerViewDataAdapter5 adapter = new RecyclerViewDataAdapter5(getActivity(), allSampleData);
             my_recycler_view.setAdapter(adapter);
             adapter.setitemclick_deleteAll3(this);
             if(size==0){
                 my_recycler_view.setVisibility(View.GONE);
-            } else {
+            }
+            else {
                 my_recycler_view.setVisibility(View.VISIBLE);
             }
-        } else if(requestCode==80){
+
+        }
+
+   else if(requestCode==80){
             hideMenu();
             hideMenu2();
             String contno2=MyApplication.getInstance().getPrefManager().getPreferrence("qr_code_report_promlem_sale");
+
+
             inputText.setText(contno2);
             contno=contno2;
             pDialogg2 = new SweetAlertDialog(getActivity(), SweetAlertDialog.PROGRESS_TYPE);
@@ -8415,27 +9184,39 @@ public static String InformID_M="",InformID_D="",InformID_I="";
             INSENT_DATA_SALE();
             INSENT_DATA_CHECK_CONTNO();
 
-        } else if(requestCode == CAM_REQUEST){
+        }
+        else if(requestCode == CAM_REQUEST){
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
         //    imgTakenPic.setImageBitmap(bitmap);
-        } else if (requestCode == 77 && resultCode == RESULT_OK) {
+        }
+
+        else if (requestCode == 77 && resultCode == RESULT_OK) {
             allSampleData.clear();
-            String FILE="";
-            String DD="";
-            String image_name="";
-            String image_type="png";
+
+                     String FILE="";
+                     String DD="";
+                    String image_name="";
+                    String image_type="png";
             int size_arr;
-            Uri uri = data.getData();
-            String[] projection = {MediaStore.Images.Media.DATA};
+                Uri uri = data.getData();
+                String[] projection = {MediaStore.Images.Media.DATA};
 
-            Cursor cursor = getActivity().getContentResolver().query(uri, projection, null, null, null);
-            cursor.moveToFirst();
+                Cursor cursor = getActivity().getContentResolver().query(uri, projection, null, null, null);
+                cursor.moveToFirst();
 
-            int columnIndex = cursor.getColumnIndex(projection[0]);
-            String filepath = cursor.getString(columnIndex);
+                int columnIndex = cursor.getColumnIndex(projection[0]);
+                String filepath = cursor.getString(columnIndex);
+
+
+
+
+
+
 
             String FILE2= "";
+
             try {
+
                 File file21 = new File(filepath);
                 String filePath = file21.getPath();
 //                Bitmap bitmap = BitmapFactory.decodeFile(filePath);
@@ -8448,12 +9229,21 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                 /**
                  * End
                  */
+
+
                 FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
-            } catch (Exception ex){
-                Log.e("Browse image", ex.getLocalizedMessage());
             }
-             FILE =FILE2;
+            catch (Exception ex){
+
+            }
+
+
+
+
+
+
+            FILE =FILE2;
 
              image_name = MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new";
              cursor.close();
@@ -8461,7 +9251,8 @@ public static String InformID_M="",InformID_D="",InformID_I="";
 
             if(item.equals("อื่นๆ")){
                 ID_SUB="0";
-            } else {
+            }
+            else {
                 if (status_Shortcut.equals("1")) {
                     ID_SUB = ID_PROMLEM_NUMBER;
                 } else if (status_Shortcut.equals("2")) {
@@ -8471,11 +9262,19 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                 }
             }
 
+
+
             order_image=order_image+1;
             order_image2=order_image+1;
+
+
+
            // String Url="http://app.thiensuat.co.th/assanee/uploads_image_report_problem/"+image_name+"."+image_type;
 
             String Url=SERVER_PATH+"uploads_image_report_problem/"+image_name+"."+image_type;
+
+
+
             File file2 = new File(FILE);
             long length = file2.length();
             length = length/1024;
@@ -8483,7 +9282,8 @@ public static String InformID_M="",InformID_D="",InformID_I="";
             String number="";
             if(check_buttom_remove_image==1){
                  number= String.valueOf(2);
-            } else {
+            }
+            else {
                  number= String.valueOf(1);
             }
 
@@ -8495,14 +9295,21 @@ public static String InformID_M="",InformID_D="",InformID_I="";
             sqLiteDatabase.execSQL(SQLiteDataBaseQueryHolder);
 
             for (int i = 1; i <=1; i++) {
+
                 SectionDataModel dm = new SectionDataModel();
+
                 dm.setHeaderTitle("ล่าสุด ");
+
                 ArrayList<SingleItemModel> singleItem = new ArrayList<SingleItemModel>();
+
+
+
 
                 if(check_buttom_remove_image==1){
                     cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+SQLiteHelper_image_buffer.TABLE_NAME+""  +" WHERE name_image ="+"'"+"2"+"'"   , null);
                     if (cursor.moveToFirst()) {
                         do {
+
                             String FA = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer.Table_url_image));
                             String f = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer.Table_order_image));
                             Log.e("A", FA);
@@ -8512,62 +9319,101 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                             // String f= String.valueOf(order_image);
                             singleItem.add(new SingleItemModel("รูป " + f, FA));
 
-                            size = singleItem.size();
-                            MyApplication.getInstance().getPrefManager().setPreferrence("cancal", "1");
-                        } while (cursor.moveToNext());
-                    }
-                    cursor.close();
-                } else {
-                    cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + SQLiteHelper_image_buffer.TABLE_NAME + "", null);
-                    if (cursor.moveToFirst()) {
-                        do {
-                            String FA = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer.Table_url_image));
-                            String f = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer.Table_order_image));
-                            Log.e("A", FA);
-                            // GetDataAdapter2.setMp3_thumbnail_s2(json.getString("artist_image_thumb"));
-                            // String f= String.valueOf(order_image);
-                            singleItem.add(new SingleItemModel("รูป " + f, FA));
                             size = singleItem.size();
                             MyApplication.getInstance().getPrefManager().setPreferrence("cancal", "1");
                         } while (cursor.moveToNext());
                     }
                     cursor.close();
                 }
+                else {
+
+
+                    cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + SQLiteHelper_image_buffer.TABLE_NAME + "", null);
+
+                    if (cursor.moveToFirst()) {
+                        do {
+
+                            String FA = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer.Table_url_image));
+                            String f = cursor.getString(cursor.getColumnIndex(SQLiteHelper_image_buffer.Table_order_image));
+                            Log.e("A", FA);
+
+                            // GetDataAdapter2.setMp3_thumbnail_s2(json.getString("artist_image_thumb"));
+
+                            // String f= String.valueOf(order_image);
+                            singleItem.add(new SingleItemModel("รูป " + f, FA));
+
+                            size = singleItem.size();
+                            MyApplication.getInstance().getPrefManager().setPreferrence("cancal", "1");
+                        } while (cursor.moveToNext());
+                    }
+                    cursor.close();
+                }
+
+
+
+
+
                 dm.setAllItemsInSection(singleItem);
+
                 allSampleData.add(dm);
+
+
             }
+
+
             RecyclerViewDataAdapter5 adapter = new RecyclerViewDataAdapter5(getActivity(), allSampleData);
             my_recycler_view.setAdapter(adapter);
             adapter.setitemclick_deleteAll3(this);
+
             if(size==0){
                 my_recycler_view.setVisibility(View.GONE);
-            } else {
+            }
+            else {
                 my_recycler_view.setVisibility(View.VISIBLE);
             }
-        } else if(requestCode==11){
+        }
+
+   else if(requestCode==11){
+
             if(checkConnection() == true){
                 relativeLayout_check_net.setVisibility(View.GONE);
-            } else {
+            }
+            else {
                 relativeLayout_check_net.setVisibility(View.VISIBLE);
+
             }
         }
+
     }
 
     public void SQLiteDataBaseBuild(){
+
         sqLiteDatabase = getActivity().openOrCreateDatabase(SQLiteHelper_image_buffer.DATABASE_NAME, Context.MODE_PRIVATE, null);
+
     }
 
     public void SQLiteTableBuild(){
+
         //sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS "+SQLiteHelper.TABLE_NAME+"("+ SQLiteHelper.Table_Column_ID+" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "+SQLiteHelper.Table_Column_1_Subject_Name+" VARCHAR, "+SQLiteHelper.Table_Column_2_SubjectFullForm+" VARCHAR, "+SQLiteHelper.Table_Column_3_subteamcode+" VARCHAR, "+SQLiteHelper.Table_Column_5_contract_number+" VARCHAR, "+SQLiteHelper.Table_Column_6_contract_number2+" VARCHAR, "+SQLiteHelper.Table_Column_7_name_topic+" VARCHAR, "+SQLiteHelper.Table_Column_8_customer+" VARCHAR, "+SQLiteHelper.Table_Column_9_description+" VARCHAR, "+SQLiteHelper.Table_Column_16_status+" VARCHAR, "+SQLiteHelper.Table_Column_15_date_time+" VARCHAR, "+SQLiteHelper.Table_Column_23_date_time_update+" VARCHAR, "+SQLiteHelper.Table_Column_10_approveStatus+" VARCHAR, "+SQLiteHelper.Table_Column_11_approveBy+" VARCHAR, "+SQLiteHelper.Table_Column_12_approveDate+" VARCHAR, "+SQLiteHelper.Table_Column_17_isremark+" VARCHAR, "+SQLiteHelper.Table_Column_14_isremark1+" VARCHAR, "+SQLiteHelper.Table_Column_20_check_foller+" VARCHAR, "+SQLiteHelper.Table_Column_21_countfoller+" VARCHAR, "+SQLiteHelper.Table_Column_22_countcomment+" VARCHAR, "+SQLiteHelper.Table_Column_4_picture+" VARCHAR);");
+
         sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS "+SQLiteHelper_image_buffer.TABLE_NAME+"("+ SQLiteHelper_image_buffer.Table_Column_ID+" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,"+SQLiteHelper_image_buffer.Table_part_id+" VARCHAR, "+SQLiteHelper_image_buffer.Table_name_image+" VARCHAR, "+SQLiteHelper_image_buffer.Table_url_image+" VARCHAR, "+SQLiteHelper_image_buffer.Table_Url+" VARCHAR, "+SQLiteHelper_image_buffer.Table_Image_Name+" VARCHAR, "+SQLiteHelper_image_buffer.Table_Image_Size+" VARCHAR, "+SQLiteHelper_image_buffer.Table_Image_Type+" VARCHAR, "+SQLiteHelper_image_buffer.Table_order_image+" VARCHAR);");
+
+
     }
 
     public void SQLiteDataBaseBuild2(){
+
         sqLiteDatabase = getActivity().openOrCreateDatabase(SQLiteHelper_problem_id_image.DATABASE_NAME, Context.MODE_PRIVATE, null);
+
     }
 
     public void SQLiteTableBuild2(){
+
+        //sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS "+SQLiteHelper.TABLE_NAME+"("+ SQLiteHelper.Table_Column_ID+" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "+SQLiteHelper.Table_Column_1_Subject_Name+" VARCHAR, "+SQLiteHelper.Table_Column_2_SubjectFullForm+" VARCHAR, "+SQLiteHelper.Table_Column_3_subteamcode+" VARCHAR, "+SQLiteHelper.Table_Column_5_contract_number+" VARCHAR, "+SQLiteHelper.Table_Column_6_contract_number2+" VARCHAR, "+SQLiteHelper.Table_Column_7_name_topic+" VARCHAR, "+SQLiteHelper.Table_Column_8_customer+" VARCHAR, "+SQLiteHelper.Table_Column_9_description+" VARCHAR, "+SQLiteHelper.Table_Column_16_status+" VARCHAR, "+SQLiteHelper.Table_Column_15_date_time+" VARCHAR, "+SQLiteHelper.Table_Column_23_date_time_update+" VARCHAR, "+SQLiteHelper.Table_Column_10_approveStatus+" VARCHAR, "+SQLiteHelper.Table_Column_11_approveBy+" VARCHAR, "+SQLiteHelper.Table_Column_12_approveDate+" VARCHAR, "+SQLiteHelper.Table_Column_17_isremark+" VARCHAR, "+SQLiteHelper.Table_Column_14_isremark1+" VARCHAR, "+SQLiteHelper.Table_Column_20_check_foller+" VARCHAR, "+SQLiteHelper.Table_Column_21_countfoller+" VARCHAR, "+SQLiteHelper.Table_Column_22_countcomment+" VARCHAR, "+SQLiteHelper.Table_Column_4_picture+" VARCHAR);");
+
         sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS "+SQLiteHelper_problem_id_image.TABLE_NAME+"("+ SQLiteHelper_problem_id_image.Table_Column_ID+" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,"+SQLiteHelper_problem_id_image.Table_part_id+" VARCHAR, "+SQLiteHelper_problem_id_image.Table_part_image+" VARCHAR, "+SQLiteHelper_problem_id_image.Table_Category+" VARCHAR, "+SQLiteHelper_problem_id_image.Table_Main_problems+" VARCHAR, "+SQLiteHelper_problem_id_image.Table_Sub_problems+" VARCHAR,"+SQLiteHelper_problem_id_image.Table_topic+" VARCHAR,"+SQLiteHelper_problem_id_image.Table_ProblemDetail+" VARCHAR, "+SQLiteHelper_problem_id_image.Table_datetime+" VARCHAR, "+SQLiteHelper_problem_id_image.Table_Url+" VARCHAR, "+SQLiteHelper_problem_id_image.Table_Image_Name+" VARCHAR, "+SQLiteHelper_problem_id_image.Table_Image_Size+" VARCHAR, "+SQLiteHelper_problem_id_image.Table_Image_Type+" VARCHAR, "+SQLiteHelper_problem_id_image.Table_order_image+" VARCHAR);");
+
+
     }
 
     public void SQLiteDataBaseBuild3(){
@@ -8619,7 +9465,10 @@ public static String InformID_M="",InformID_D="",InformID_I="";
         popeup4.setStartOffset(200);
         popeup5.setStartOffset(250);
         popeup6.setStartOffset(300);
+
+
     }
+
 
 
     public void hideMenu() {
@@ -8634,9 +9483,11 @@ public static String InformID_M="",InformID_D="",InformID_I="";
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             try {
                 anim = ViewAnimationUtils.createCircularReveal(linear_sale1, cx, cy, initialRadius, 0);
-            } catch (Exception ex){
+            }
+            catch (Exception ex){
 
             }
+
         }
 
         try {
@@ -8653,10 +9504,24 @@ public static String InformID_M="",InformID_D="",InformID_I="";
             });
 
             anim.start();
-        } catch (Exception ex){
+        }
+        catch (Exception ex){
 
         }
+
+
+
+
+
+
+
     }
+
+
+
+
+
+
 
     public void revealMenu2() {
         menuOpen = true;
@@ -8703,7 +9568,10 @@ public static String InformID_M="",InformID_D="",InformID_I="";
         popeup4.setStartOffset(200);
         popeup5.setStartOffset(250);
         popeup6.setStartOffset(300);
+
+
     }
+
 
 
     public void hideMenu2() {
@@ -8724,10 +9592,13 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                 anim = ViewAnimationUtils.createCircularReveal(linear_sale2, cx, cy, initialRadius, 0);
 
                 anim2 = ViewAnimationUtils.createCircularReveal(linear_sale3, cx3, cy3, initialRadius3, 0);
-            } catch (Exception ex){
+            }
+            catch (Exception ex){
 
             }
+
         }
+
 
         try {
             anim.addListener(new AnimatorListenerAdapter() {
@@ -8741,9 +9612,16 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                 }
             });
             anim.start();
-        } catch (Exception e){
+        }
+        catch (Exception e){
 
         }
+
+
+
+
+
+
 
         try {
             anim2.addListener(new AnimatorListenerAdapter() {
@@ -8757,10 +9635,16 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                 }
             });
             anim2.start();
-        } catch (Exception e){
+        }
+        catch (Exception e){
 
         }
+
+
+
+
     }
+
 
     @Override
     public void onResume() {
@@ -8803,6 +9687,14 @@ public static String InformID_M="",InformID_D="",InformID_I="";
 
         Log.e("dialog","ปิด dialog");
         // sDialog.dismissWithAnimation();
+
+
+
+
+
+
+
+
 
         MyApplication.getInstance().getPrefManager().setPreferrence("getCONTNO","null");
         MyApplication.getInstance().getPrefManager().setPreferrence("getProductName","null");
@@ -8923,6 +9815,7 @@ public static String InformID_M="",InformID_D="",InformID_I="";
     }
 
 
+
     @Override
     public void click_deleteAll(View v, int position) {
         final GetData_check_problem getDataAdapter1 =  getData_check_problems.get(position);
@@ -8978,7 +9871,16 @@ public static String InformID_M="",InformID_D="",InformID_I="";
 
         recycler_view.setHasFixedSize(true);
         recycler_view.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+
+
+
         //tvTitle.setText(singleItem.getName());
+
+
+
+
+
+
         cursor = sqLiteDatabase.rawQuery("SELECT part_image  FROM " + SQLiteHelper_problem_id_image.TABLE_NAME + "" + " WHERE part_id =" + "'" + getDataAdapter1.getPart_id() + "'" , null);
 
         if (cursor.moveToFirst()) {
@@ -8999,7 +9901,21 @@ public static String InformID_M="",InformID_D="",InformID_I="";
         dialog.show();
 
         //itemImage.setOnTouchListener(new ImageMatrixTouchHandler(getActivity()));
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
     public class ObjNonti{
         public String InformID,WorkCode,MessageHeader,MessageDetails,ipaddress,type,project;
@@ -9065,6 +9981,8 @@ public static String InformID_M="",InformID_D="",InformID_I="";
             }
         };
 
+
+
         webSocketClient.setConnectTimeout(10000);
         webSocketClient.setReadTimeout(60000);
         //webSocketClient.addHeader("Origin", "http://developer.example.com");
@@ -9073,6 +9991,16 @@ public static String InformID_M="",InformID_D="",InformID_I="";
         check_nonti_web=1;
         //details_problem_nonti_to_web="";
     }
+
+
+
+
+
+
+
+
+
+
 
     public   void insert_data_to_cs(){
 
@@ -9120,13 +10048,26 @@ Log.e("InformID_REAL4444",InformID_REAL);
                         DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                         DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
-            } catch (RuntimeException ex){
+            }
+            catch (RuntimeException ex){
 
             }
-        } catch (OutOfMemoryError EX){
+        }
+        catch (OutOfMemoryError EX){
 
         }
+
+
+
     }
+
+
+
+
+
+
+
+
 
     Dialog dialog_image;
 
@@ -9212,6 +10153,10 @@ Log.e("InformID_REAL4444",InformID_REAL);
                     .setConfirmText("ออก!")
                     .show();
         }
+
+
+
+
     }
 int update_order_image=0,size3;
 
@@ -9272,6 +10217,13 @@ int update_order_image=0,size3;
                 } while (cursor.moveToNext());
             }
             cursor.close();
+
+
+
+
+
+
+
         size_image=getData_image_news.size();
         //getData_image_news.clear();
         if(getData_image_news.size()==0){
@@ -9352,7 +10304,9 @@ if(size_image==1){
         } while (cursor.moveToNext());
     }
     cursor.close();
-} else {
+}
+
+else {
 
 
 
@@ -9372,6 +10326,8 @@ if(size_image==1){
                     Log.e("FAn", FA + "," + order_image);
                 }
 
+
+
                 singleItem.add(new SingleItemModel("รูป " + f, FA));
 
                 size = singleItem.size();
@@ -9383,6 +10339,14 @@ if(size_image==1){
 
 
 }
+
+
+
+
+
+
+            //}
+
 
             dm.setAllItemsInSection(singleItem);
             allSampleData.add(dm);
@@ -9448,13 +10412,39 @@ String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("
                         DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                         DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
-            } catch (RuntimeException ex){
+            }
+            catch (RuntimeException ex){
 
             }
-        } catch (OutOfMemoryError EX){
+        }
+        catch (OutOfMemoryError EX){
 
         }
+
+
+
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    // String details_problem_nonti_to_web2="";
     public class ObjNonti2{
@@ -9466,7 +10456,8 @@ String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("
         URI uri;
         try {
             uri = new URI("ws://toss.thiensurat.co.th:3002");
-        } catch (URISyntaxException e) {
+        }
+        catch (URISyntaxException e) {
             e.printStackTrace();
             return;
         }
@@ -9529,15 +10520,36 @@ String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("
                     //webSocketClient.addHeader("Origin", "http://developer.example.com");
                     //webSocketClient.enableAutomaticReconnection(5000);
                     webSocketClient.connect();
-                } catch (Exception ex){
+                }
+                catch (Exception ex){
 
                 }
+
+
         check_nonti_web=1;
         //details_problem_nonti_to_web="";
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private void insert_log_problem(){
         String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("EMPID");
+
+
+
         String ipaddress2=MyApplication.getInstance().getPrefManager().getPreferrence("IPaddress")+"";
         String computername2=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
 
@@ -9548,14 +10560,20 @@ String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("
 
         if(ipaddress2.equals("null")){
             ipaddress3="-";
-        } else {
+        }
+        else {
             ipaddress3="-";
             //ipaddress=ipaddress2.substring(0, 15);
         }
 
+
+
+
+
         if(computername2.equals("null")){
             computername3="-";
-        } else {
+        }
+        else {
             //computername="android 6.0";
             computername3=MyApplication.getInstance().getPrefManager().getPreferrence("android_name")+"";
         }
@@ -9591,6 +10609,7 @@ String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("
             e.printStackTrace();
         }
 
+
         try {
             try {
                 requestQueue = Volley.newRequestQueue(getActivity());
@@ -9603,11 +10622,20 @@ String InformEmpID=MyApplication.getInstance().getPrefManager().getPreferrence("
                         DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                         DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
-            } catch (RuntimeException ex){
+            }
+            catch (RuntimeException ex){
 
             }
-        } catch (OutOfMemoryError EX){
+        }
+        catch (OutOfMemoryError EX){
 
         }
+
+
+
+
+
+
+
     }
 }

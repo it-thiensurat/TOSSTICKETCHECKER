@@ -237,6 +237,10 @@ public class Activity_edit_problem_from_sale_edit_new extends AppCompatActivity 
         setContentView(R.layout.cardview_row_cedit_cedit3);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         VersionOSM = android.os.Build.VERSION.RELEASE;
+
+        Log.e("page","2");
+
+
         my_recycler_view2 = (RecyclerView) findViewById(R.id.my_recycler_view2);
         my_recycler_view = (RecyclerView) findViewById(R.id.my_recycler_view);
 
@@ -1072,6 +1076,30 @@ public class Activity_edit_problem_from_sale_edit_new extends AppCompatActivity 
         if (view == open_camera) {
             checkCameraPermission();
 
+
+            if (!marshMallowPermission.checkPermissionForCamera()) {
+                marshMallowPermission.requestPermissionForCamera();
+            } else {
+                if (!marshMallowPermission.checkPermissionForExternalStorage()) {
+                    marshMallowPermission.requestPermissionForExternalStorage();
+                } else {
+
+                    CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                    ic = new ImageConfiguration(this, PATH);
+                    file = ic.createImageByType_error(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
+                            "report_problem", "ALL");
+
+                    fileUri = FileProvider.getUriForFile(this,
+                            BuildConfig.APPLICATION_ID + ".provider",
+                            file);
+                    // fileUri = Uri.fromFile(file);
+                    CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+                    startActivityForResult(CamIntent, 1);
+                }
+            }
+
+/*
             try {
                 if ((VersionOSM.equals("5.0"))|(VersionOSM.equals("5.0.1"))|(VersionOSM.equals("5.0.2"))|(VersionOSM.equals("5.1.3"))|(VersionOSM.equals("5.1"))|(VersionOSM.equals("5.1.1"))|(VersionOSM.equals("5.1.0"))|(VersionOSM.equals("5.1.2"))) {
                     CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -1085,43 +1113,7 @@ public class Activity_edit_problem_from_sale_edit_new extends AppCompatActivity 
                     CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
                     startActivityForResult(CamIntent, 1);
                 }
-/*                else if((VersionOSM.equals("6.0"))|(VersionOSM.equals("6.0.0"))|(VersionOSM.equals("6.0.1"))|(VersionOSM.equals("6.1"))|(VersionOSM.equals("6.1.0"))|(VersionOSM.equals("7.0"))|(VersionOSM.equals("7.0.0"))|(VersionOSM.equals("7.0.1"))|(VersionOSM.equals("7.1"))|(VersionOSM.equals("7.1.0"))|(VersionOSM.equals("7.1.1"))|(VersionOSM.equals("7.1.2"))|(VersionOSM.equals("8.0"))|(VersionOSM.equals("8.0.0"))|(VersionOSM.equals("8.1.0"))|(VersionOSM.equals("8.0"))|(VersionOSM.equals("8.1"))|(VersionOSM.equals("9"))|(VersionOSM.equals("9.0"))|(VersionOSM.equals("9.0.0"))|(VersionOSM.equals("9.1"))|(VersionOSM.equals("9.1.0"))){
-
-                    if (!marshMallowPermission.checkPermissionForCamera()) {
-                        marshMallowPermission.requestPermissionForCamera();
-                    } else {
-                        if (!marshMallowPermission.checkPermissionForExternalStorage()) {
-                            marshMallowPermission.requestPermissionForExternalStorage();
-                        } else {
-
-                            CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-                            ic = new ImageConfiguration(this,PATH);
-                            file = ic.createImageByType_error(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
-                                    "report_problem", "ALL");
-
-                            fileUri = FileProvider.getUriForFile(this,
-                                    BuildConfig.APPLICATION_ID + ".provider",
-                                    file);
-                            // fileUri = Uri.fromFile(file);
-                            CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-                            startActivityForResult(CamIntent, 1);
-                        }
-                    }
-                }*/
                 else {
-/*                    CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-                    ic = new ImageConfiguration(this,PATH);
-                    file = ic.createImageByType_error(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
-                            "report_problem", "ALL");
-
-                    fileUri = FileProvider.getUriForFile(this,
-                            BuildConfig.APPLICATION_ID + ".provider",
-                            file);
-                    // fileUri = Uri.fromFile(file);
-                    CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-                    startActivityForResult(CamIntent, 1);*/
 
 
                     if (!marshMallowPermission.checkPermissionForCamera()) {
@@ -1161,36 +1153,12 @@ public class Activity_edit_problem_from_sale_edit_new extends AppCompatActivity 
                 CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
                 startActivityForResult(CamIntent, 1);
             }
-
-
-
-
-
-            /*
-
-            if (!marshMallowPermission.checkPermissionForCamera()) {
-                marshMallowPermission.requestPermissionForCamera();
-            } else {
-                if (!marshMallowPermission.checkPermissionForExternalStorage()) {
-                    marshMallowPermission.requestPermissionForExternalStorage();
-                } else {
-                    CamIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-                    ic = new ImageConfiguration(this);
-                    file = ic.createImageByType_edit(MyApplication.getInstance().getPrefManager().getPreferrence("contno_save"),
-                            "report_problem", "ALL");
-
-                   // fileUri = FileProvider.getUriForFile(Activity_edit_problem_from_sale_edit_new.this,
-                      //      BuildConfig.APPLICATION_ID + ".provider",
-                     //       file);
-
-                    fileUri = Uri.fromFile(file);
-                    CamIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-                    startActivityForResult(CamIntent, 1);
-
-                }
-            }
 */
+
+
+
+
+
 
         }
         else if (view == open_image) {
@@ -2467,7 +2435,7 @@ public class Activity_edit_problem_from_sale_edit_new extends AppCompatActivity 
                     Bitmap bitmap = BitmapFactory.decodeFile(filePath);
 
 
-                    ic.getResizedBiBitmaptmap(bitmap,"camera");
+                    ic.NewresizeBitmap(bitmap);
 
                     FILE = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
@@ -2582,13 +2550,18 @@ public class Activity_edit_problem_from_sale_edit_new extends AppCompatActivity 
 
                 if((VersionOS.equals("6.0"))|(VersionOS.equals("6.0.0"))|(VersionOS.equals("6.0.1"))|(VersionOS.equals("6.1"))|(VersionOS.equals("6.1.0"))|(VersionOS.equals("7.0"))|(VersionOS.equals("7.0.0"))|(VersionOS.equals("7.0.1"))|(VersionOS.equals("7.1"))|(VersionOS.equals("7.1.0"))|(VersionOS.equals("7.1.1"))|(VersionOS.equals("7.1.2"))|(VersionOS.equals("8.0"))|(VersionOS.equals("8.0.0"))|(VersionOS.equals("8.1.0"))|(VersionOS.equals("8.0"))|(VersionOS.equals("8.1"))|(VersionOS.equals("9"))|(VersionOS.equals("9.0"))|(VersionOS.equals("9.0.0"))|(VersionOS.equals("9.1"))|(VersionOS.equals("9.1.0"))){
                     FILE=MyApplication.getInstance().getPrefManager().getPreferrence("part_image")+"/"+MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+".jpg";
+                    //FILE=file.getAbsolutePath();
                 }
                 else {
-                    FILE=file.getAbsolutePath();
+                    FILE=MyApplication.getInstance().getPrefManager().getPreferrence("part_image")+"/"+MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+".jpg";
+
+                 //   FILE=file.getAbsolutePath();
                 }
             }
             catch (Exception ex){
-                FILE=file.getAbsolutePath();
+                FILE=MyApplication.getInstance().getPrefManager().getPreferrence("part_image")+"/"+MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+".jpg";
+
+               // FILE=file.getAbsolutePath();
             }
 
 
@@ -2707,8 +2680,18 @@ public class Activity_edit_problem_from_sale_edit_new extends AppCompatActivity 
 
                 File file21 = new File(filepath);
                 String filePath = file21.getPath();
-                Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-                ic.getResizedBiBitmaptmap(bitmap,"open");
+
+                //Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+               // ic.getResizedBiBitmaptmap(bitmap,"open");
+
+
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
+                /**
+                 * Edit by Teerayut Klinsanga
+                 */
+                bitmap = ic.NewresizeBitmap(bitmap);
+
+
                 FILE2 = MyApplication.getInstance().getPrefManager().getPreferrence("part_image") + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new" + ".png";
 
             }
