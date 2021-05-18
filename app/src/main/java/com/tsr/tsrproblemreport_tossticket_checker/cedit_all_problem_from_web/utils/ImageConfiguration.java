@@ -520,16 +520,15 @@ public class ImageConfiguration {
      */
     public Bitmap NewresizeBitmap(Bitmap bmp) {
         int maxImageSize = 300 * 1024;
-//        int width = bmp.getWidth();
-//        int height = bmp.getHeight();
-        int bounding = dpToPx(480);
-
+        int width = bmp.getWidth();
+        int height = bmp.getHeight();
+        int bounding = dpToPx(420);
+        Log.e("bounding", String.valueOf(bounding));
         float ratio = Math.min((float) maxImageSize / bmp.getWidth(), (float) maxImageSize / bmp.getHeight());
-        int width = Math.round((float) ratio * bmp.getWidth());
-        int height = Math.round((float) ratio * bmp.getHeight());
+        Log.e("ratio", String.valueOf(ratio));
 
-        float xScale = ((float) bounding) / width;
-        float yScale = ((float) bounding) / height;
+        float xScale = (((float) bounding) / bmp.getWidth()) / 2;
+        float yScale = (((float) bounding) / bmp.getHeight()) / 2;
         float scale = (xScale <= yScale) ? xScale : yScale;
 
         Matrix matrix = new Matrix();
@@ -545,7 +544,7 @@ public class ImageConfiguration {
         try {
             imageFile = new File(storageDir, MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new"+".png");
             fileoutStream = new FileOutputStream(imageFile);
-            b2.compress(Bitmap.CompressFormat.JPEG, 80, fileoutStream);
+            b2.compress(Bitmap.CompressFormat.PNG, 70, fileoutStream);
             fileoutStream.flush();
             fileoutStream.close();
         } catch (IOException e) {

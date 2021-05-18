@@ -133,6 +133,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
@@ -5241,7 +5242,7 @@ else {
 
 
         else if(view==open_image){
-            if((check!=0)|(!CHECK_contno.equals("null"))) {
+//            if((check!=0)|(!CHECK_contno.equals("null"))) {
                 checkCameraPermission();
 
                // Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -5263,23 +5264,22 @@ else {
                 startActivityForResult(intent, 77);
 
 
-            }
-            else {
-                SweetAlertDialog sweetAlertDialog = new SweetAlertDialog(getActivity(), SweetAlertDialog.ERROR_TYPE);
-                sweetAlertDialog.setTitleText("เลขที่สัญญาไม่ถูกต้อง!");
-                sweetAlertDialog.setContentText("*กรุณาลองใหม่อีกครั้ง*");
-                sweetAlertDialog.setCancelable(true);
-                sweetAlertDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                    @Override
-                    public void onClick(SweetAlertDialog sDialog) {
-
-
-                        Log.e("dialog", "ปิด dialog");
-                        sDialog.dismissWithAnimation();
-                    }
-                });
-                sweetAlertDialog.show();
-            }
+//            } else {
+//                SweetAlertDialog sweetAlertDialog = new SweetAlertDialog(getActivity(), SweetAlertDialog.ERROR_TYPE);
+//                sweetAlertDialog.setTitleText("เลขที่สัญญาไม่ถูกต้อง!");
+//                sweetAlertDialog.setContentText("*กรุณาลองใหม่อีกครั้ง*");
+//                sweetAlertDialog.setCancelable(true);
+//                sweetAlertDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+//                    @Override
+//                    public void onClick(SweetAlertDialog sDialog) {
+//
+//
+//                        Log.e("dialog", "ปิด dialog");
+//                        sDialog.dismissWithAnimation();
+//                    }
+//                });
+//                sweetAlertDialog.show();
+//            }
         }
         else if(view==switcher){
             Intent intent = new Intent(getActivity(), MainActivity_qr_report_problem.class);
@@ -9226,6 +9226,13 @@ public static String InformID_M="",InformID_D="",InformID_I="";
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), data.getData());
                 bitmap = ic.NewresizeBitmap(bitmap);
                 Log.e("Bitmap size", bitmap.getWidth() + ", " + bitmap.getHeight());
+
+//                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+//                byte[] imageInByte = stream.toByteArray();
+//                long lengthbmp = imageInByte.length;
+
+                Log.e("Size of bmp", String.valueOf(bitmap.getByteCount()));
                 /**
                  * End
                  */
