@@ -519,9 +519,14 @@ public class ImageConfiguration {
      *
      */
     public Bitmap NewresizeBitmap(Bitmap bmp) {
-        int width = bmp.getWidth();
-        int height = bmp.getHeight();
+        int maxImageSize = 300 * 1024;
+//        int width = bmp.getWidth();
+//        int height = bmp.getHeight();
         int bounding = dpToPx(480);
+
+        float ratio = Math.min((float) maxImageSize / bmp.getWidth(), (float) maxImageSize / bmp.getHeight());
+        int width = Math.round((float) ratio * bmp.getWidth());
+        int height = Math.round((float) ratio * bmp.getHeight());
 
         float xScale = ((float) bounding) / width;
         float yScale = ((float) bounding) / height;
@@ -531,7 +536,7 @@ public class ImageConfiguration {
         matrix.postScale(scale, scale);
         Bitmap b2 = Bitmap.createBitmap(bmp, 0, 0, width, height, matrix, true);
 
-//        Bitmap b2 = Bitmap.createScaledBitmap(bmp, (bmp.getWidth() / 2), (bmp.getHeight() / 2), true);
+//        Bitmap b2 = Bitmap.createScaledBitmap(bmp, Integer.parseInt(String.valueOf(xScale)), Integer.parseInt(String.valueOf(yScale)), true);
         File storageDir = context.getExternalFilesDir(
                 Environment.DIRECTORY_PICTURES + "/" + MyApplication.getInstance().getPrefManager().getPreferrence("contno_save") + "/" + "report_problem" + "/" + "ID" + "ALL" + "/" + "image_error" + "/");
 
@@ -540,7 +545,7 @@ public class ImageConfiguration {
         try {
             imageFile = new File(storageDir, MyApplication.getInstance().getPrefManager().getPreferrence("imageName")+"new"+".png");
             fileoutStream = new FileOutputStream(imageFile);
-            b2.compress(Bitmap.CompressFormat.PNG, 100, fileoutStream);
+            b2.compress(Bitmap.CompressFormat.JPEG, 80, fileoutStream);
             fileoutStream.flush();
             fileoutStream.close();
         } catch (IOException e) {
