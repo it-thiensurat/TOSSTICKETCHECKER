@@ -521,7 +521,7 @@ public class ImageConfiguration {
     public Bitmap NewresizeBitmap(Bitmap bmp) {
         int width = bmp.getWidth();
         int height = bmp.getHeight();
-        int bounding = dpToPx(250);
+        int bounding = dpToPx(480);
 
         float xScale = ((float) bounding) / width;
         float yScale = ((float) bounding) / height;
